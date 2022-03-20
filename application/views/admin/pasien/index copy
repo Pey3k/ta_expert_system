@@ -1,0 +1,129 @@
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Data Pengelolaan Pasien</h1>
+          <p class="mb-4">Data Pasien merupakan data pasien yang telah terdaftar pada basis data sistem pakar <i>HealthMe</i>.</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Tabel Data Pasien</h6>
+            </div>
+
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Nama Pasien</th>
+                      <th>Jenis Kelamin</th>
+                      <th>Umur</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th >Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+                                $no = 0 ;
+                                foreach($listData as $value){
+                                $no++;
+                                 ?>
+                    <tr>
+                      <td><?php echo $no; ?></td>
+                      <td><?php echo $value->nama_pengguna; ?></td>
+                      <td><?php echo $value->jk; ?></td>
+                      <td><?php echo $value->umur; ?></td>
+                      <td><?php echo $value->username; ?></td>
+                      <td><?php echo $value->email; ?></td>
+                      <td>
+                        <a href="<?php echo base_url('admin/pasien/edit/'.$value->id_pengguna) ?>" class="badge badge-success badge-custom">Edit</a>
+                        <a href="<?php echo base_url('admin/pasien/doDelete/'.$value->id_pengguna) ?>" class="badge badge-danger" onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+                     </td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+
+  <!-- Edit Modal-->
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="modalEditGejala" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Pasien</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- MODAL EDIT
+
+ <div class="modal fade" id="modalEditPasien" tabindex="-1" role="dialog" aria-labelledby="modalEditGejala" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditGejala">Edit Gejala</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" method="post" action="<?php echo base_url().'admin/gejala/doAdd/'?>" role="form">
+                    <?php
+                       $dataOld = $this->session->flashdata('oldPost');
+                       echo $this->session->flashdata('msgbox');?>
+
+                            <div class="form-group">
+                                    <label for="id_gejala">ID Gejala</label>
+                                    <input type="text" class="form-control" id="id_gejala" value="<?php echo $detailData->id_gejala ?>" readonly name="id_gejala" placeholder="">
+                            </div>
+
+                             <div class="form-group">
+                                    <label for="gejala">Nama Gejala</label>
+                                    <input type="text" class="form-control" id="gejala" name="gejala" value="<?php echo $detailData->gejala; ?>" placeholder="" required>
+                            </div>
+
+                             <div class="form-group">
+                                    <label for="bobot">Bobot Gejala</label>
+                                    <input type="text" class="form-control" id="bobot" name="bobot" value="<?php echo $detailData->gejala_bobot?>" placeholder="" required>
+                            </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary tombolTambahData">Ubah</button>
+                                </div>
+
+                    </form>
+
+                </div>
+
+        </div>
+    </div>
+</div> -->

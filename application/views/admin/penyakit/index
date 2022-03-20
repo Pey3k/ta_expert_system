@@ -1,0 +1,66 @@
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Data Pengelolaan Penyakit</h1>
+          <p class="mb-4">Data Penyakit terdapat sebanyak 8 penyakit yang diperoleh dari pakar kesehatan terkait dengan penyakit yang kerap menyerang remaja dengan pola hidup remaja yang tidak sehat.</p>          
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Tabel Data Penyakit</h6>
+            </div>
+            <a href="<?php echo base_url('admin/penyakit/add/') ?>" class="btn btn-primary mb-3">Tambah Penyakit</a>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>ID Penyakit</th>
+                      <th>Nama Penyakit</th>
+                      <th>Gejala Penyakit</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+                                $no = 0 ;
+                                foreach($listData as $value){
+                                $no++;
+                                 ?>
+                    <tr>
+                      <td><?php echo $no; ?></td>
+                      <td><?php echo $value->id_penyakit; ?></td>
+					  <td><?php echo $value->penyakit; ?></td>
+
+                      <td>
+                      <?php
+						$detailData = $this->m_penyakit->getListRuleByPenyakit($value->id_penyakit);
+						foreach($detailData as $value){
+						echo "[".$value->id_gejala."] ".$value->gejala."<br>";
+						} ?>
+                      </td>
+
+                      <td>
+                        <a href="<?php echo base_url('admin/penyakit/edit/'.$value->id_penyakit) ?>" class="badge badge-success badge-custom">Edit</a>
+                        <a href="<?php echo base_url('admin/penyakit/doDelete/'.$value->id_penyakit) ?>" class="badge badge-danger" onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+                        <a href="<?php echo base_url('admin/penyakit/add_gejala/'.$value->id_penyakit) ?>" class="badge badge-primary">Tambah Gejala</a>
+                     </td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
