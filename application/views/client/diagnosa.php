@@ -1,157 +1,169 @@
 <html lang="en">
-    <head>
-        <title>Expert System Website</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<title>Expert System Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>fonts/icomoon/style.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/jquery-ui.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.carousel.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/jquery.fancybox.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>fonts/flaticon/font/flaticon.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/aos.css">
-        <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/style.css">
-
-
-    </head>
-    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-        <div class="site-wrap">
-
-            <div class="site-mobile-menu site-navbar-target">
-              <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                  <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-              </div>
-              <div class="site-mobile-menu-body"></div>
-            </div>
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>fonts/icomoon/style.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/jquery-ui.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/aos.css">
+	<link rel="stylesheet" href="<?= base_url('assets/frontend/'); ?>css/style.css">
 
 
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="site-wrap">
 
-            <header class="site-navbar py-2 bg-white js-sticky-header site-navbar-target" role="banner">
-
-              <div class="container">
-                <div class="row align-items-center">
-
-                  <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="<?= base_url('auth')?>" class="text-black mb-0">HealthMe<span class="text-primary">.</span> </a></h1>
-                  </div>
-                  <div class="col-12 col-md-10 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-
-                      <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                        <li><a href="<?= base_url('auth') ?>" class="nav-link">Beranda</a></li>
-                        <li><a href="<?= base_url('auth/#tentang-kami-section') ?>" class="nav-link">Tentang Kami</a></li>
-                        <li><a href="<?= base_url('auth/#pola-hidup-section') ?>" class="nav-link">Pola Hidup Sehat</a></li>
-                        <li><a href="<?= base_url('auth/#penyakit-section') ?>" class="nav-link">Penyakit</a></li>
-                        <li><a href="<?= base_url('diagnosa') ?>" class="nav-link active">Konsultasi</a></li>
-                        <li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-
-                  <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-
-                </div>
-              </div>
-
-            </header>
-            <div class="site-wrap">
-                <div class="site-section bg-light" id="contact-section">
-
-                    <div class="container">
-
-                      <div class="row align-items-center justify-content-center">
-                        <div class="col-md-7 text-center">
-                        <h3 class="section-sub-title">Consultation</h3>
-                        <h3 class="section-title text-black mt-4 mb-4">Konsultasi Pola Hidup</h3>
-                        </div>
-
-                      </div>
-                      <form action="<?php echo base_url().'diagnosa/kalkulasi/'.$id_pengguna;?>" method="post">
-                        <?= $this->session->flashdata('message');?>
-                      <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                          <h6 class="m-0 font-weight-bold text-primary">Silahkan melakukan mengisi jawaban dibawah: </h6>
-                        </div>
-                        <div class="card-body">
-                          <div class="table-responsive">
-                            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
-                            <col width="20">
-                              <thead>
-                                <tr>
-                                  <th >No.</th>
-                                  <th style="height:10px">Pertanyaan</th>
-                                  <th colspan=2 style="width:200px">Jawaban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <?php
-							$no = 0;
-							foreach ($list_gejala as $value) {
-								$no++;
-							?>
-								<tr>
-									<td><?php echo $no;?></td>
-									<td><?php echo "[".$value->id_gejala."] ".$value->gejala ."</b>";?></td>
-									<td><input type="radio" id="form-field-1" name="<?php echo $value->id_gejala; ?>" value="<?php echo $value->id_gejala;?>"  class="col-xs-10 col-sm-5">Ya</td>
-									<td><input type="radio" id="form-field-1" name="" value=""                                 class="col-xs-10 col-sm-5">Tidak</td>
-								</tr>
-							<?php } ?>
-                              </tbody>
-
-                            </table>
-                          </div>
-
-                          <div class="clearfix form-actions">
-
-                             <div class="col-md-offset-3 col-ml-0 pl-0">
-                                 <button  class="btn btn-primary" type="submit">
-                                   <i class="fa fa-home"></i>
-                                     Diagnosa Sekarang
-                                 </button>
-
-                                 &nbsp; &nbsp; &nbsp;
-                                 <button class="btn btn-secondary" type="reset">
-                                   <i class="fa fa-home"></i>
-                                     Reset
-                                 </button>
-                             </div>
-                         </div>
-
-                                </form>
-
-                        </div>
-                      </div>
-
-                    </div>
-
-                    </div>
-                </div>
-            </div>
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close mt-3">
+				<span class="icon-close2 js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
 
 
-         <!-- .site-wrap -->
+	<header class="site-navbar py-2 bg-white js-sticky-header site-navbar-target" role="banner">
 
-        <script src="<?= base_url('assets/frontend/');?>js/jquery-3.3.1.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery-ui.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/popper.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/bootstrap.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/owl.carousel.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery.stellar.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery.countdown.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/bootstrap-datepicker.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery.easing.1.3.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/aos.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery.fancybox.min.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/jquery.sticky.js"></script>
-        <script src="<?= base_url('assets/frontend/');?>js/main.js"></script>
+		<div class="container">
+			<div class="row align-items-center">
 
-    </body>
+				<div class="col-6 col-xl-2">
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">HealthMe<span
+									class="text-primary">.</span> </a></h1>
+				</div>
+				<div class="col-12 col-md-10 d-none d-xl-block">
+					<nav class="site-navigation position-relative text-right" role="navigation">
+
+						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+							<li><a href="<?= base_url('auth') ?>" class="nav-link">Beranda</a></li>
+							<li><a href="<?= base_url('auth/#tentang-kami-section') ?>" class="nav-link">Tentang
+									Kami</a></li>
+							<li><a href="<?= base_url('auth/#pola-hidup-section') ?>" class="nav-link">Pola Hidup
+									Sehat</a></li>
+							<li><a href="<?= base_url('auth/#penyakit-section') ?>" class="nav-link">Penyakit</a></li>
+							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link active">Konsultasi</a></li>
+							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
+							href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span
+								class="icon-menu h3"></span></a></div>
+
+			</div>
+		</div>
+
+	</header>
+	<div class="site-wrap">
+		<div class="site-section bg-light" id="contact-section">
+
+			<div class="container">
+
+				<div class="row align-items-center justify-content-center">
+					<div class="col-md-7 text-center">
+						<h3 class="section-sub-title">Consultation</h3>
+						<h3 class="section-title text-black mt-4 mb-4">Konsultasi Pola Hidup</h3>
+					</div>
+
+				</div>
+				<form action="<?php echo base_url() . 'diagnosa/kalkulasi/' . $id_pengguna; ?>" method="post">
+					<?= $this->session->flashdata('message'); ?>
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary">Silahkan melakukan mengisi jawaban
+								dibawah: </h6>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped" id="dataTable" width="100%"
+									   cellspacing="0">
+									<col width="20">
+									<thead>
+									<tr>
+										<th>No.</th>
+										<th style="height:10px">Pertanyaan</th>
+										<th colspan=2 style="width:200px">Jawaban</th>
+									</tr>
+									</thead>
+									<tbody>
+									<?php
+									$no = 0;
+									foreach ($list_gejala as $value) {
+										$no++;
+										?>
+										<tr>
+											<td><?php echo $no; ?></td>
+											<td><?php echo "[" . $value->id_gejala . "] " . $value->gejala . "</b>"; ?></td>
+											<td><input type="radio" id="form-field-1"
+													   name="<?php echo $value->id_gejala; ?>"
+													   value="<?php echo $value->id_gejala; ?>"
+													   class="col-xs-10 col-sm-5">Ya
+											</td>
+											<td><input type="radio" id="form-field-1" name="" value=""
+													   class="col-xs-10 col-sm-5">Tidak
+											</td>
+										</tr>
+									<?php } ?>
+									</tbody>
+
+								</table>
+							</div>
+
+							<div class="clearfix form-actions">
+
+								<div class="col-md-offset-3 col-ml-0 pl-0">
+									<button class="btn btn-primary" type="submit">
+										<i class="fa fa-home"></i>
+										Diagnosa Sekarang
+									</button>
+
+									&nbsp; &nbsp; &nbsp;
+									<button class="btn btn-secondary" type="reset">
+										<i class="fa fa-home"></i>
+										Reset
+									</button>
+								</div>
+							</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- .site-wrap -->
+
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery-3.3.1.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery-migrate-3.0.1.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery-ui.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/popper.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/owl.carousel.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery.stellar.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery.countdown.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/bootstrap-datepicker.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery.easing.1.3.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/aos.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery.fancybox.min.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/jquery.sticky.js"></script>
+<script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
+
+</body>
 </html>
