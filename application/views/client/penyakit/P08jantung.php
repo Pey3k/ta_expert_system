@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>fonts/icomoon/style.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/jquery-ui.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/aos.css">
-    <link rel="stylesheet" href="<?= base_url('assets/client/');?>css/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>fonts/icomoon/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/jquery-ui.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/aos.css">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/');?>css/style.css">
 
 
 </head>
@@ -206,22 +206,22 @@
 
        <!-- .site-wrap -->
 
-        <script src="<?= base_url('assets/client/');?>js/jquery-3.3.1.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery-ui.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/popper.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/bootstrap.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/owl.carousel.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery.stellar.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery.countdown.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/bootstrap-datepicker.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery.easing.1.3.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/aos.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery.fancybox.min.js"></script>
-        <script src="<?= base_url('assets/client/');?>js/jquery.sticky.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery-3.3.1.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery-ui.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/popper.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/bootstrap.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/owl.carousel.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery.stellar.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery.countdown.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/bootstrap-datepicker.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery.easing.1.3.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/aos.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery.fancybox.min.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/jquery.sticky.js"></script>
 
 
-        <script src="<?= base_url('assets/client/');?>js/main.js"></script>
+        <script src="<?= base_url('assets/frontend/');?>js/main.js"></script>
 
     </body>
 </html>
