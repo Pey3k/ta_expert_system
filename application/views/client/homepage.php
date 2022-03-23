@@ -31,7 +31,7 @@
 	<div class="container">
 		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 			<div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-				<a class="navbar-brand" href="index.html">Dentista<span>Dental Clinic</span></a>
+				<a class="navbar-brand" href="index.html">HealthMe</span></a>
 			</div>
 			<div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
 				<div class="icon d-flex justify-content-center align-items-center order-md-last">
@@ -61,13 +61,10 @@
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
-				<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Home</a></li>
 				<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-				<li class="nav-item"><a href="doctor.html" class="nav-link">Doctor</a></li>
-				<li class="nav-item"><a href="department.html" class="nav-link">Treatments</a></li>
-				<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-				<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-				<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Diagnosa</a></li>
+				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 			</ul>
 		</div>
 	</div>

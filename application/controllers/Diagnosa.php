@@ -19,8 +19,11 @@ class Diagnosa extends CI_Controller
 	public function index()
 	{
 		$data = $this->session->userdata('loginUser');
-		// var_dump($data);
-		// die;
+
+		if (empty($data)) {
+			redirect('login');
+		}
+
 		$data['id_pengguna'] = $data['UserID'];
 		$data['list_gejala'] = $this->m_gejala->getlistGejala();
 		$this->load->view('client/diagnosa', $data);

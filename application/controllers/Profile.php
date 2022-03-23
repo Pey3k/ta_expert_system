@@ -11,7 +11,13 @@ class Profile extends CI_Controller
 
 	public function index()
 	{
-		$data['userLogin'] = $this->session->userdata('loginUser');
+		$data = $this->session->userdata('loginUser');
+
+		if (empty($data)) {
+			redirect('login');
+		}
+
+		$data['userLogin'] = $data;
 		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['UserID']);
 		$this->load->view('client/profile', $data);
 	}
