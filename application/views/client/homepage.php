@@ -56,7 +56,7 @@
 				<?php if(empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
 				<?php } else { ?>
-				<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
+					<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 				<?php } ?>
 			</ul>
 		</div>

@@ -193,7 +193,7 @@
 											<?php
 											echo floatval($nilaiKombinasi * 100) . ' % , diperoleh dari nilai himpunan penyakit yang paling tinggi.';
 											?> <br>
-											<a href="<?= base_url('riwayatpasien'); ?>">Riwayat konsultasi</a><br>
+											<a href="<?= base_url('riwayatpasien'); ?>">Riwayat Konsultasi</a><br>
 										</li>
 									<?php }
 								}

@@ -41,20 +41,23 @@
 		<div class="row align-items-center">
 
 			<div class="col-6 col-xl-2">
-				<h1 class="mb-0 site-logo"><a href="<?= base_url('auth/'); ?>" class="text-black mb-0">WAOS<span
-								class="text-primary">.</span> </a></h1>
+				<h1 class="mb-0 site-logo"><a href="<?= base_url('auth/'); ?>" class="text-black mb-0">WAOS</a></h1>
 			</div>
 			<div class="col-12 col-md-10 d-none d-xl-block">
 				<nav class="site-navigation position-relative text-right" role="navigation">
 
 					<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-						<li><a href="<?= base_url('auth') ?>" class="nav-link">Beranda</a></li>
-						<li><a href="<?= base_url('auth/#tentang-kami-section') ?>" class="nav-link">Tentang Kami</a>
-						</li>
-						<li><a href="<?= base_url('auth/#pola-hidup-section') ?>" class="nav-link">Pola Hidup Sehat</a>
-						</li>
-						<li><a href="<?= base_url('auth/#penyakit-section') ?>" class="nav-link active">Penyakit</a>
-						</li>
+						<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
+						<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+						<?php if(empty($this->session->userdata('loginUser'))) { ?>
+							<li><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
+							<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
+						<?php } else { ?>
+							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
+							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
+						<?php } ?>
 					</ul>
 				</nav>
 			</div>
