@@ -43,6 +43,11 @@
 					<nav class="site-navigation position-relative text-right" role="navigation">
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
+							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
+							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
 					</nav>

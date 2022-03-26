@@ -94,7 +94,7 @@ class Login extends CI_Controller
 	function logout()
 	{
 		$this->session->unset_userdata('loginData');
-		redirect('admin/login');
+		redirect('');
 	}
 
 	function register_admin()

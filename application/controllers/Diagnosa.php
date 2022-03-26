@@ -221,7 +221,7 @@ class Diagnosa extends CI_Controller
 
 		}
 
-		if (count($jawaban) == 1 || count($jawaban) == 0) {
+		if (count($jawaban) <= 1) {
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
 			Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
@@ -307,7 +307,7 @@ class Diagnosa extends CI_Controller
 				unset($jawaban[$key]);
 			}
 		}
-		if (count($jawaban) == 0 || count($jawaban) == 1) {
+		if (count($jawaban) <= 1) {
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
 					Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
@@ -491,7 +491,7 @@ class Diagnosa extends CI_Controller
 		// Mengambil data jawaban dari post pada view di radio box
 		$jawaban = $this->input->post();
 
-		if (count($jawaban) == 0 || count($jawaban) == 1) {
+		if (count($jawaban) <= 1) {
 			// Kondisi jika jawaban bernilai null yaitu tidak dipilih satu pun
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
 			Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');

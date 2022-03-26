@@ -45,14 +45,12 @@
 					<nav class="site-navigation position-relative text-right" role="navigation">
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-							<li><a href="<?= base_url('auth') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('auth/#tentang-kami-section') ?>" class="nav-link">Tentang
-									Kami</a></li>
-							<li><a href="<?= base_url('auth/#pola-hidup-section') ?>" class="nav-link">Pola Hidup
-									Sehat</a></li>
-							<li><a href="<?= base_url('auth/#penyakit-section') ?>" class="nav-link">Penyakit</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link active">Konsultasi</a></li>
+							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
+							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
+							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
+							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -70,7 +68,6 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-7 text-center mt-5">
-					<h3 class="section-sub-title">Calculate</h3>
 					<h3 class="section-title text-black mt-4 mb-4">Hasil Hitungan Diagnosa </h3>
 				</div>
 			</div>

@@ -53,7 +53,11 @@
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Tentang Kami</a></li>
-				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Login</a></li>
+				<?php if(empty($this->session->userdata('loginUser'))) { ?>
+					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
+				<?php } else { ?>
+				<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>

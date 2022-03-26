@@ -63,7 +63,6 @@
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
-					<h3 class="section-sub-title">Register</h3>
 					<h2 class="section-title mt-4 mb-3">Registrasi Pasien</h2>
 				</div>
 			</div>
