@@ -64,7 +64,7 @@
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<h1 class="mb-2 bread">Penyakit <?= $dataPenyakit->penyakit ?></h1>
+				<h1 class="mb-2 bread">Penyakit Periodontitis</h1>
 			</div>
 		</div>
 	</div>
@@ -74,18 +74,48 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 ftco-animate">
-				<?php
-				$dataOld = $this->session->flashdata('oldPost');
-				echo $this->session->flashdata('msgbox'); ?>
-				<h2 class="mb-3">Penyakit <?= $dataPenyakit->penyakit ?></h2>
-				<p><?= $dataPenyakit->solusi ?></p>
+				<h2 class="mb-3">Penyakit Periodontitis</h2>
+				<p>
+					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+				</p>
+				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
+					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
+					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
+					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
+				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
+					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
+					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
+					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
+				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
+					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
+					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
+					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
+				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
+					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
+					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
+					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
+					recusandae!</p>
+				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
+					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
+					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
+					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
+					inventore?</p>
 
-				<div class="tag-widget post-tag-container mb-5 mt-5">
-					<div class="tagcloud">
-						<a href="<?= base_url('penyakit/pulpitis') ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
-					</div>
-				</div>
 			</div> <!-- .col-md-8 -->
+
+			<div class="col-lg-4 sidebar ftco-animate">
+				<div class="sidebar-box ftco-animate">
+					<h3>Jenis Penyakit Gigi</h3>
+					<ul class="categories">
+						<li><a href="<?= base_url('penyakit/karies') ?>" target="_blank">Karies Gigi</a></li>
+						<li><a href="<?= base_url('penyakit/pulpitis') ?>" target="_blank">Pulpitis</a></li>
+						<li><a href="<?= base_url('penyakit/gingivitis') ?>" target="_blank">Gingivitis</a></li>
+						<li><a href="<?= base_url('penyakit/absesgusi') ?>" target="_blank">Abses Gusi</a></li>
+						<li><a href="<?= base_url('penyakit/impaksi') ?>" target="_blank">Impaksi Gigi</a></li>
+						<li><a href="<?= base_url('penyakit/periodontitis') ?>" target="_blank">Periodontitis</a></li>
+					</ul>
+				</div>
+			</div><!-- END COL -->
 		</div>
 	</div>
 </section>

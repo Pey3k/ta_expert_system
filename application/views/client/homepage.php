@@ -49,7 +49,8 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Beranda</a></li>
-				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
+				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a>
+				</li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
@@ -202,6 +203,7 @@
 					<div>
 						<h3 class="mb-4">Abses Gusi</h3>
 					</div>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-8.jpg');"></div>
 					<div>
 						Abses gusi berawal dari infeksi pada mulut yang dibiarkan dan akhirnya membentuk kantung atau
 						benjolan berisi nanah pada gusi ...
@@ -234,7 +236,7 @@
 						Periodontitis adalah infeksi gusi yang merusak gigi, jaringan lunak, dan tulang penyangga
 						gigi. Kondisi ini harus segera diobati ...
 					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/periondontitis') ?>"
+					<p class="button text-center"><a href="<?= base_url('penyakit/periodontitis') ?>"
 													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 				</div>
 			</div>
@@ -321,8 +323,8 @@
 				<div class="ftco-footer-widget mb-5 ml-md-4">
 					<h2 class="ftco-heading-2">Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="<?= base_url('') ?>#"><span
-										class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+						<li><a href="<?= base_url('') ?>"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit
 								Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>

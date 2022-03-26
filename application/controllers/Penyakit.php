@@ -47,10 +47,10 @@ class Penyakit extends CI_Controller
 	}
 
 
-	public function periondontitis()
+	public function periodontitis()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/periondontitis', $data);
+		$this->load->view('client/penyakit/periodontitis', $data);
 	}
 
 }
