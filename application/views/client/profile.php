@@ -85,6 +85,16 @@
 										<td><?= $listProfile->nama_pengguna ?></td>
 									</tr>
 									<tr>
+										<th style="width: 200px">Tempat Lahir</th>
+										<th style="width: 30px">:</th>
+										<td><?= $listProfile->tempat_lahir ?></td>
+									</tr>
+									<tr>
+										<th style="width: 200px">Tanggal Lahir</th>
+										<th style="width: 30px">:</th>
+										<td><?= date_format(date_create($listProfile->tgl_lahir), 'd F Y') ?></td>
+									</tr>
+									<tr>
 										<th>Jenis Kelamin</th>
 										<th>:</th>
 										<td>
@@ -111,11 +121,6 @@
 										<th>Username</th>
 										<th>:</th>
 										<td><?= $listProfile->username ?></td>
-									</tr>
-									<tr>
-										<th>Password</th>
-										<th>:</th>
-										<td>************</td>
 									</tr>
 								</table>
 								<div class="col-12 text-center">

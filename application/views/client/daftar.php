@@ -84,6 +84,21 @@
 
 						<div class="row form-group">
 							<div class="col-md-6">
+								<label class="text-black" for="tempat_lahir">Tempat Lahir </label>
+								<input type="text" id="tempat_lahir" name="tempat_lahir" min="1" max="100"
+									   value="<?= set_value('tempat_lahir'); ?>" class="form-control rounded-0" required>
+							</div>
+
+							<div class="col-md-6">
+								<label class="text-black" for="tgl_lahir">Tanggal Lahir</label>
+								<input type="date" id="tgl_lahir" name="tgl_lahir"
+									   value="<?= set_value('tgl_lahir'); ?>" class="form-control rounded-0" required>
+							</div>
+
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-6">
 								<label class="text-black" for="umur">Umur </label>
 
 								<input type="number" id="umur" name="umur" min="1" max="100"

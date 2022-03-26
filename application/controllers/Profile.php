@@ -37,6 +37,8 @@ class Profile extends CI_Controller
 		if ($post['password'] != "") {
 			$dataArray = array(
 				"nama_pengguna" => $post['nama'],
+				"tempat_lahir" => $post['tempat_lahir'],
+				"tgl_lahir" => $post['tgl_lahir'],
 				"jk" => $post['jk'],
 				"email" => $post['email'],
 				"umur" => $post['umur'],
@@ -46,6 +48,8 @@ class Profile extends CI_Controller
 		} else {
 			$dataArray = array(
 				"nama_pengguna" => $post['nama'],
+				"tempat_lahir" => $post['tempat_lahir'],
+				"tgl_lahir" => $post['tgl_lahir'],
 				"jk" => $post['jk'],
 				"email" => $post['email'],
 				"umur" => $post['umur'],

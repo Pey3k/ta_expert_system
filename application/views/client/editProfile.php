@@ -82,6 +82,21 @@
 
 						<div class="row form-group">
 							<div class="col-md-6">
+								<label class="text-black" for="tempat_lahir">Tempat Lahir </label>
+								<input type="text" id="tempat_lahir" name="tempat_lahir" min="1" max="100"
+									   value="<?= $detailData->tempat_lahir ?>" class="form-control rounded-0">
+							</div>
+
+							<div class="col-md-6">
+								<label class="text-black" for="tgl_lahir">Tanggal Lahir</label>
+								<input type="date" id="tgl_lahir" name="tgl_lahir"
+									   value="<?= $detailData->tgl_lahir ?>" class="form-control rounded-0">
+							</div>
+
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-6">
 								<label class="text-black" for="umur">Umur </label>
 								<input value="<?= $detailData->umur ?>" type="number" id="umur" name="umur"
 									   class="form-control rounded-0">

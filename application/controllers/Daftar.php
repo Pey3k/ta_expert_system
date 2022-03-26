@@ -38,6 +38,8 @@ class Daftar extends CI_Controller
 			$dataArray = array(
 				"nama_pengguna" => $post['nama'],
 				"jk" => $post['jk'],
+				"tempat_lahir" => $post['tempat_lahir'],
+				"tgl_lahir" => $post['tgl_lahir'],
 				"umur" => $post['umur'],
 				"email" => $post['email'],
 				"username" => $post['username'],
@@ -47,11 +49,5 @@ class Daftar extends CI_Controller
 			$insert = $this->db->insert("pengguna", $dataArray);
 			redirect('login');
 		}
-
-
 	}
-
-
-	// }
-
 }
