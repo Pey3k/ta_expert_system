@@ -45,9 +45,8 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
@@ -77,8 +76,7 @@
 					<?= $this->session->flashdata('message'); ?>
 					<div class="card shadow mb-4">
 						<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary">Silahkan melakukan mengisi jawaban
-								dibawah: </h6>
+							<h6 class="m-0 font-weight-bold text-primary">Silakan mengisi beberapa pertanyaan dibawah ini:</h6>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">

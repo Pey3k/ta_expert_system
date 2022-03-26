@@ -232,6 +232,7 @@ class Diagnosa extends CI_Controller
 			$minning['max'] = $b_max[0];
 
 			if (!empty($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]])) {
+
 				$dataSimpan = array(
 					'idPengguna' => $dataUserLogin['UserID'],
 					'tglAnalisa' => date('Y-m-d'),
@@ -239,7 +240,6 @@ class Diagnosa extends CI_Controller
 				$this->db->insert("hasilanalisa", $dataSimpan);
 				$idhasil = $this->db->insert_id();
 				foreach ($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]] as $key => $value) {
-
 					$data_gangguan = $this->m_penyakit->getListPenyakitById($value);
 					if (empty($data_gangguan)) {
 						continue;
@@ -249,6 +249,7 @@ class Diagnosa extends CI_Controller
 						'idHasilAnalisa' => $idhasil,
 						'penyakit' => $data_gangguan->penyakit,
 						'idPengguna' => $dataUserLogin['UserID'],
+						'persentase' => ($minning['nilaiCombine'][count($minning['tableCombine'])][$b_max[0]] * 100),
 					);
 
 					$this->db->insert("detailhasilanalisa", $dataDetail);

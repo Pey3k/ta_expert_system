@@ -72,8 +72,6 @@
 					<form action="<?= base_url('profile/doUpdate/' . $this->uri->segment(3)); ?>" method="post"
 						  class="p-5 bg-white">
 
-						<h2 class="h4 text-black mb-5">Ubah data diri anda :</h2>
-
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label class="text-black" for="nama_lengkap">Nama Lengkap</label>

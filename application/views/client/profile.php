@@ -44,9 +44,8 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
@@ -119,13 +118,12 @@
 										<td>************</td>
 									</tr>
 								</table>
-								<div>
+								<div class="col-12 text-center">
 									<a href="<?= base_url('profile/editProfile/' . $listProfile->id_pengguna); ?>"
-									   class="btn btn-warning btn-sm">Ubah Profile</a>
-									<a href="<?= base_url('riwayatpasien'); ?>" class="btn btn-info btn-sm"
-									   style="margin-left:240">Lihat Riwayat Konsultasi</a>
+									   class="btn btn-info btn-sm">Ubah Profile</a>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>

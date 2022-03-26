@@ -45,9 +45,8 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
@@ -70,7 +69,7 @@
 
 				<div class="row align-items-center justify-content-center">
 					<div class="col-md-7 text-center">
-						<h3 class="section-title text-black mt-4 mb-4">Riwayat Diagnosa Pasien</h3>
+						<h3 class="section-title text-black mt-4 mb-4">Riwayat Konsultasi</h3>
 					</div>
 				</div>
 
@@ -78,7 +77,7 @@
 					<div class="card-header py-3">
 						<div class="row">
 							<div class="col-md-6">
-								<h6 class="m-0 font-weight-bold text-primary">Riwayat Diagnosa Pasien </h6>
+								<h6 class="m-0 font-weight-bold text-primary">Riwayat Penyakit Gigi </h6>
 							</div>
 							<div class="col-md-6">
 								<?php if (!empty($userLogin)) { ?>
@@ -108,6 +107,7 @@
 									<th align="center">No</th>
 									<th align="center">Nama</th>
 									<th align="center">Penyakit</th>
+									<th align="center">Persentase</th>
 									<th align="center">Tanggal konsultasi</th>
 								</tr>
 								</thead>
@@ -123,6 +123,7 @@
 										<td style="padding:10px;"> <?php echo $no; ?> </td>
 										<td style="padding:10px;"> <?php echo $value->nama_pengguna; ?> </td>
 										<td style="padding:10px;"> <?php echo $value->penyakit; ?> </td>
+										<td style="padding:10px;"> <?php echo $value->persentase; ?> % </td>
 										<td style="padding:10px;"> <?= date_format(date_create($value->tglAnalisa), 'd F Y'); ?></td>
 									</tr>
 								<?php } ?>

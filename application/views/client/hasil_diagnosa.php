@@ -46,9 +46,8 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
@@ -68,7 +67,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-7 text-center mt-5">
-					<h3 class="section-title text-black mt-4 mb-4">Hasil Konsultasi Diagnosa </h3>
+					<h3 class="section-title text-black mt-4 mb-4">Hasil Konsultasi Penyakit </h3>
 				</div>
 			</div>
 			<div class="bg-white py-4 mb-2">
@@ -78,13 +77,8 @@
 						$dataOld = $this->session->flashdata('oldPost');
 						echo $this->session->flashdata('msgbox'); ?>
 						<!-- #section:elements.form -->
-						<div class="form-group">
-							<div class="col-sm-3 pl-0 mt-0" style="border-bottom: 2px solid #6EBACC;">
-								Data Gejala Pasien:
-							</div>
-						</div>
 						<div class="table-header" style="width: 80%; ">
-							Gejala Ter-Identifikasi (Dijawab Ya)
+							Gejala yang dirasakan oleh pasien:
 						</div>
 						<table class="table table-striped table-bordered" style="width: 80%; height: 50px; ">
 							<tr>
@@ -109,141 +103,40 @@
 								<?php } ?>
 							<?php } ?>
 						</table>
-						<!--
-              <div class="table-header" style="width: 80%; ">
-                                Hasil Diagnosa Terdeteksi
-                            </div>
 
-
-              <table class="table table-striped table-bordered" style="width: 80%; height: 50px; ">
-                <tr>
-                  <?php if (count($diagnosa) > 0) { ?>
-                  <th  align="center">No</th>
-                  <th  align="center">ID Penyakit</th>
-                  <th  align="center">Penyakit</th>
-                  <th  align="center">Solusi</th>
-                  <th  align="center">Gejala Terdeteksi</th>
-                  <?php } else { ?>
-                  <th  align="center">Hasil</th>
-                  <?php } ?>
-                </tr>
-
-
-                <?php if (count($diagnosa) > 0) {
-							$no = 0;
-							foreach ($diagnosa as $row) {
-								$no++;
-								?>
-                <tr>
-                  <td style="padding:10px;"> <?php echo $no; ?> </td>
-                  <td style="padding:10px;"> <?php echo $row->id_penyakit; ?> </td>
-                  <td style="padding:10px;"> <?php echo $row->penyakit; ?> </td>
-                  <td style="padding:10px;"> <?php echo $row->solusi; ?></td>
-                  <td style="padding:10px;"> <?php echo $row->jumlah_gejala; ?> Gejala</td>
-                </tr>
-                <?php
-							}
-						} else { ?>
-                <tr>
-                  <td style="padding:10px;">Anda dinyatakan dalam keadaan <strong>SEHAT</strong>. Hasil diagnosa tidak terdeteksi. Silahkan ulangi diagnosa kembali..</td>
-                </tr>
-                <?php } ?>
-
-              </table>
-              -->
 						<br/>
 						<div>
-							<div>
-								<h3>Hasil Diagnosa : </h3>
-								<p>Hasil setelah dilakukan penghitungan matematis menggunakan metode <i>Dempster
-										Shafer</i>, pasien terdiagnosa terkena gangguan: </p>
-								<ul>
-								</ul>
-								<?php
-								if (count($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']]) == 0) { ?>
-									<li>Tidak Ada</li>
-								<?php } else {
-									$nilaiKombinasi = $data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])][$data['hasil']['max']];
+							<h3>Diagnosa Penyakit Pasien </h3>
+							<p>Berdasarkan data gejala yang Anda rasakan pada gigi Anda, kemungkinan Anda mengalami
+								beberapa penyakit gigi yaitu: </p>
+							<ul>
+							</ul>
+							<?php
+							if (count($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']]) == 0) { ?>
+								<li>Tidak Ada</li>
+							<?php } else {
+								$nilaiKombinasi = $data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])][$data['hasil']['max']];
 
-									foreach ($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']] as $key => $value) {
-										$data_gangguan = $this->m_penyakit->getListPenyakitById($value); ?>
-										<li><?= $data_gangguan->penyakit ?>
-											<?php
-											echo floatval($nilaiKombinasi * 100) . ' %';
-											?> <br>
-											<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>">Solusi
-												Penyakit</a><br></li>
-									<?php }
-								}
-								?>
-							</div>
-							<h3 class="mt-2" style="text-align:center;">Seluruh hasil dari diagnosa bersifat
-								<b>PREDIKSI</b> menggunakan perhitungan metode <b><i>Dempster Shafer</b></i> berdasarkan
-								pengelolaan data dari pakar!</h3>
-
-							<!-- <p>
-                  <h3>Hasil Diagnosa : </h3>
-                  Hasil setelah dilakukan penghitungan matematis menggunakan metode <i>Dempster Shafer</i>, pasien terdiagnosa terkena gangguan: <br>
-                  <?php
-							echo "<strong>" . $datahasil['hasil'] . "</strong>";
-							echo "<p>dengan persentasi nilai densitas sebesar " . $datahasil['densitas'] . "%. </p>";
-
+								foreach ($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']] as $key => $value) {
+									$data_gangguan = $this->m_penyakit->getListPenyakitById($value); ?>
+									<li><?= $data_gangguan->penyakit ?>
+										<?php
+										echo floatval($nilaiKombinasi * 100) . ' %';
+										?> |
+										<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>">Baca Solusi
+											Tindakan</a><br></li>
+								<?php }
+							}
 							?>
-
-
-                </p> -->
 						</div>
-						<!-- <div class="col-sm-3 pl-0 mt-0" style="border-bottom: 2px solid #6EBACC;">
-                            Hasil perhitungan
-                          </div>
-              <table class="table table-striped table-bordered mt-1" style="width: 80%; height: 50px; ">
-                <tr>
-                  <th>No</th>
-                  <th>M</th>
-                  <th>Kode</th>
-                  <th>Nilai</th>
-                </tr>
 
-
-                <?php
-						$no = 0;
-						$hitungan = $this->db->query("select * from analisa where id_pengguna = '" . $id_pengguna . "'")->result();
-						foreach ($hitungan as $row) {
-
-							$no++;
-							?>
-                <tr>
-                  <td style="padding:10px;"> <?php echo $no; ?> </td>
-                  <td style="padding:10px;"> <?php echo $row->M; ?> </td>
-                  <td style="padding:10px;"> <?php if ($row->kode == "teta") {
-								echo "&theta;";
-							} else {
-								echo $row->kode;
-							} ?> </td>
-                  <td style="padding:10px;"> <?php echo number_format($row->nilai, 2, '.', ''); ?> </td>
-                </tr>
-
-
-                <?php } ?>
-
-              </table> -->
-
-						<div class="hr hr-24"></div>
-						<div class="row">
-
-							<div class="col-md-6 ">
-								<a href="<?php echo base_url('diagnosa'); ?>" class="btn btn-xl btn-primary mt-2"><i
-											class="ace-icon fa fa-angle-double-left "></i> Kembali Diagnosa</a>
-							</div>
-							<div class="col-md-6">
-								<form method="post" action="<?php echo base_url('diagnosa/tampil_hitung'); ?>">
-									<input type="hidden" name="data" value='<?= json_encode($data["hasil"]) ?>'>
-									<button class="btn btn-xl btn-warning mt-2" style="margin-left:300px;"><i
-												class="ace-icon fa fa-angle-double-left "></i> Tampil Perhitungan !
-									</button>
-								</form>
-							</div>
-						</div>
+						<br/>
+						<form method="post" action="<?php echo base_url('diagnosa/tampil_hitung'); ?>">
+							<input type="hidden" name="data" value='<?= json_encode($data["hasil"]) ?>'>
+							<button class="btn btn-xl btn-info mt-2"><i
+										class="ace-icon fa fa-angle-double-left "></i> Lihat Perhitungan
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>

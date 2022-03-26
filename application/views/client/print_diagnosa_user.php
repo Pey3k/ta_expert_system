@@ -44,6 +44,7 @@
 					<th>No</th>
 					<th style="text-align:center;">Nama Pasien</th>
 					<th style="text-align:center;">Penyakit</th>
+					<th style="text-align:center;">Persentase</th>
 					<th style="text-align:center;">Tanggal Konsultasi</th>
 
 				</tr>
@@ -60,6 +61,7 @@
 
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->nama_pengguna ?></td>
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->penyakit ?></td>
+						<td style="font-size:10pt;text-align:center;"><?php echo $value->persentase ?> % </td>
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->tglAnalisa ?></td>
 
 					</tr>

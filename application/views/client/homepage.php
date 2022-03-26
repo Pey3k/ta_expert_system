@@ -48,11 +48,11 @@
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
-				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Beranda</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
-				<li class="nav-item"><a href="<?= base_url('profile') ?>" class="nav-link">Tentang Kami</a></li>
+				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
+				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
 				<?php if(empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
 				<?php } else { ?>
@@ -102,9 +102,8 @@
 			<div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
 				<div class="heading-section mb-5">
 					<div class="pl-md-5 ml-md-5 pt-md-5">
-						<span class="subheading mb-2">Welcome to WAOS</span>
-						<h2 class="mb-2" style="font-size: 32px;">Medical specialty concerned with the care of acutely
-							ill hospitalized patients</h2>
+						<span class="subheading mb-2">Tips Kesehatan Gigi</span>
+						<h2 class="mb-2" style="font-size: 32px;">Tip</h2>
 					</div>
 				</div>
 				<div class="pl-md-5 ml-md-5 mb-5">
@@ -228,10 +227,9 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-2">
 			<div class="col-md-8 text-center heading-section ftco-animate">
-				<span class="subheading">Blog</span>
-				<h2 class="mb-4">Recent Blog</h2>
-				<p>Separated they live in. A small river named Duden flows by their place and supplies it with the
-					necessary regelialia. It is a paradisematic country</p>
+				<span class="subheading">Tips dan Trick</span>
+				<h2 class="mb-4">Tips Kesehatan Gigi</h2>
+				<p>Beberapa tips untuk menjaga kesehatan gigi Anda</p>
 			</div>
 		</div>
 		<div class="row">
@@ -331,8 +329,8 @@
 						<li><a href="<?= base_url('') ?>#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
+						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
+						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
 						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a></li>
 						<li><a href="<?= base_url('admin/login') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
 					</ul>

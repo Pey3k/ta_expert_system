@@ -46,9 +46,8 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-							<li><a href="<?= base_url('profile') ?>" class="nav-link">Petunjuk</a></li>
+							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<li><a href="<?= base_url('profile') ?>" class="nav-link">Profile</a></li>
 							<li><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
 						</ul>
@@ -68,7 +67,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-7 text-center mt-5">
-					<h3 class="section-title text-black mt-4 mb-4">Hasil Hitungan Diagnosa </h3>
+					<h3 class="section-title text-black mt-4 mb-4">Hasil Perhitungan Diagnosa Penyakit </h3>
 				</div>
 			</div>
 			<div class="bg-white py-4 mb-2">
@@ -82,7 +81,7 @@
 
 
 							<div class="table-header" style="width: 80%; ">
-								Pilihan Gejala Terpilih :
+								Gejala yang dipilih pasien:
 							</div>
 							<table class="table table-striped table-bordered" style="width: 80%; height: 50px; ">
 								<tr>
@@ -178,7 +177,7 @@
 								<?php } ?>
 							</table>
 							<div class="hr hr-24"></div>
-							<div> Penyakit terindenfitikasi berdasarkan hitungan Metode Dempster Shafer:
+							<div> Penyakit yang teridentifikasi berdasarkan perhitungan Metode Dempster Shafer:
 								<ul>
 								</ul>
 								<?php
@@ -192,17 +191,13 @@
 										<li><?= $data_gangguan->penyakit ?> dengan persentase sebesar
 											<?php
 											echo floatval($nilaiKombinasi * 100) . ' % , diperoleh dari nilai himpunan penyakit yang paling tinggi.';
-											?> <br>
-											<a href="<?= base_url('riwayatpasien'); ?>">Riwayat Konsultasi</a><br>
+											?>
 										</li>
 									<?php }
 								}
 								?>
 							</div>
 
-							<br>
-							<a href="<?php echo base_url('diagnosa'); ?>" class="btn btn-xl btn-primary"><i
-										class="ace-icon fa fa-angle-double-left"></i> Kembali Diagnosa</a>
 						</form>
 					</div>
 				</div>
