@@ -88,7 +88,15 @@
 					<h1 class="mb-4">Senyum Membuat Kesan <br>Yang Abadi</h1>
 					<h3 class="subheading">Kesehatan gigi Anda menjadi yang utama dengan pertolongan medis yang
 						komprehensif dan terjangkau!.</h3>
-					<p><a href="<?= base_url('daftar') ?>" class="btn btn-secondary px-4 py-3 mt-3">Registrasi</a></p>
+					<p>
+						<?php if (empty($this->session->userdata('loginUser'))) { ?>
+							<a href="<?= base_url('daftar') ?>" class="btn btn-secondary px-4 py-3 mt-3">Registrasi</a>
+						<?php } else { ?>
+							<a href="<?= base_url('riwayatpasien') ?>" class="btn btn-secondary px-4 py-3 mt-3">Riwayat
+								Konsultasi</a>
+						<?php } ?>
+
+					</p>
 				</div>
 			</div>
 		</div>
