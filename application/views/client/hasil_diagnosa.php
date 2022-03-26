@@ -123,7 +123,8 @@
 										<?php
 										echo floatval($nilaiKombinasi * 100) . ' %';
 										?> |
-										<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>" target="_blank">Baca Solusi
+										<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>" target="_blank">Baca
+											Solusi
 											Tindakan</a><br></li>
 								<?php }
 							}
@@ -133,8 +134,7 @@
 						<br/>
 						<form method="post" action="<?php echo base_url('diagnosa/tampil_hitung'); ?>">
 							<input type="hidden" name="data" value='<?= json_encode($data["hasil"]) ?>'>
-							<button class="btn btn-xl btn-info mt-2"><i
-										class="ace-icon fa fa-angle-double-left "></i> Lihat Perhitungan
+							<button class="btn btn-xl btn-info mt-2"> Lihat Perhitungan
 							</button>
 						</form>
 					</div>
