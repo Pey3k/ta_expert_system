@@ -49,7 +49,7 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
@@ -83,7 +83,10 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-1.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Informasi Kesehatan Gigi</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<p>Apakah Anda sedang mencari informasi mengenai cara merawat gigi?
+							Apakah Anda tertarik dengan informasi mengenai gaya hidup, informasi tentang plak gigi, dan kerusakan gigi?
+							Kami memiliki yang Anda butuhkan.
+							Dalam halaman ini Anda dapat membaca informasi seputar cara merawat gigi agar tetap sehat dan prima.</p>
 					</div>
 				</div>
 			</div>
@@ -92,7 +95,10 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-2.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Konsultasi Gigi</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<p>Apakah gigi Anda sedang mengalami rasa sakit atau nyeri di bagian tertentu?
+							Mulailah konsultasi dengan kami.
+							Kami dapat membantu Anda dalam mengatasi permasalahan gigi Anda.
+							Dibantu dengan seorang pakar gigi Anda dapat mengetahui jenis penyakit gigi yang sedang dialami.</p>
 					</div>
 				</div>
 			</div>
@@ -101,7 +107,8 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-3.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Monitoring Kesehatan</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<p>WAOS akan menyediakan riwayat konsultasi dari Anda setelah melakukan konsultasi mengenai penyakit gigi yang sedang Anda alami.
+							Solusi mengenai penyakit gigi yang Anda alami diperoleh melalui seorang pakar.</p>
 					</div>
 				</div>
 			</div>
@@ -124,7 +131,7 @@
 					<h2 class="ftco-heading-2">Links</h2>
 					<ul class="list-unstyled">
 						<li><a href="<?= base_url('') ?>#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
+						<li><a href="<?= base_url('/#penyakit-gigi') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a></li>
 						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
 						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>

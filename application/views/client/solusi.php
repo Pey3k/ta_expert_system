@@ -48,7 +48,7 @@
 
 					<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 						<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+						<li><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 						<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 						<?php if(empty($this->session->userdata('loginUser'))) { ?>
@@ -90,16 +90,9 @@
 
 					<div class="hr hr-24"></div>
 					<div class="col-sm-12">
-
-
-						<p>
-							<a href="<?= base_url('polahidup/makan') ?>"
-							   class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">Baca
-								Selengkapnya !</a>
-						</p>
-						<p>Silahkan mengisi kuesioner berikut :<a
-									href="https://docs.google.com/forms/d/e/1FAIpQLSfDtDY4Hys9VsPOiGmpP7NhwRLUMRHt68rjxkyyc3Zwi85W2g/viewform?usp=sf_link">
-								<b>klik sebelah sini :) </a></p>
+						<p>Silahkan mengisi kuesioner berikut :
+							<a href="https://docs.google.com/forms/d/e/1FAIpQLSfDtDY4Hys9VsPOiGmpP7NhwRLUMRHt68rjxkyyc3Zwi85W2g/viewform?usp=sf_link">
+								<b> Link Berikut</a></p>
 
 					</div>
 				</div>

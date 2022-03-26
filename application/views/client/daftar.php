@@ -72,7 +72,7 @@
 					<form action="<?= base_url('daftar/register'); ?>" method="post" class="p-5 bg-white">
 						<?= $this->session->flashdata('message'); ?>
 
-						<h2 class="h4 text-black mb-5">Masukan data diri anda :</h2>
+						<h2 class="h4 text-black mb-5">Masukan data diri Anda :</h2>
 
 						<div class="row form-group">
 							<div class="col-md-12">

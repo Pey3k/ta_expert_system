@@ -49,11 +49,11 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
-				<?php if(empty($this->session->userdata('loginUser'))) { ?>
+				<?php if (empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
 				<?php } else { ?>
 					<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
@@ -64,7 +64,8 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');"
+		 data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -83,16 +84,9 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-1.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Informasi Seputar Gigi</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 d-flex services align-self-stretch p-4 ftco-animate">
-				<div class="media block-6 d-block">
-					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-2.jpg);"></div>
-					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Daftarkan Diri Anda</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<p>WAOS merupakan aplikasi yang memberikan Anda informasi seputar gigi.
+							Informasi seputar gigi dapat Anda lihat pada halaman gigi secara lengkap beserta
+							dengan informasi tentang bagaimana merawat kesehatan gigi. </p>
 					</div>
 				</div>
 			</div>
@@ -100,8 +94,9 @@
 				<div class="media block-6 d-block">
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-3.jpg);"></div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Akses untuk Konsultasi</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<h3 class="heading">Daftarkan Diri Anda</h3>
+						<p>Untuk konsultasi dengan pakar Anda harus melakukan pendaftaran pada sistem pakar WAOS.
+							Anda dapat mendaftar dengan cara membuat akun baru yang ada pada halaman login.</p>
 					</div>
 				</div>
 			</div>
@@ -110,8 +105,9 @@
 				<div class="media block-6 d-block">
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-4.jpg);"></div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Konsultasi dengan Pakar</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<h3 class="heading">Akses untuk Konsultasi</h3>
+						<p>Apabila Anda sudah mendaftarkan diri Anda pada sistem pakar WAOS Anda dapat melakukan
+							konsultasi terkait dengan penyakit gigi yang sedang Anda alami. </p>
 					</div>
 				</div>
 			</div>
@@ -119,8 +115,25 @@
 				<div class="media block-6 d-block">
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-5.jpg);"></div>
 					<div class="media-body p-2 mt-3">
+						<h3 class="heading">Konsultasi dengan Pakar</h3>
+						<p>Anda bisa melakukan konsultasi dengan pakar terkait gejala yang Anda rasakan pada gigi Anda.
+							Setelah Anda melakukan login Anda dapat melakukan konsultasi dengan cara klik pada
+							konsultasi.
+							Anda akan diberi beberapa pertanyaan dari sistem yang bersumber dari pakar terkait gejala
+							gigi yang Anda rasakan.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex services align-self-stretch p-4 ftco-animate">
+				<div class="media block-6 d-block">
+					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-2.jpg);"></div>
+					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Hasil Konsultasi Penyakit</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<p>Setelah Anda melakukan konsultasi Anda dapat melihat hasil konsultasi penyakit gigi yang Anda
+							alami
+							beserta dengan persentase penyakit gigi yang sedang Anda alami.
+							Pada halaman konsultasi akan berisi informasi penyakit beserta dengan solusi tindakan.
+							Data penyakit dan solusi merupakan data yang diperoleh dari pakar gigi.</p>
 					</div>
 				</div>
 			</div>
@@ -129,8 +142,9 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-6.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Riwayat Konsultasi</h3>
-						<p>Anda dapat melihat riwaya konsultasi penyakit gigi melalui profil akun Anda dengan cara klik pada akun Anda, kemudian
-						klik pada bagian Riwayat Konsultasi.</p>
+						<p>Anda dapat melihat riwaya konsultasi penyakit gigi melalui profil akun Anda dengan cara klik
+							pada akun Anda, kemudian
+							klik pada bagian Riwayat Konsultasi.</p>
 					</div>
 				</div>
 			</div>
@@ -151,13 +165,20 @@
 				<div class="ftco-footer-widget mb-5 ml-md-4">
 					<h2 class="ftco-heading-2">Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="<?= base_url('') ?>#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a></li>
-						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
-						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a></li>
-						<li><a href="<?= base_url('admin/login') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
+						<li><a href="<?= base_url('') ?>#"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit
+								Gigi</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>
+						</li>
+						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a>
+						</li>
+						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang
+								Kami</a></li>
+						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a>
+						</li>
+						<li><a href="<?= base_url('admin/login') ?>"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
 					</ul>
 				</div>
 			</div>

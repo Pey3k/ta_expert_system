@@ -223,7 +223,7 @@ class Diagnosa extends CI_Controller
 
 		if (count($jawaban) <= 1) {
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-			Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
 
 		} else {
@@ -310,7 +310,7 @@ class Diagnosa extends CI_Controller
 		}
 		if (count($jawaban) <= 1) {
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-					Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
+					Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
 		}
 
@@ -495,7 +495,7 @@ class Diagnosa extends CI_Controller
 		if (count($jawaban) <= 1) {
 			// Kondisi jika jawaban bernilai null yaitu tidak dipilih satu pun
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-			Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
 		}
 
@@ -931,7 +931,7 @@ class Diagnosa extends CI_Controller
 // 	if (count($jawaban) == 0) {
 // 		// jika tidak ada jawaban yang diinput
 // 		$this->session->set_flashdata('message', '<div style="font-size:15px" class="alert alert-danger" role="alert">
-// 		Harap memasukan data gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.   Terimakasih.</div>');
+// 		Harap memasukan data gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.   Terimakasih.</div>');
 // 		redirect('diagnosa');
 // 	}
 // 	foreach ($query as $data){
@@ -1125,7 +1125,7 @@ class Diagnosa extends CI_Controller
 //
 //
 // 	if($i==0){
-// 		$hasil_diagnosa='Tidak ada gejala dipilih, anda baik baik saja';
+// 		$hasil_diagnosa='Tidak ada gejala dipilih, Anda baik baik saja';
 // 		$hasil['densitas']=0;
 // 	}else{
 // 		$hasil= $this->m_diagnosa->m_max($id_pengguna);
@@ -1174,7 +1174,7 @@ class Diagnosa extends CI_Controller
 // 	}
 // 	if (count($jawaban) == 0 || count($jawaban) == 1) {
 // 		$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-// 		Harap memasukan data gejala sebanyak minimal 2 gejala yang anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
+// 		Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 // 		redirect('diagnosa');
 // 	}
 //

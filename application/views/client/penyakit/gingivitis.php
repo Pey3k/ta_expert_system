@@ -45,7 +45,7 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<?php if(empty($this->session->userdata('loginUser'))) { ?>
@@ -72,8 +72,8 @@
 		<div class="container">
 			<div class="row mb-1 justify-content-center" data-aos="fade" data-aos-delay="150">
 				<div class="col-md-12 text-center">
-					<h3 class="section-sub-title mt-4">Hepatitis</h3>
-					<h2 class="section-title mt-1">Penyakit Hepatitis</h2>
+					<h3 class="section-sub-title mt-4">Gingvitis</h3>
+					<h2 class="section-title mt-1">Penyakit Gingvitis</h2>
 					<p>
 						Hepatitis merupakan satu dari ancaman kesehatan yang paling sering mengancam kesehatan individu.
 						Riset Kesehatan Dasar tahun 2014 mendapatkan data terdapat sekitar 28 juta penduduk Indonesia

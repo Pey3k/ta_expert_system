@@ -49,11 +49,11 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Beranda</a></li>
-				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
-				<?php if(empty($this->session->userdata('loginUser'))) { ?>
+				<?php if (empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
 				<?php } else { ?>
 					<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
@@ -85,7 +85,8 @@
 			<div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
 				<div class="col-md-6 text ftco-animate">
 					<h1 class="mb-4">Senyum Membuat Kesan <br>Yang Abadi</h1>
-					<h3 class="subheading">Kesehatan gigi Anda menjadi yang utama dengan pertolongan medis yang komprehensif dan terjangkau!.</h3>
+					<h3 class="subheading">Kesehatan gigi Anda menjadi yang utama dengan pertolongan medis yang
+						komprehensif dan terjangkau!.</h3>
 					<p><a href="<?= base_url('daftar') ?>" class="btn btn-secondary px-4 py-3 mt-3">Registrasi</a></p>
 				</div>
 			</div>
@@ -102,8 +103,8 @@
 			<div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
 				<div class="heading-section mb-5">
 					<div class="pl-md-5 ml-md-5 pt-md-5">
-						<span class="subheading mb-2">Tips Kesehatan Gigi</span>
-						<h2 class="mb-2" style="font-size: 32px;">Tip</h2>
+						<span class="subheading mb-2">Selamat Datang di WAOS</span>
+						<h2 class="mb-2" style="font-size: 32px;">Konsultasi Permasalahan Gigi Anda bersama Kami</h2>
 					</div>
 				</div>
 				<div class="pl-md-5 ml-md-5 mb-5">
@@ -117,7 +118,7 @@
 					<div class="founder d-flex align-items-center mt-5">
 						<div class="img" style="background-image: url(assets/frontend/images/doc-1.jpg);"></div>
 						<div class="text pl-3">
-							<h3 class="mb-0">Dr. Paul Foster</h3>
+							<h3 class="mb-0">Agit Erfan</h3>
 							<span class="position">CEO, Founder</span>
 						</div>
 					</div>
@@ -138,85 +139,103 @@
 				<p></p>
 			</div>
 			<div class="col-md-3 d-flex align-items-center">
-				<p class="mb-0"><a href="<?= base_url('diagnosa') ?>" class="btn btn-secondary px-4 py-3">Konsultasi Gratis</a></p>
+				<p class="mb-0"><a href="<?= base_url('diagnosa') ?>" class="btn btn-secondary px-4 py-3">Konsultasi
+						Gratis</a></p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="ftco-section">
+<section class="ftco-section" id="penyakit-gigi">
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-2">
 			<div class="col-md-8 text-center heading-section ftco-animate">
-				<span class="subheading">Pricing</span>
-				<h2 class="mb-4">Our Pricing</h2>
-				<p>Separated they live in. A small river named Duden flows by their place and supplies it with the
-					necessary regelialia. It is a paradisematic country</p>
+				<span class="subheading">Penyakit</span>
+				<h2 class="mb-4">Penyakit Gigi</h2>
+				<p>Beberapa penyakit gigi yang pernah menyerang pasien kami</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3 ftco-animate">
+			<div class="col-md-4 services p-4 ftco-animate">
 				<div class="pricing-entry pb-5 text-center">
 					<div>
-						<h3 class="mb-4">Basic</h3>
-						<p><span class="price">$24.50</span> <span class="per">/ session</span></p>
+						<h3 class="mb-4">Karies Gigi</h3>
 					</div>
-					<ul>
-						<li>Diagnostic Services</li>
-						<li>Professional Consultation</li>
-						<li>Tooth Implants</li>
-						<li>Surgical Extractions</li>
-						<li>Teeth Whitening</li>
-					</ul>
-					<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-5.jpg');"></div>
+					<div>
+						Karies gigi adalah kondisi rusaknya struktur dan lapisan gigi yang terjadi secara bertahap ...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/karies') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 				</div>
 			</div>
-			<div class="col-md-3 ftco-animate">
+			<div class="col-md-4 services p-4 ftco-animate">
 				<div class="pricing-entry pb-5 text-center">
 					<div>
-						<h3 class="mb-4">Standard</h3>
-						<p><span class="price">$34.50</span> <span class="per">/ session</span></p>
+						<h3 class="mb-4">Pulpitis</h3>
 					</div>
-					<ul>
-						<li>Diagnostic Services</li>
-						<li>Professional Consultation</li>
-						<li>Tooth Implants</li>
-						<li>Surgical Extractions</li>
-						<li>Teeth Whitening</li>
-					</ul>
-					<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-1.jpg');"></div>
+					<div>
+						Pulpitis adalah penyebab utama dari sakit gigi dan tanggalnya gigi pada orang-orang yang lebih
+						muda ...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/pulpitis') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 				</div>
 			</div>
-			<div class="col-md-3 ftco-animate">
+			<div class="col-md-4 services p-4 ftco-animate">
 				<div class="pricing-entry active pb-5 text-center">
 					<div>
-						<h3 class="mb-4">Premium</h3>
-						<p><span class="price">$54.50</span> <span class="per">/ session</span></p>
+						<h3 class="mb-4">Gingivitis</h3>
 					</div>
-					<ul>
-						<li>Diagnostic Services</li>
-						<li>Professional Consultation</li>
-						<li>Tooth Implants</li>
-						<li>Surgical Extractions</li>
-						<li>Teeth Whitening</li>
-					</ul>
-					<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-2.jpg');"></div>
+					<div>
+						Gingivitis merupakan suatu inflamasi atau peradangan yang mengenai jaringan lunak di sekitar
+						gigi atau jaringan gingiva...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/gingivitis') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 				</div>
 			</div>
-			<div class="col-md-3 ftco-animate">
+			<div class="col-md-4 services p-4 ftco-animate">
 				<div class="pricing-entry pb-5 text-center">
 					<div>
-						<h3 class="mb-4">Platinum</h3>
-						<p><span class="price">$89.50</span> <span class="per">/ session</span></p>
+						<h3 class="mb-4">Abses Gusi</h3>
 					</div>
-					<ul>
-						<li>Diagnostic Services</li>
-						<li>Professional Consultation</li>
-						<li>Tooth Implants</li>
-						<li>Surgical Extractions</li>
-						<li>Teeth Whitening</li>
-					</ul>
-					<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+					<div>
+						Abses gusi berawal dari infeksi pada mulut yang dibiarkan dan akhirnya membentuk kantung atau
+						benjolan berisi nanah pada gusi ...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/absesgusi') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
+				</div>
+			</div>
+			<div class="col-md-4 services p-4 ftco-animate">
+				<div class="pricing-entry pb-5 text-center">
+					<div>
+						<h3 class="mb-4">Impaksi Gigi</h3>
+					</div>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-3.jpg');"></div>
+					<div>
+						Impaksi gigi adalah suatu keadaan dimana benih gigi atau calon gigi yang akan tumbuh terhalang
+						jalan pertumbuhannya ...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/impaksi') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
+				</div>
+			</div>
+			<div class="col-md-4 services p-4 ftco-animate">
+				<div class="pricing-entry active pb-5 text-center">
+					<div>
+						<h3 class="mb-4">Periodontitis</h3>
+					</div>
+					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-7.jpg');"></div>
+					<div>
+						Periodontitis adalah infeksi gusi yang merusak gigi, jaringan lunak, dan tulang penyangga
+						gigi. Kondisi ini harus segera diobati ...
+					</div>
+					<p class="button text-center"><a href="<?= base_url('penyakit/periondontitis') ?>"
+													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 				</div>
 			</div>
 		</div>
@@ -236,23 +255,15 @@
 			<div class="col-md-4 ftco-animate">
 				<div class="blog-entry">
 					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('images/image_1.jpg');">
-						<div class="meta-date text-center p-2">
-							<span class="day">18</span>
-							<span class="mos">September</span>
-							<span class="yr">2019</span>
-						</div>
+					   style="background-image: url('assets/frontend/images/image_1.jpg');">
 					</a>
 					<div class="text bg-white p-4">
 						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 							there live the blind texts.</p>
 						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span
+							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
 											class="ion-ios-arrow-round-forward"></span></a></p>
-							<p class="ml-auto mb-0">
-								<a href="#" class="mr-2">Admin</a>
-								<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 							</p>
 						</div>
 					</div>
@@ -261,23 +272,15 @@
 			<div class="col-md-4 ftco-animate">
 				<div class="blog-entry">
 					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('images/image_2.jpg');">
-						<div class="meta-date text-center p-2">
-							<span class="day">18</span>
-							<span class="mos">September</span>
-							<span class="yr">2019</span>
-						</div>
+					   style="background-image: url('assets/frontend/images/image_2.jpg');">
 					</a>
 					<div class="text bg-white p-4">
 						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 							there live the blind texts.</p>
 						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span
+							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
 											class="ion-ios-arrow-round-forward"></span></a></p>
-							<p class="ml-auto mb-0">
-								<a href="#" class="mr-2">Admin</a>
-								<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 							</p>
 						</div>
 					</div>
@@ -286,23 +289,15 @@
 			<div class="col-md-4 ftco-animate">
 				<div class="blog-entry">
 					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('images/image_3.jpg');">
-						<div class="meta-date text-center p-2">
-							<span class="day">18</span>
-							<span class="mos">September</span>
-							<span class="yr">2019</span>
-						</div>
+					   style="background-image: url('assets/frontend/images/image_3.jpg');">
 					</a>
 					<div class="text bg-white p-4">
 						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 							there live the blind texts.</p>
 						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span
+							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
 											class="ion-ios-arrow-round-forward"></span></a></p>
-							<p class="ml-auto mb-0">
-								<a href="#" class="mr-2">Admin</a>
-								<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 							</p>
 						</div>
 					</div>
@@ -326,13 +321,20 @@
 				<div class="ftco-footer-widget mb-5 ml-md-4">
 					<h2 class="ftco-heading-2">Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="<?= base_url('') ?>#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a></li>
-						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
-						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a></li>
-						<li><a href="<?= base_url('admin/login') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
+						<li><a href="<?= base_url('') ?>#"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit
+								Gigi</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>
+						</li>
+						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a>
+						</li>
+						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang
+								Kami</a></li>
+						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a>
+						</li>
+						<li><a href="<?= base_url('admin/login') ?>"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
 					</ul>
 				</div>
 			</div>

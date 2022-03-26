@@ -45,7 +45,7 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<?php if(empty($this->session->userdata('loginUser'))) { ?>
@@ -68,43 +68,45 @@
 
 	</header>
 
-	<div class="site-section bg-light" id="dispepsia-section">
+	<div class="site-section bg-light" id="pola-hidup-section">
 		<div class="container">
 			<div class="row mb-1 justify-content-center" data-aos="fade" data-aos-delay="150">
 				<div class="col-md-12 text-center">
-					<h3 class="section-sub-title mt-4">Dispepsia</h3>
-					<h2 class="section-title mt-1">Penyakit Dispepsia</h2>
-					<p> Dispepsia merupakan suatu sindrom yang menimbulkan ketidaknyamanan perut bagian atas.
-						Dispepsia dapat terjadi pada semua golongan usia terutama diakibatkan oleh pola hidup yang
-						tidak benar. Gejala yang umum terjadi seperti perasaan panas pada bagian perut dan terasa
-						kembung.
-						Meskipun bukan suatu hal mengerikan, namun bukan berarti dispepsia dapat disepelekan.</p>
+					<h3 class="section-sub-title mt-4">Periondontitis</h3>
+					<h2 class="section-title mt-1">Penyakit Periondontitis</h2>
+					<p>Asam urat merupakan sebuah komponen dalam tubuh yang secara alami terbentuk
+						dalam tubuh untuk menguarai zat purin dalam makanan. Manusia memiliki kondisi normal
+						asam urat tersebut tidak terpakai maka akan secara langsung dibuang tubuh melalui urine dan
+						feses.
+						Namun penyakit asam urat terjadi karena kelebihan asam urat yang terproduksi dalam tubuh
+						sehingga ginjal
+						tidak mampu mengatur pembuangan zat sisa dalam tubuh.</p>
 				</div>
 			</div>
 
 			<div class="bg-white py-4 mb-4">
 				<div class="row mx-4 my-4 product-item-2 align-items-start">
-					<div class="col-md-6 mb-5 mb-md-0">
+					<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 							<div class="carousel-inner" data-aos="fade">
 								<div class="carousel-item active">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar1.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/asamurat/gambar1.jpg'); ?>"
 										 alt="First slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar3.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/asamurat/gambar3.jpg'); ?>"
 										 alt="Second slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar4.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/asamurat/gambar2.jpg'); ?>"
 										 alt="Third slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar2.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/asamurat/gambar4.jpg'); ?>"
 										 alt="Fourth slide">
 								</div>
 							</div>
@@ -121,114 +123,97 @@
 						</div>
 					</div>
 
-					<div class="col-md-5 ml-auto product-title-wrap" data-aos="fade">
-						<h3 class="text-black mb-2 font-weight-bold">Bahaya Penyakit Dispepsia</h3>
+					<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1" data-aos="fade">
+						<h3 class="text-black mb-2 font-weight-bold">Bahaya Penyakit Asam Urat</h3>
 						<p class="mb-4" style="text-align:justify; font-size:16px;">
-							Penakit dispepsia atau nyeri perut sering diarasakan pada saat makan dan setelah makan.
-							Ketidaknyamanan tersebut dimulai saat makan menyebabkan lambung menghasilkan asam. Lambung
-							yang
-							menghasilkan jumlah asam tidak sewajarnya akan menyebabkan iritasi pada dinding lambung.
-							Bahkan bisa sampai merasakan
-							pada kerongkongan.
-						</p>
-						<p class="mb-4" style="text-align:justify; font-size:16px;">Kelebihan produksi asam lambung yang
-							berlebih dapat menyakiti dinding lambung sehingga dapat melukai dinding lambung tersebut.
-							Luka tersebut dapat menimbulkan peradangan lambung. Terdapat beberapa macam penyakit
-							pencernaan terkait sindrom dispepsia tersebut
-							antara lain GERD (Penyakit asam lambung), gangguan pankreas, tukak lambung bahkan sampai
-							kanker lambung. </p>
+							Kelebihan kadar asam urat dalam tubuh dapat mempengaruhi darah dalam tubuh.
+							Hal tersebut dapat menyebabkan terbentuknya kristal pada pada sendi hingga menimbulkan
+							penyakit asam urat. Kristal tersebut dapat menyebabkan kondisi berbahaya seperti kerusakan
+							sendi.
+							Selain menyebabkan kerusakan sendi, penyakit asam urat dapat menjalar hingga perusakan organ
+							ginjal dalam tubuh.</p>
+						<p class="mb-4" style="text-align:justify; font-size:16px;">
+							Bahaya dari asam urat dapat terjadi pada remaja yang tidak memperhatikan pola
+							hidup mereka. Beragam penyakit yang dapat diakibatkan oleh asam urat antara
+							lain kerusakan sendi, tophi, hingga batu ginjal. Penumpukan kristal padat di tubuh
+							menyebabkan benjolan kecil pada tubuh biasanya pada ibu jari kaki, siku, lengan, tumit
+							bahkan
+							pergelangan kaki. Benjolan tersebut dapat membengkak dan menyakitkan. </p>
 						<hr>
 						<p>
-							<a href="#faktor-dispepsia-section"
+							<a href="#faktor-asamurat-section"
 							   class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block main-menu js-clone-nav ">Baca
-								Faktor Penyakit Dispepsia !</a>
+								Faktor Penyakit Asam Urat !</a>
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="bg-white py-4 mb-4" id="faktor-dispepsia-section">
+			<!-- 3 -->
+
+			<div class="bg-white py-4 mb-4" id="faktor-asamurat-section">
 				<div class="col-12 text-center" data-aos="fade" data-aos-delay="100">
-					<h2 class="section-title mb-5">Faktor Penyakit Dispepsia</h2>
+					<h2 class="section-title mb-5">Faktor Penyakit Asam Urat</h2>
 				</div>
 
 				<div class="row">
-					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
+					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
 						<div class="person text-center">
-							<img src="<?= base_url('assets/images/penyakit/dispepsia/faktor1.jpg'); ?>" alt="Image"
+							<img src="<?= base_url('assets/images/penyakit/asamurat/faktor1.jpg'); ?>" alt="Image"
 								 class="img-fluid img-thumbnail rounded w-75 mb-3">
-							<h2 class="text-black font-weight-bold">Alkohol</h2>
+							<h2 class="text-black font-weight-bold">Kelebihan Zat Purin</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Kandungan alkohol akan memiliki efek panas pada perut terutama bagian atas.
-								Efek tersebut disebabkan oleh zat yang terkandung dalam alkohol sehingga memicu
-								kandungan gas
-								dalam lambung. Jika kandungan gas tersebut tidak terkendali rasa panas akan terasa pada
-								bagian perut hingga kerongkongan.
-								.</p>
+								Zat purin adalah sebuah kandungan dalam makanan baik itu hewan maupun tumbuhan.
+								Purin merupakan senyawa kimia dalam tubuh yang menghasilkan asam urat. Kelebihan zat
+								purin
+								justru menyebabkan penimbunan pada sendi. Makanan yang memiliki kadar purin tinggi
+								antara lain
+								jeroan, seafood dan kacang - kacangan.Kurangi konsumsi zat makanan yang mengandung purin
+								untuk menjauhi pemecahan asam urat yang berlebihan.</p>
 							<hr>
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
 						<div class="person text-center">
-							<img src="<?= base_url('assets/images/penyakit/dispepsia/faktor2.jpg'); ?>" alt="Image"
+							<img src="<?= base_url('assets/images/penyakit/asamurat/faktor2.jpg'); ?>" alt="Image"
 								 class="img-fluid img-thumbnail rounded w-75 mb-3">
-							<h2 class="text-black font-weight-bold">Kafein</h2>
+							<h2 class="text-black font-weight-bold">Gula</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Kafein dapat menjadi sebuah stimulan bagi tubuh dari rasa lelah , justru memiliki
-								efek yang positif bagi tubuh. Namun konsumsi kafein berlebih apalagi bagi mereka
-								yang memiliki kelainan pada lambung justru memicu gejala dispepsia. Kandungan kafein
-								yang berlebih justru memicu dispepsia itu sendiri yang dapat melukai organ lambung.
+								Terdapat berbagai macam jenis gula yang sering kita konsumsi salah satunya adalah
+								fruktosa. Fruktosa merupakan gula yang terdapat
+								dalam buah, namun terdapat pula kadungan gula buatandari sirup jagung dengan kandungan
+								fruktosa sekitar 50%.
+								Penelitian CDC menghasilkan fakta konsumsi fruktosa tersebut akan mempercepat pemecahan
+								purin menjadi asam urat.
 							</p>
 							<hr>
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
 						<div class="person text-center">
 							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/dispepsia/faktor3.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Kecemasan</h2>
+								 src="<?= base_url('assets/images/penyakit/asamurat/faktor3.jpg'); ?>" alt="Image">
+							<h2 class="text-black font-weight-bold">Tidak Olahraga</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Pada orang tertentu
-								kecemasan berlebih justru memicu kadungan zat dalam lambung yang meningkat. Asam lambung
-								yang meningkat justru
-								akan menyebabkan gangguan dispepsia pada tubuh seseorang. Meskipun terdengar sepele
-								namun beberapa khasus penyakit dispepsia disebabkan oleh pola pikir orang itu sendiri.
-
-								. </p>
-							<hr>
-
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-						<div class="person text-center">
-							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/dispepsia/faktor4.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Pola Makan</h2>
-							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Pola makan yang salah pada individu menyebabkan asupan gizi yang masuk kedalam tubuh
-								tidak sesuai.
-								Porsi makan seseorang juga perlu diperhatikan terutama pada penderi dispesia.
-								Kecenderungan memakan makanan dalam porsi
-								besar sekali adalah hal yang salah. Seharusnya konsumsi makan porsi kecil dengan waktu
-								yang rutin </p>
+								Sendi dalam tubuh memerlukan pergerakan secara rutin untuk menjauhi berbagai penyakit.
+								Olahraga menjadi
+								salah satu sarana untuk menurunkan kadar asam urat pada tubuh terutama pada persendian.
+								Olahraga yang dilakukan
+								juga bukan sembarang olahraga. Jenis olahraga tersebut adalah olahraga
+								yang cenderung menyababkan sendi lebih aktif seperti bulu tangkis, berenang dan
+								jogging.</p>
 							<hr>
 
 						</div>
 					</div>
 				</div>
-				<br>
-
-
 			</div>
 
 
 		</div>
 	</div>
-
-	<!-- Faktor Obesitas -->
 
 
 	<!-- .site-wrap -->
@@ -252,4 +237,5 @@
 
 </body>
 </html>
+
 

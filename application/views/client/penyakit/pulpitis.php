@@ -45,7 +45,7 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<?php if(empty($this->session->userdata('loginUser'))) { ?>
@@ -68,42 +68,43 @@
 
 	</header>
 
-	<div class="site-section bg-light" id="obesitas-section">
+	<div class="site-section bg-light" id="pola-hidup-section">
 		<div class="container">
 			<div class="row mb-1 justify-content-center" data-aos="fade" data-aos-delay="150">
 				<div class="col-md-12 text-center">
-					<h3 class="section-sub-title mt-4">Obesity</h3>
-					<h2 class="section-title mt-1">Penyakit Obesitas</h2>
-					<p>Penyakit Obesitas adalah sebuah kondisi penggemukan pada tubuh yang diakibatkan oleh penumpukan
-						lemak yang berlebih dalam tubuh. Penumpukan lemak tersebut terjadi karena asupan makanan dalam
-						tubuh yaitu kalori terlalu berlebih dibanding aktivitas pembakaran kalori tersebut, sehingga
-						kalori tersebut berlebih dan menumpuk dalam bentuk lemak.</p>
+					<h3 class="section-sub-title mt-4">Pulpitis</h3>
+					<h2 class="section-title mt-1">Penyakit Pulpitis</h2>
+					<p>Infeksi Saluran Pernapasan Akut merupakan penyakit yang dialami oleh banyak orang. Infeksi ini
+						merupakan
+						jenis penyakit yang menyebabkan gangguan pada pernapasan seseorang. ISPA dapat terjadi kapan
+						saja terutama padat musim hujan.
+						Penyakit ISPA dapat menjadi parah jika tidak segera diperiksa dan diobati.</p>
 				</div>
 			</div>
 
 			<div class="bg-white py-4 mb-4">
 				<div class="row mx-4 my-4 product-item-2 align-items-start">
-					<div class="col-md-6 mb-5 mb-md-0">
+					<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 							<div class="carousel-inner" data-aos="fade">
 								<div class="carousel-item active">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/obesitas/gambar1.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/ispa/gambar4.jpg'); ?>"
 										 alt="First slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/obesitas/gambar3.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/ispa/gambar1.jpg'); ?>"
 										 alt="Second slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/obesitas/gambar2.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/ispa/gambar2.jpg'); ?>"
 										 alt="Third slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/obesitas/gambar4.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/ispa/gambar3.jpg'); ?>"
 										 alt="Fourth slide">
 								</div>
 							</div>
@@ -120,60 +121,66 @@
 						</div>
 					</div>
 
-					<div class="col-md-5 ml-auto product-title-wrap" data-aos="fade">
-						<h3 class="text-black mb-2 font-weight-bold">Bahaya Penyakit Obesitas</h3>
-						<p class="mb-4" style="text-align:justify; font-size:16px;">Obesitas bukanlah sebuah penyakit
-							yang dapat disepelekan, banyak sekali bahaya dari penyakit obesitas itu sendiri seperti
-							meningkatkan risiko penyakit. Timbunan lemak yang berlebih dalam tubuh
-							khususnya daerah perut menambah risiko gangguan kesehatan yang serius seperti diabetes,
-							jantung , kanker dan komplikasi.</p>
-						<p class="mb-4" style="text-align:justify; font-size:16px;">Penyakit tersebut disebabkan oleh
-							hal sepele yang menyebabkan obesitas dan akan ke tahap penyakit bahaya jika tidak segera ada
-							perubahan. Terdapat beberapa cara untuk mengatasi obesitas yang paling utama
-							adalah mengukur apakah anda tergolong penderita obesitas dengan mengukur Body Mass
-							Index. </p>
+					<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1" data-aos="fade">
+						<h3 class="text-black mb-2 font-weight-bold">Bahaya Infeksi Saluran Pernapasan Akut</h3>
+						<p class="mb-4" style="text-align:justify; font-size:16px;">
+							Infeksi Saluran Pernapasan Akut (ISPA) disebabkan oleh serangan langsung terhadap penapasan
+							seseorang terutama melalui mulu dan hidung. Penyebab utama dari ISPA adalah virus atau
+							bakteri.
+							Virus dan bakteri yang sering menyerang penderita antara lain virus influenza, adenovirus
+							dan antivirals. ISPA yang tidak segera ditangani akan menyebabkan penyakit berbahaya.
+						<p class="mb-4" style="text-align:justify; font-size:16px;">
+							Infeksi tersebut dapat menyebabkan bronkitis hingga akut. Bronkitis merupakan infeksi pada
+							saluran pernapasan akut yang menyebabkan iritasi pada saluran udara yang menuju paru - paru.
+							Bronkitis awalnya
+							seperti penyakit ISPA biasanya di awali dengan gejala - gejala seperti batuk, sesak napas
+							hingga menyebabkan daya tahan hubung yang melemah.</p>
 						<hr>
 						<p>
-							<a href="#faktor-obesitas-section"
+							<a href="#faktor-ispa-section"
 							   class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block main-menu js-clone-nav ">Baca
-								Faktor Penyakit Obesitas !</a>
+								Faktor Infeksi Saluran Pernapasan Akut !</a>
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="bg-white py-4 mb-4" id="faktor-obesitas-section">
+			<!-- 3 -->
+
+			<div class="bg-white py-4 mb-4" id="faktor-ispa-section">
 				<div class="col-12 text-center" data-aos="fade" data-aos-delay="100">
-					<h2 class="section-title mb-5">Faktor Penyakit Obesitas</h2>
+					<h2 class="section-title mb-5">Faktor Infeksi Saluran Pernapasan </h2>
 				</div>
 
 				<div class="row">
 					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
 						<div class="person text-center">
-							<img src="<?= base_url('assets/images/penyakit/obesitas/makan.jpg'); ?>" alt="Image"
+							<img src="<?= base_url('assets/images/penyakit/ispa/faktor1.jpg'); ?>" alt="Image"
 								 class="img-fluid img-thumbnail rounded w-75 mb-3">
-							<h2 class="text-black font-weight-bold">Pola Makan Buruk</h2>
+							<h2 class="text-black font-weight-bold">Virus dan Bakteri</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Penerapan pola makan yang buruk dapat menyebabkan obesitas dan kelebihan
-								asupan lemak pada tubuh. Pola makan buruk itu memiliki kecenderungan mengonsumsi
-								makanan yang tinggi kalori dan lemak seperti Junk Food, soda dan makanan cepat saji
-								lainnya.
-								Keseimbangan pola makan harus diimbangi seperti konsumsi buah dan sayur berserat.</p>
+								Virus dan bakteri merupakan faktor utama dari Infeksi Saluran Pernapasa Akut (ISPA).
+								Penyebaran virus dan bakteri tersebut di sebarkan oleh penderita
+								melalui udara. Terdapat berbagai virus dan bakteri yang berbahaya
+								seperti influenza. Selain melalui udara, virus dan bakter tersebut dapat disebarkan
+								melalui
+								cairan seperti air liur, maka sangat perlu untuk menjaga kebersihan lingkungan dan
+								tubuh. </p>
 							<hr>
 						</div>
 					</div>
 
 					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
 						<div class="person text-center">
-							<img src="<?= base_url('assets/images/penyakit/obesitas/malas.jpg'); ?>" alt="Image"
+							<img src="<?= base_url('assets/images/penyakit/ispa/faktor2.jpg'); ?>" alt="Image"
 								 class="img-fluid img-thumbnail rounded w-75 mb-3">
-							<h2 class="text-black font-weight-bold">Malas Bergerak</h2>
+							<h2 class="text-black font-weight-bold">Bersin</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Tubuh yang malas bergerak dapat menyebabkan penimbunan lemak dikarena
-								tidak ada pembakaran lemak yang dilakukan oleh tubuh. Lemak dalam tubuh
-								perlu diolah dan dipecah menjadi energi, namun kemalasan untuk bergerak
-								justru menyebabkan penimbunan lemak terhadap tubuh. Tubuh memerlukan metabolisme
-								yang seimbang dapat dilakukan dengan aktivitas fisik. </p>
+								Bersin menjadi faktor penyabab tersebarnya virus pembawa Infeksi Saluran Pernapasan Akut
+								(ISPA). Virus dan bakteri yang tersebar melalui bersin dapat mudah menyebar karena udara
+								disekitar, apalagi udara yang lembab memudahkan masuk ke tubuh. Penyebaran virus dan
+								bakteri tersebut dari orang ke orang dan dapat menyebar lebih dari satu orang, sehingga
+								penyebaran relatif cepat dan bahaya.</p>
 							<hr>
 						</div>
 					</div>
@@ -181,65 +188,14 @@
 					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
 						<div class="person text-center">
 							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/obesitas/genetik.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Faktor Genetik</h2>
+								 src="<?= base_url('assets/images/penyakit/ispa/faktor3.jpg'); ?>" alt="Image">
+							<h2 class="text-black font-weight-bold">Batuk</h2>
 							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Keturunan menjadi faktor yang sangat berpengaruh terhadap penyakit obesitas. Hal
-								tersebut dikarenakan
-								faktor genetik dapat berpengaruh terhadap metabolisme tubuh seseorang. Salah satu
-								contohnya adalah
-								penyerapan jumlah lemak terhadap tubuh. Terdapat beberapa kelainan faktor genetik salah
-								satunya disebut sindrom Prader-Willi. </p>
-							<hr>
-
-						</div>
-					</div>
-				</div>
-				<br>
-
-				<div class="row">
-					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
-						<div class="person text-center">
-							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/obesitas/obat.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Obat - obatan</h2>
-							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Penyalahgunaan obat baik itu kadar dosis maupun kesalahan penggunaan obat
-								justru dapat menyebabkan efek samping pada tubuh. Salah satu efek samping tersebut
-								disebut iatrogenic yaitu obat - obatan penyabab obesitas. Berbagai macam obat - obatan
-								tersebut antara lain obat golongan steroid, antidepresan, insulin dan antibiotik.
-							</p>
-							<hr>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-						<div class="person text-center">
-							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/obesitas/begadang.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Kurang Istirahat</h2>
-							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Pola istirahat setiap individu memiliki jam idealnya masing - masing,
-								namun kekurangan tidur merupakan hal yang harus dihindari. Kekurangan
-								tidur dapat menyebabkan peningkatan nafsu makan. Nafsu makan yang berlebihan
-								meyebabkan kita mengonsumsi makanan dengan jumlah yang banyak. Jumlah tersebut
-								harus dapat diatasi dengan membakar lemak tersebut. </p>
-							<hr>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-						<div class="person text-center">
-							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-								 src="<?= base_url('assets/images/penyakit/obesitas/stress.jpg'); ?>" alt="Image">
-							<h2 class="text-black font-weight-bold">Stress</h2>
-							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-								Stress dapat disebabkan oleh berbagai faktor. Pengelolaan pola pikir
-								yang sehat perlu dilakukan untuk menghindari stress. Stress dapat memicu
-								pengubahan hormon dalam tubuh yaitu hormon Adamts1. Hormon tersebut berperan
-								untuk memicu bertambahnya berat badan dan penimbunan lemak dalam tubuh. Stress justru
-								memicu pertambahan berat badan.
-							</p>
+								Penyebaran Infeksi Saluran Pernapasan Akut (ISPA) juga dapat melalui batuk dari
+								penderita yang menular ke individu lainnya. Sama halnya dengan bersin batuk menyebabkan
+								virus dan bakteri infeksi tersebut tersebar melalui udara disekitar. Batuk dari
+								penderita lebih bahaya dibandingkan bersin, karena batuk tersebut bersifat keras dan
+								penyebaran dapat disebarkan kepada orang disekitar penderita.</p>
 							<hr>
 
 						</div>
@@ -252,8 +208,6 @@
 
 		</div>
 	</div>
-
-	<!-- Faktor Obesitas -->
 
 
 	<!-- .site-wrap -->

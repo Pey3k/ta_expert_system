@@ -16,55 +16,41 @@ class Penyakit extends CI_Controller
 		$this->load->view('client/homepage/', $data);
 	}
 
-	public function obesitas()
+	public function karies()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P01obesitas', $data);
+		$this->load->view('client/penyakit/karies', $data);
 	}
 
-	public function ispa()
+	public function pulpitis()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P02ispa', $data);
+		$this->load->view('client/penyakit/pulpitis', $data);
 	}
 
-	public function hepatitis()
+	public function gingivitis()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P03hepatitis', $data);
+		$this->load->view('client/penyakit/gingivitis', $data);
 	}
 
-	public function dispepsia()
+	public function absesgusi()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P04dispepsia', $data);
+		$this->load->view('client/penyakit/absesgusi', $data);
 	}
 
-
-	public function tipes()
+	public function impaksi()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P05tipes', $data);
-	}
-
-	public function asamurat()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P06asamurat', $data);
-	}
-
-	public function darahrendah()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P07darahrendah', $data);
+		$this->load->view('client/penyakit/impaksi', $data);
 	}
 
 
-	public function jantung()
+	public function periondontitis()
 	{
 		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/P08jantung', $data);
+		$this->load->view('client/penyakit/periondontitis', $data);
 	}
-
 
 }

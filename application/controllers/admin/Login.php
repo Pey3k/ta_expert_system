@@ -60,7 +60,7 @@ class Login extends CI_Controller
 
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-				Password yang anda masukan salah!</div>');
+				Password yang Anda masukan salah!</div>');
 					redirect('admin/login');
 				}
 			} else
@@ -86,7 +86,7 @@ class Login extends CI_Controller
 			redirect('admin/dashboard');
 		} else {
 			$this->session->set_flashdata('message', '<div style="font-size:15px" class="alert alert-danger" role="alert">
-			Username atau password yang anda masukan salah!</div>');
+			Username atau password yang Anda masukan salah!</div>');
 			redirect('admin/login');
 		}
 	}
@@ -139,7 +139,7 @@ class Login extends CI_Controller
 	{
 		$data = array('subject' => 'Aktivasi Akun Anda',
 			'receiver' => $par1,
-			'msg' => 'Klik link dibawah ini untuk aktivasi akun anda : <br>http://operation.kpptechnology.co.id/fathi/aci/admin/login/aktivasi/' . $par2);
+			'msg' => 'Klik link dibawah ini untuk aktivasi akun Anda : <br>http://operation.kpptechnology.co.id/fathi/aci/admin/login/aktivasi/' . $par2);
 		$mail = $this->htmlmail($data);
 	}
 
@@ -147,7 +147,7 @@ class Login extends CI_Controller
 	{
 		$data = array('subject' => 'Aktivasi Akun Anda',
 			'receiver' => 'fitrianiyulia1@gmail.com',
-			'msg' => 'Klik link dibawah ini untuk aktivasi akun anda : <br>http://operation.kpptechnology.co.id/fathi/aci/admin/login/aktivasi/');
+			'msg' => 'Klik link dibawah ini untuk aktivasi akun Anda : <br>http://operation.kpptechnology.co.id/fathi/aci/admin/login/aktivasi/');
 		$mail = $this->htmlmail($data);
 	}
 
@@ -277,7 +277,7 @@ class Login extends CI_Controller
 	//
 	// 			}else{
 	// 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-	// 		Password anda salah</div>');
+	// 		Password Anda salah</div>');
 	// 		redirect('admin/login');
 	// 			}
 	// 		}else

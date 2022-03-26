@@ -25,7 +25,7 @@ class Login extends CI_Controller
 			redirect('auth');
 		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-				Username atau password yang anda masukan salah!</div>');
+				Username atau password yang Anda masukan salah!</div>');
 			redirect('login');
 		}
 	}

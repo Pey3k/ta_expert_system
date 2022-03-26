@@ -45,7 +45,7 @@
 
 						<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 							<li><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Penyakit Gigi</a></li>
+							<li><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 							<li><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 							<li><a href="<?= base_url('riwayatpasien') ?>" class="nav-link">Riwayat Konsultasi</a></li>
 							<?php if(empty($this->session->userdata('loginUser'))) { ?>
@@ -68,42 +68,43 @@
 
 	</header>
 
-	<div class="site-section bg-light" id="pola-hidup-section">
+	<div class="site-section bg-light" id="dispepsia-section">
 		<div class="container">
 			<div class="row mb-1 justify-content-center" data-aos="fade" data-aos-delay="150">
 				<div class="col-md-12 text-center">
-					<h3 class="section-sub-title mt-4">Thypoid Fever</h3>
-					<h2 class="section-title mt-1">Penyakit Tipes</h2>
-					<p>Tipes merupakan penyakit yang dikarenakan kurangnya perhatian terhadap kebesihan seseorang.
-						Kebersihan tersebut meliputi kebersihan diri, makanan bahkan lingkungan. Perlunya menjaga
-						kebersihan menjadi faktor utama penyakit tipes karena bakteri tersebut dapat menyebar secara
-						cepat pada penderita yang tidak menjaga kebersihan..</p>
+					<h3 class="section-sub-title mt-4">Abses Gusi</h3>
+					<h2 class="section-title mt-1">Penyakit Abses Gusi</h2>
+					<p> Dispepsia merupakan suatu sindrom yang menimbulkan ketidaknyamanan perut bagian atas.
+						Dispepsia dapat terjadi pada semua golongan usia terutama diakibatkan oleh pola hidup yang
+						tidak benar. Gejala yang umum terjadi seperti perasaan panas pada bagian perut dan terasa
+						kembung.
+						Meskipun bukan suatu hal mengerikan, namun bukan berarti dispepsia dapat disepelekan.</p>
 				</div>
 			</div>
 
 			<div class="bg-white py-4 mb-4">
 				<div class="row mx-4 my-4 product-item-2 align-items-start">
-					<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
+					<div class="col-md-6 mb-5 mb-md-0">
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 							<div class="carousel-inner" data-aos="fade">
 								<div class="carousel-item active">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/tipes/gambar1.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar1.jpg'); ?>"
 										 alt="First slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/tipes/gambar3.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar3.jpg'); ?>"
 										 alt="Second slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/tipes/gambar2.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar4.jpg'); ?>"
 										 alt="Third slide">
 								</div>
 								<div class="carousel-item">
 									<img class="img-fluid img-thumbnail"
-										 src="<?= base_url('assets/images/penyakit/tipes/gambar4.jpg'); ?>"
+										 src="<?= base_url('assets/images/penyakit/dispepsia/gambar2.jpg'); ?>"
 										 alt="Fourth slide">
 								</div>
 							</div>
@@ -120,79 +121,105 @@
 						</div>
 					</div>
 
-					<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1" data-aos="fade">
-						<h3 class="text-black mb-2 font-weight-bold">Bahaya Penyakit Tipes</h3>
+					<div class="col-md-5 ml-auto product-title-wrap" data-aos="fade">
+						<h3 class="text-black mb-2 font-weight-bold">Bahaya Penyakit Dispepsia</h3>
 						<p class="mb-4" style="text-align:justify; font-size:16px;">
-							Tipes dikenal dengan demam tifoid yaitu sebuah penyakit dikarenakan sebuah bakteri yang
-							penyebarannya di sebarkan melalui makanan, air atau dari orang yang terinfeksi. Penyakit
-							tipes memang tidak terlihat berbahaya
-							namun dikarenakan pola hidup yang tidak dijaga dapat menyebabkan penyakit tersebut terutama
-							masalah kebersihan.</p>
-						<p class="mb-4" style="text-align:justify; font-size:16px;">
-							Gejala penderita tipes biasanya demam hingga suhu yang sangat tinggi, namun hal tersebut
-							memerlukan perlakuan medis yang benar supaya tidak semakin parah. Menjaga kebersihan menjadi
-							salah satu faktor utama
-							dari penyakit tipes. </p>
+							Penakit dispepsia atau nyeri perut sering diarasakan pada saat makan dan setelah makan.
+							Ketidaknyamanan tersebut dimulai saat makan menyebabkan lambung menghasilkan asam. Lambung
+							yang
+							menghasilkan jumlah asam tidak sewajarnya akan menyebabkan iritasi pada dinding lambung.
+							Bahkan bisa sampai merasakan
+							pada kerongkongan.
+						</p>
+						<p class="mb-4" style="text-align:justify; font-size:16px;">Kelebihan produksi asam lambung yang
+							berlebih dapat menyakiti dinding lambung sehingga dapat melukai dinding lambung tersebut.
+							Luka tersebut dapat menimbulkan peradangan lambung. Terdapat beberapa macam penyakit
+							pencernaan terkait sindrom dispepsia tersebut
+							antara lain GERD (Penyakit asam lambung), gangguan pankreas, tukak lambung bahkan sampai
+							kanker lambung. </p>
 						<hr>
 						<p>
-							<a href="#faktor-tipes-section"
+							<a href="#faktor-dispepsia-section"
 							   class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block main-menu js-clone-nav ">Baca
-								Faktor Penyakit Tipes !</a>
+								Faktor Penyakit Dispepsia !</a>
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- 3 -->
-			<div class="bg-white py-4 mb-4" id="faktor-tipes-section">
-				<div class="bg-white py-4 mb-4">
-					<div class="col-12 text-center" data-aos="fade" data-aos-delay="100">
-						<h2 class="section-title mb-5">Faktor Penyakit Tipes</h2>
+			<div class="bg-white py-4 mb-4" id="faktor-dispepsia-section">
+				<div class="col-12 text-center" data-aos="fade" data-aos-delay="100">
+					<h2 class="section-title mb-5">Faktor Penyakit Dispepsia</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
+						<div class="person text-center">
+							<img src="<?= base_url('assets/images/penyakit/dispepsia/faktor1.jpg'); ?>" alt="Image"
+								 class="img-fluid img-thumbnail rounded w-75 mb-3">
+							<h2 class="text-black font-weight-bold">Alkohol</h2>
+							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
+								Kandungan alkohol akan memiliki efek panas pada perut terutama bagian atas.
+								Efek tersebut disebabkan oleh zat yang terkandung dalam alkohol sehingga memicu
+								kandungan gas
+								dalam lambung. Jika kandungan gas tersebut tidak terkendali rasa panas akan terasa pada
+								bagian perut hingga kerongkongan.
+								.</p>
+							<hr>
+						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0 " data-aos="fade" data-aos-delay="100">
-							<div class="person text-center">
-								<img src="<?= base_url('assets/images/penyakit/tipes/faktor1.jpg'); ?>" alt="Image"
-									 class="img-fluid img-thumbnail rounded w-75 mb-3">
-								<h2 class="text-black font-weight-bold">Bakteri</h2>
-								<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-									Bakteri penyebab tipes adalah bakteri <i>Salomonella thypi</i> yaitu bakteri yang
-									terkontaminasi dengan feses. Bakteri tersebut sering ditemukan di berbagai tempat
-									kotor seperti dalam air, makanan dan minuman.</p>
-								<hr>
-							</div>
+					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+						<div class="person text-center">
+							<img src="<?= base_url('assets/images/penyakit/dispepsia/faktor2.jpg'); ?>" alt="Image"
+								 class="img-fluid img-thumbnail rounded w-75 mb-3">
+							<h2 class="text-black font-weight-bold">Kafein</h2>
+							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
+								Kafein dapat menjadi sebuah stimulan bagi tubuh dari rasa lelah , justru memiliki
+								efek yang positif bagi tubuh. Namun konsumsi kafein berlebih apalagi bagi mereka
+								yang memiliki kelainan pada lambung justru memicu gejala dispepsia. Kandungan kafein
+								yang berlebih justru memicu dispepsia itu sendiri yang dapat melukai organ lambung.
+							</p>
+							<hr>
 						</div>
+					</div>
 
-						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-							<div class="person text-center">
-								<img src="<?= base_url('assets/images/penyakit/tipes/faktor2.jpg'); ?>" alt="Image"
-									 class="img-fluid img-thumbnail rounded w-75 mb-3">
-								<h2 class="text-black font-weight-bold">Makan Sembarang</h2>
-								<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
-									Makanan menjadi sumber utama kebutuhan kita sebagai manusia. Kebersihan makanan
-									perlu diperhatikan untuk menjauhi dari berbagai macam bakteri penyakit, salah
-									satunya bakteri penyebab tipes yang terdapat pada makanan kotor.</p>
-								<hr>
-							</div>
+					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+						<div class="person text-center">
+							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
+								 src="<?= base_url('assets/images/penyakit/dispepsia/faktor3.jpg'); ?>" alt="Image">
+							<h2 class="text-black font-weight-bold">Kecemasan</h2>
+							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
+								Pada orang tertentu
+								kecemasan berlebih justru memicu kadungan zat dalam lambung yang meningkat. Asam lambung
+								yang meningkat justru
+								akan menyebabkan gangguan dispepsia pada tubuh seseorang. Meskipun terdengar sepele
+								namun beberapa khasus penyakit dispepsia disebabkan oleh pola pikir orang itu sendiri.
+
+								. </p>
+							<hr>
+
 						</div>
+					</div>
 
-						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-							<div class="person text-center">
-								<img class="img-fluid img-thumbnail rounded w-75 mb-3"
-									 src="<?= base_url('assets/images/penyakit/tipes/faktor3.jpg'); ?>" alt="Image">
-								<h2 class="text-black font-weight-bold" style='font-size:25px'>Tidak Menjaga
-									Kebersihan</h2>
-								<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px; padding-top:10px;">
-									Kebersihan merupakan sebuah usaha untuk menjaga diri dari suatu kondisi yang tidak
-									mengenakan. Kebersihan lingkungan sekitar perlu diperhatikan oleh seseorang terutama
-									kebersihan diri sendiri. </p>
-								<hr>
+					<div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+						<div class="person text-center">
+							<img class="img-fluid img-thumbnail rounded w-75 mb-3"
+								 src="<?= base_url('assets/images/penyakit/dispepsia/faktor4.jpg'); ?>" alt="Image">
+							<h2 class="text-black font-weight-bold">Pola Makan</h2>
+							<p class="mb-4 pl-2 pr-2" align="justify" style="font-size:14px">
+								Pola makan yang salah pada individu menyebabkan asupan gizi yang masuk kedalam tubuh
+								tidak sesuai.
+								Porsi makan seseorang juga perlu diperhatikan terutama pada penderi dispesia.
+								Kecenderungan memakan makanan dalam porsi
+								besar sekali adalah hal yang salah. Seharusnya konsumsi makan porsi kecil dengan waktu
+								yang rutin </p>
+							<hr>
 
-							</div>
 						</div>
 					</div>
 				</div>
+				<br>
 
 
 			</div>
@@ -200,6 +227,8 @@
 
 		</div>
 	</div>
+
+	<!-- Faktor Obesitas -->
 
 
 	<!-- .site-wrap -->
