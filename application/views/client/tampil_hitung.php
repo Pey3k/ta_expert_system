@@ -96,14 +96,18 @@
 								<?php
 								$no = 1;
 								foreach ($data['hasil']['terpilih'] as $key => $value) { ?>
-									<tr>
-										<th align="center"><?= $no++ ?></th>
-										<th align="center"><?= $value ?></th>
-										<th align="center"><?php
-											$dataGejala = $this->m_gejala->getlistGejalaById($value);
-											echo $dataGejala->gejala;
-											?></th>
-									</tr>
+									<?php if ($value != "") { ?>
+										<tr>
+											<th align="center"><?= $no++ ?></th>
+											<th align="center"><?= $value ?></th>
+											<th align="center">
+												<?php
+												$dataGejala = $this->m_gejala->getlistGejalaById($value);
+												echo $dataGejala->gejala;
+												?>
+											</th>
+										</tr>
+									<?php } ?>
 								<?php } ?>
 							</table>
 
@@ -192,7 +196,7 @@
 											<?php
 											echo floatval($nilaiKombinasi * 100) . ' % , diperoleh dari nilai himpunan penyakit yang paling tinggi.';
 											?> <br>
-											<a href="<?= base_url('riwayatpasien'); ?>">Lihat riwayat konsultasi</a><br>
+											<a href="<?= base_url('riwayatpasien'); ?>">Riwayat konsultasi</a><br>
 										</li>
 									<?php }
 								}
