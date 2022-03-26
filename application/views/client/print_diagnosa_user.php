@@ -14,7 +14,7 @@
 		<div class="subpage">
 			<div class="content">
 				<div style="width:128mm;float:left;">
-					HealthMe.
+					WAOS.
 				</div>
 				<div style="width:128mm;float:right;">
 					<!-- <p style="text-align:right;"></button>&nbsp;&nbsp;&nbsp;<button style="text-align:right;" onclick="window.print()">Print</button></p> -->
@@ -23,7 +23,7 @@
 				<div style="clear:both;"></div>
 				<hr/>
 				<center>
-					<h1 style="font-weight:none;font-size:15pt">HealthMe.  </title>
+					<h1 style="font-weight:none;font-size:15pt">WAOS.  </title>
 						</head> </h1>
 
 				</center>

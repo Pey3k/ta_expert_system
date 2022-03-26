@@ -39,8 +39,7 @@
 			<div class="row align-items-center">
 
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth'); ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth'); ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<nav class="site-navigation position-relative text-right" role="navigation">
@@ -71,7 +70,6 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-7 text-center mt-5">
-					<h3 class="section-sub-title">Result</h3>
 					<h3 class="section-title text-black mt-4 mb-4">Hasil Konsultasi Diagnosa </h3>
 				</div>
 			</div>
@@ -99,14 +97,19 @@
 							<?php
 							$no = 1;
 							foreach ($data['hasil']['terpilih'] as $key => $value) { ?>
-								<tr>
-									<th align="center"><?= $no++ ?></th>
-									<th align="center"><?= $value ?></th>
-									<th align="center"><?php
-										$dataGejala = $this->m_gejala->getlistGejalaById($value);
-										echo $dataGejala->gejala;
-										?></th>
-								</tr>
+								<?php if ($value != "") { ?>
+									<tr>
+										<th align="center"><?= $no++ ?></th>
+										<th align="center"><?= $value ?></th>
+										<th align="center">
+											<?php
+											$dataGejala = $this->m_gejala->getlistGejalaById($value);
+											echo $dataGejala->gejala;
+											?>
+										</th>
+									</tr>
+									<?php
+								} ?>
 							<?php } ?>
 						</table>
 						<!--
@@ -171,8 +174,8 @@
 											<?php
 											echo floatval($nilaiKombinasi * 100) . ' %';
 											?> <br>
-											<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>">lihat Solusi
-												disini</a><br></li>
+											<a href="<?= base_url() ?>/diagnosa/solusi/<?= $value ?>">Solusi
+												Penyakit</a><br></li>
 									<?php }
 								}
 								?>

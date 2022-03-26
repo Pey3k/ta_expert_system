@@ -38,8 +38,7 @@
 			<div class="row align-items-center">
 
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<nav class="site-navigation position-relative text-right" role="navigation">
@@ -69,29 +68,28 @@
 		<div class="container">
 			<div class="row mb-2">
 				<div class="col-12 text-center">
-					<h3 class="section-sub-title">Reference</h3>
-					<h2 class="section-title mt-4 mb-3">Refrensi Sistem Pakar <i>HealthMe</i></h2>
+					<h2 class="section-title mt-4 mb-3">Refrensi Sistem Pakar <i>WAOS</i></h2>
 				</div>
 			</div>
 			<div class="bg-white py-4 mb-4">
 				<div class="row mx-4 my-4 product-item-2 align-items-start">
 
 					<div class="col-md-12 mr-auto product-title-wrap order-2 order-md-1" data-aos="fade">
-						<h3 class="text-black mb-0 font-weight-bold">Referensi pembuatan Sistem Pakar HealthMe</h3>
+						<h3 class="text-black mb-0 font-weight-bold">Referensi pembuatan Sistem Pakar WAOS</h3>
 						<p class="mb-4" style="text-align:justify; font-size:16px;">
 							Terimakasih penulis ucapkan kepada Tuhan Yang Maha Esa yang memberikan rahmat dan Roh
-							KudusNya, sehingga penulis dapat menyelesaikan Tugas Akhir sebagai mahasiswa Universitas
+							Kudus-Nya, sehingga penulis dapat menyelesaikan Tugas Akhir sebagai mahasiswa Universitas
 							Atma Jaya Yogyakarta
 							Fakultas Teknologi Industri Program Studi Teknik Informatika dengan judul “Pembuatan Sistem
 							Pakar Pengelolaan Pola Hidup
-							Sehat Bagi Remaja Menggunakan Metode Dempster Shafer” bernama <b><i>HealthMe</i></b>.
-							Pembangunan sistem pakar HealthMe dibimbing oleh 2 dosen Universitas Atma Jaya Yogyakarta
+							Sehat Bagi Remaja Menggunakan Metode Dempster Shafer” bernama <b><i>WAOS</i></b>.
+							Pembangunan sistem pakar WAOS dibimbing oleh 2 dosen Universitas Atma Jaya Yogyakarta
 							yaitu
 							Bapak Prof. Ir. Suyoto, M.Sc. , Ph.D. dan
 
 							Bapak Dr. Alb. Joko Santoso, M.T.
 
-							Selain itu penulis juga mendapatkan keseluruhan data pembangunan sistem pakar HealthMe dari
+							Selain itu penulis juga mendapatkan keseluruhan data pembangunan sistem pakar WAOS dari
 							seorang pakar yaitu dokter Friska W. Yanong.
 						<p class="mb-4" style="text-align:justify; font-size:16px;">
 							Penulis juga memiliki beberapa referensi yang diperoleh dari berbagai macam sumber seperti
@@ -139,7 +137,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Referensi Sistem Pakar HealthMe</h5>
+				<h5 class="modal-title" id="exampleModalLabel">Referensi Sistem Pakar WAOS</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>

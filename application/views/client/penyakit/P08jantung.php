@@ -38,8 +38,7 @@
 			<div class="row align-items-center">
 
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<?php

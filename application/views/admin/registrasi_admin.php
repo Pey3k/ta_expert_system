@@ -29,7 +29,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 					<span class="login100-form-title">
-							Registrasi Petugas HealthMe.
+							Registrasi Petugas WAOS.
 						</span>
 
 				<div class="login100-pic js-tilt" data-tilt>

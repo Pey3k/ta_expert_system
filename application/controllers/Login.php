@@ -18,8 +18,8 @@ class Login extends CI_Controller
 
 	public function doLogin()
 	{
-
 		$dataPost = $this->input->post();
+
 		// Menggunakan modal pada m_login fungsi check_login_user
 		if ($this->m_login->check_login_user($dataPost['username'], $dataPost['password'])) {
 			redirect('auth');
@@ -33,7 +33,7 @@ class Login extends CI_Controller
 	function logout()
 	{
 		$this->session->unset_userdata('loginUser');
-		redirect('auth');
+		redirect('');
 	}
 
 }

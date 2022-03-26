@@ -38,8 +38,7 @@
 			<div class="row align-items-center">
 
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<nav class="site-navigation position-relative text-right" role="navigation">
@@ -110,7 +109,9 @@
 													   value="<?php echo $value->id_gejala; ?>"
 													   class="col-xs-10 col-sm-5">Ya
 											</td>
-											<td><input type="radio" id="form-field-1" name="" value=""
+											<td><input type="radio" id="form-field-1"
+													   name="<?php echo $value->id_gejala; ?>"
+													   value=""
 													   class="col-xs-10 col-sm-5">Tidak
 											</td>
 										</tr>

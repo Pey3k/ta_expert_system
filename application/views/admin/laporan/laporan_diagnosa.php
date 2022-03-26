@@ -3,8 +3,8 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Laporan Diagnosa Penyakit Sistem <i>HealthMe</i></h1>
-          <p class="mb-4">Laporan Diagnosa Penyakit adalah laporan rekapitulasi keseluruhan data penyakit yang telah terdaftar pada sistem pakar HealthMe</p>
+          <h1 class="h3 mb-2 text-gray-800">Laporan Diagnosa Penyakit Sistem <i>WAOS</i></h1>
+          <p class="mb-4">Laporan Diagnosa Penyakit adalah laporan rekapitulasi keseluruhan data penyakit yang telah terdaftar pada sistem pakar WAOS</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">

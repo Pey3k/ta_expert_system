@@ -41,7 +41,6 @@ class Diagnosa extends CI_Controller
 		// Mengambil data jawaban dari post pada view di radio box
 		$jawaban = $this->input->post();
 
-
 		if (count($jawaban) == 0) {
 			// Kondisi jika jawaban bernilai null yaitu tidak dipilih satu pun
 			redirect('diagnosa');
@@ -49,10 +48,15 @@ class Diagnosa extends CI_Controller
 
 		// Membuat variabel mining sebagai penampung dengan array bernama terpilih yaitu jawaban dari gejala yang dipilih
 		$minning['terpilih'] = $jawaban;
+
 		// Deklarasi variable minning dengan aaray bernama pilih dengan data kosong dulu
-		$minning['pilih'] = [];
+		$minning['pilih'] = array();
 
 		foreach ($jawaban as $data) {
+
+			if ($data == "") {
+				continue;
+			}
 
 			// Deklarasi panggil data dari rule dan gejala
 			$role_penyakit = $this->db->query('select id_penyakit from rule_analisa where id_gejala = "' . $data . '"')->result_array();
@@ -60,10 +64,9 @@ class Diagnosa extends CI_Controller
 			$nilai_gejala = $this->db->query('select gejala_bobot from gejala where id_gejala = "' . $data . '"')->row_array();
 
 			// membuat deklarasi data list penyakit dengan array bernama list penyakit
-			$list_penyakit = [];
+			$list_penyakit = array();
+
 			foreach ($role_penyakit as $key => $value) {
-
-
 				$list_penyakit[] = $value['id_penyakit'];
 			}
 			// Ambil semua data pilihan gejala, namun menampilkan 1 data penyakit sampai ke nilainya
@@ -71,40 +74,57 @@ class Diagnosa extends CI_Controller
 		}
 
 		// Membuat deklarasi pembuatan tabel semua gejala dan penyakit di gejala pertama
-		$minning['table'] = [];
+		$minning['table'] = array();
+
 		// Membuat deklarasi pembuatan tabel gabungan matriks
-		$minning['tableCombine'] = [];
+		$minning['tableCombine'] = array();
 
 
-// PERHITUNGAN STUCK
 		for ($i = 1; $i <= count($minning['pilih']) - 1; $i++) {
 
-
-			$minning['table'][$i][] = [[],
-				['id_penyakit' => $minning['pilih'][$i]['id_penyakit'],
-					'nilai' => $minning['pilih'][$i]['nilai']],
-				['id_penyakit' => [], 'nilai' => 1 - $minning['pilih'][$i]['nilai']]
+			$minning['table'][$i][] = [
+				array(),
+				[
+					'id_penyakit' => $minning['pilih'][$i]['id_penyakit'],
+					'nilai' => $minning['pilih'][$i]['nilai']
+				],
+				[
+					'id_penyakit' => array(),
+					'nilai' => 1 - $minning['pilih'][$i]['nilai']
+				]
 			];
 
 
 			if ($i == 1) {
-				$minning['table'][$i][] = [['id_penyakit' => $minning['pilih'][$i - 1]['id_penyakit'], 'nilai' => $minning['pilih'][$i - 1]['nilai']],
-					[],
-					[]];
+				$minning['table'][$i][] = [
+					[
+						'id_penyakit' => $minning['pilih'][$i - 1]['id_penyakit'],
+						'nilai' => $minning['pilih'][$i - 1]['nilai']
+					],
+					array(),
+					array()
+				];
 
 
-				$minning['table'][$i][] = [['id_penyakit' => [], 'nilai' => 1 - $minning['pilih'][$i - 1]['nilai']],
-					[],
-					[]];
+				$minning['table'][$i][] = [
+					[
+						'id_penyakit' => array(),
+						'nilai' => 1 - $minning['pilih'][$i - 1]['nilai']
+					],
+					array(),
+					array()
+				];
 
 			} else {
 				foreach ($minning['tableCombine'][$i - 1] as $key => $value) {
-					// var_dump($minning['tableCombine'][$i-1]);
-					// die;
-
-					$minning['table'][$i][] = [['id_penyakit' => $value, 'nilai' => $minning['nilaiCombine'][$i - 1][$key]],
-						[],
-						[]];
+					$minning['table'][$i][] = [
+						[
+							'id_penyakit' => $value,
+							'nilai' => $minning['nilaiCombine'][$i - 1][$key]
+						],
+						array(),
+						array()
+					];
 
 				}
 
@@ -117,7 +137,7 @@ class Diagnosa extends CI_Controller
 							$combine = array_intersect($minning['table'][$i][0][$keys]['id_penyakit'], $minning['table'][$i][$key][0]['id_penyakit']);
 							// PERHITUNGAN
 							// ================ disini =========== //
-							$com = [];
+							$com = array();
 							foreach ($combine as $keyz => $valuez) {
 								$com[] = $valuez;
 							}
@@ -134,7 +154,10 @@ class Diagnosa extends CI_Controller
 							if (count($minning['table'][$i][0][$keys]['id_penyakit']) == 0 && count($minning['table'][$i][$key][0]['id_penyakit']) == 0) {
 								$combine = [];
 							}
-							$minning['table'][$i][$key][$keys] = ['id_penyakit' => $combine, 'nilai' => $minning['table'][$i][0][$keys]['nilai'] * $minning['table'][$i][$key][0]['nilai']];
+							$minning['table'][$i][$key][$keys] = [
+								'id_penyakit' => $combine,
+								'nilai' => $minning['table'][$i][0][$keys]['nilai'] * $minning['table'][$i][$key][0]['nilai']
+							];
 
 							if (empty($minning['tableCombine'][$i])) {
 								// ================ disini =========== //
@@ -193,9 +216,6 @@ class Diagnosa extends CI_Controller
 				} else {
 					$minning['nilaiCombine'][$i][$keyt] = $kiri / 1;
 					$minning['berapaCombine'][$i][$keyt] = $kiri . "/1";
-					// 	$minning['nilaiCombine'][$i][$keyt] = $kiri/(1-$kanan);
-					// 	$minning['berapaCombine'][$i][$keyt] = $kiri."/(1-".$kanan.")";
-
 				}
 			}
 
@@ -221,6 +241,10 @@ class Diagnosa extends CI_Controller
 				foreach ($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]] as $key => $value) {
 
 					$data_gangguan = $this->m_penyakit->getListPenyakitById($value);
+					if (empty($data_gangguan)) {
+						continue;
+					}
+
 					$dataDetail = array(
 						'idHasilAnalisa' => $idhasil,
 						'penyakit' => $data_gangguan->penyakit,

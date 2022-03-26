@@ -37,8 +37,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth') ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<nav class="site-navigation position-relative text-right" role="navigation">
@@ -61,7 +60,6 @@
 		<div class="container">
 			<div class="row mb-0 pb-0">
 				<div class="col-12 text-center">
-					<h3 class="section-sub-title">Profile</h3>
 					<h2 class="section-title mt-4 mb-3">Profil Pasien</h2>
 
 					<!-- <img src="<?= base_url('assets/backend-assets/login/images/images.png'); ?>" width="200px" height="200px"class="img-thumbnail">
@@ -118,8 +116,8 @@
 								</table>
 								<div>
 									<a href="<?= base_url('profile/editProfile/' . $listProfile->id_pengguna); ?>"
-									   class="btn btn-primary btn-sm">Rubah Profile</a>
-									<a href="<?= base_url('riwayatpasien'); ?>" class="btn btn-warning btn-sm"
+									   class="btn btn-warning btn-sm">Ubah Profile</a>
+									<a href="<?= base_url('riwayatpasien'); ?>" class="btn btn-info btn-sm"
 									   style="margin-left:240">Lihat Riwayat Konsultasi</a>
 								</div>
 							</div>

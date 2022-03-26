@@ -4,7 +4,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Data Pengelolaan Pasien</h1>
-          <p class="mb-4">Data Pasien merupakan data pasien yang telah terdaftar pada basis data sistem pakar <i>HealthMe</i>.</p>
+          <p class="mb-4">Data Pasien merupakan data pasien yang telah terdaftar pada basis data sistem pakar <i>WAOS</i>.</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">

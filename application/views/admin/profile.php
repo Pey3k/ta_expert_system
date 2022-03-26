@@ -24,7 +24,7 @@
 					<div class="col-md-8">
 						<div class="card-body">
 							<h5 class="card-title ml-2"> <?=strtoupper($_SESSION['loginData']['userName'])?></h5>
-							<p class="card-text ml-2">as Admin Sistem Pakar HealthMe</p>
+							<p class="card-text ml-2">as Admin Sistem Pakar WAOS</p>
 							<p class="card-text ml-2"><small class="text-muted">Member since 2019</small></p>
 						</div>
 					</div>

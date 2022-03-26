@@ -39,8 +39,7 @@
 			<div class="row align-items-center">
 
 				<div class="col-6 col-xl-2">
-					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth'); ?>" class="text-black mb-0">HealthMe<span
-									class="text-primary">.</span> </a></h1>
+					<h1 class="mb-0 site-logo"><a href="<?= base_url('auth'); ?>" class="text-black mb-0">WAOS</a></h1>
 				</div>
 				<div class="col-12 col-md-10 d-none d-xl-block">
 					<nav class="site-navigation position-relative text-right" role="navigation">
@@ -211,37 +210,6 @@
 		</div>
 	</div>
 
-	<footer class="site-footer bg-white">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row">
-						<div class="col-md-3 ">
-							<h2 class="footer-heading mb-4">Tautan</h2>
-							<ul class="list-unstyled">
-								<li><a href="<?= base_url('') ?>">Beranda</a></li>
-								<li><a href="<?= base_url('') ?>">Pola Hidup Sehat</a></li>
-								<li><a href="<?= base_url('') ?>">Penyakit</a></li>
-								<li><a href="<?= base_url('diagnosa') ?>">Konsultasi</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--<div class="row pt-5 mt-5 text-center">
-			  <div class="col-md-12">
-				<div class="border-top pt-5">
-				<p>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-		  </p>
-				</div>
-			  </div>
-
-			</div>-->
-		</div>
-	</footer>
 
 </div> <!-- .site-wrap -->
 

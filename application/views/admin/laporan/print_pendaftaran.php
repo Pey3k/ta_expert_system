@@ -20,7 +20,7 @@
 					<div style="clear:both;"></div>
 					<hr/>
 					<center>
-						<h1 style="font-weight:none;font-size:28pt">HealthMe.</h1>
+						<h1 style="font-weight:none;font-size:28pt">WAOS.</h1>
 						<h2>Pengelolaan Pola Hidup Sehat Pada Remaja</h2>
 						</center>
 					<hr/>
