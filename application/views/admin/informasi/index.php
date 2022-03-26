@@ -24,40 +24,43 @@
 					<div class="card">
 						<div class="card-header d-flex justify-content-between">
 							<h4 class="card-title">List Data Master Informasi</h4>
-							
+
 							<a href="<?php echo base_url('admin/informasi/add/') ?>" class="btn btn-primary mr-1"><i
-                        class="bx bx-plus-circle"></i> Tambah Informasi</a>
+										class="bx bx-plus-circle"></i> Tambah Informasi</a>
 						</div>
 						<div class="card-content">
 							<div class="card-body card-dashboard">
 								<div class="table-responsive" id="show-data-disease">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
-											<tr>
-                        <th>No</th>
-                        <th>Jenis</th>
-                        <th>Informasi</th>
-                        <th style="width:80px">Aksi</th>
-											</tr>
+										<tr>
+											<th>No</th>
+											<th>Jenis</th>
+											<th>Informasi</th>
+											<th style="width:80px">Aksi</th>
+										</tr>
 										</thead>
-                    <tbody>
-                    <?php
-                                  $no = 0 ;
-                                  foreach($listData as $value){
-                                  $no++;
-                                  ?>
-                      <tr>
-                        <td><?php echo $no; ?></td>
-                        <td><?php echo $value->namaPenyakit; ?></td>
-                    <td><?php echo $value->content; ?></td>
-                        <td>
-                          <a href="<?php echo base_url('admin/informasi/edit/'.$value->idInformasi) ?>" class="badge badge-success badge-custom"  >Edit</a>
-                          <a href="<?php echo base_url('admin/informasi/doDelete/'.$value->idInformasi) ?>" class="badge badge-danger" onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
-                      </tr>
-                      <?php
-                      }
-                      ?>
-                  </tbody>
+										<tbody>
+										<?php
+										$no = 0;
+										foreach ($listData as $value) {
+											$no++;
+											?>
+											<tr>
+												<td><?php echo $no; ?></td>
+												<td><?php echo $value->namaPenyakit; ?></td>
+												<td><?php echo $value->content; ?></td>
+												<td>
+													<a href="<?php echo base_url('admin/informasi/edit/' . $value->idInformasi) ?>"
+													   class="badge badge-success badge-custom">Edit</a>
+													<a href="<?php echo base_url('admin/informasi/doDelete/' . $value->idInformasi) ?>"
+													   class="badge badge-danger"
+													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+											</tr>
+											<?php
+										}
+										?>
+										</tbody>
 									</table>
 								</div>
 							</div>

@@ -27,12 +27,13 @@
 							<h4 class="m-0 font-weight-bold text-primary">Form Ubah Data Informasi</h4>
 						</div>
 						<div class="card-body">
-							<form method="post" action="<?php echo base_url().'admin/solusi/doUpdate/'.$this->uri->segment(4)?>"
-								role="form">
+							<form method="post"
+								  action="<?php echo base_url() . 'admin/solusi/doUpdate/' . $this->uri->segment(4) ?>"
+								  role="form">
 
-								<?php 
-$dataOld = $this->session->flashdata('oldPost'); 
-echo $this->session->flashdata('msgbox');?>
+								<?php
+								$dataOld = $this->session->flashdata('oldPost');
+								echo $this->session->flashdata('msgbox'); ?>
 
 
 								<h6 class="m-0 font-weight-bold text-danger mb-3">Harap mengisi data dibawah ini :</h6>
@@ -42,9 +43,11 @@ echo $this->session->flashdata('msgbox');?>
 									<label for="id_gejala">Nama Penyakit</label>
 									<select class="form-control" id="" name="jenis">
 										<?php foreach ($jenisPenyakit as $value) { ?>
-										<option value="<?php echo $value->id_penyakit; ?>"
-											<?php if($dataDetail->id_penyakit == $value->id_penyakit) { echo "selected"; } ?>>
-											<?php echo $value->penyakit; ?></option>
+											<option value="<?php echo $value->id_penyakit; ?>"
+													<?php if ($dataDetail->id_penyakit == $value->id_penyakit) {
+														echo "selected";
+													} ?>>
+												<?php echo $value->penyakit; ?></option>
 										<?php } ?>
 									</select>
 
@@ -54,12 +57,12 @@ echo $this->session->flashdata('msgbox');?>
 								<div class="form-group">
 									<label for="solusi">Solusi Penyakit</label>
 									<textarea class="form-control" id="" name="solusi"
-										rows="5"><?php echo $dataDetail->solusi; ?></textarea>
+											  rows="5"><?php echo $dataDetail->solusi; ?></textarea>
 								</div>
 
 								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan</button>
 								<a href="<?php echo base_url('admin/solusi') ?>" class="btn btn-danger ml-4 mt-3"
-									style="width:100px">Batal</a>
+								   style="width:100px">Batal</a>
 							</form>
 						</div>
 					</div>

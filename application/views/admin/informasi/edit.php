@@ -26,37 +26,39 @@
 						<div class="card-header">
 							<h4 class="m-0 font-weight-bold text-primary">Form Ubah Data Informasi</h4>
 						</div>
-						<div class="card-body">						
-            <form method="post" action="<?php echo base_url().'admin/informasi/doUpdate/'.$this->uri->segment(4)?>"
-                role="form">
+						<div class="card-body">
+							<form method="post"
+								  action="<?php echo base_url() . 'admin/informasi/doUpdate/' . $this->uri->segment(4) ?>"
+								  role="form">
 
-                <?php
-                       $dataOld = $this->session->flashdata('oldPost');
-                       echo $this->session->flashdata('msgbox');?>
+								<?php
+								$dataOld = $this->session->flashdata('oldPost');
+								echo $this->session->flashdata('msgbox'); ?>
 
 
-                <h6 class="m-0 font-weight-bold text-danger mb-3">Harap mengisi data dibawah ini :</h6>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="">Jenis Informasi</label>
-                        <input type="text" class="form-control" style="width:400px" name="namaPenyakit"
-                            id="namaPenyakit" value="<?php echo $detailData->namaPenyakit; ?>" placeholder="">
-                    </div>
+								<h6 class="m-0 font-weight-bold text-danger mb-3">Harap mengisi data dibawah ini :</h6>
+								<div class="form-row">
+									<div class="form-group col-md-8">
+										<label for="">Jenis Informasi</label>
+										<input type="text" class="form-control" style="width:400px" name="namaPenyakit"
+											   id="namaPenyakit" value="<?php echo $detailData->namaPenyakit; ?>"
+											   placeholder="">
+									</div>
 
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="bobot">Informasi</label>
-                        <textarea class="form-control" id="" name="content"
-                            rows="5"><?php echo $detailData->content; ?></textarea>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-8">
+										<label for="bobot">Informasi</label>
+										<textarea class="form-control" id="" name="content"
+												  rows="5"><?php echo $detailData->content; ?></textarea>
 
-                    </div>
-                </div>
+									</div>
+								</div>
 
-                <button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan</button>
-                <a href="<?php echo base_url('admin/informasi') ?>" class="btn btn-danger ml-4 mt-3"
-                    style="width:100px">Batal</a>
-            </form>
+								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan</button>
+								<a href="<?php echo base_url('admin/informasi') ?>" class="btn btn-danger ml-4 mt-3"
+								   style="width:100px">Batal</a>
+							</form>
 						</div>
 					</div>
 				</div>

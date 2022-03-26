@@ -24,45 +24,45 @@
 					<div class="card">
 						<div class="card-header d-flex justify-content-between">
 							<h4 class="card-title">List Data Master Gejala</h4>
-              
-              <!-- <button type="button" class="btn btn-primary mr-1" onclick="openModal('disease','add')"><i
-                        class="bx bx-plus-circle"></i> Tambah Data</button> -->
-						<a href="<?php echo base_url('admin/gejala/add/') ?>" class="btn btn-primary mr-1" ><i
-                        class="bx bx-plus-circle"></i>Tambah Gejala</a>
+
+							<!-- <button type="button" class="btn btn-primary mr-1" onclick="openModal('disease','add')"><i
+									  class="bx bx-plus-circle"></i> Tambah Data</button> -->
+							<a href="<?php echo base_url('admin/gejala/add/') ?>" class="btn btn-primary mr-1"><i
+										class="bx bx-plus-circle"></i>Tambah Gejala</a>
 						</div>
 						<div class="card-content">
 							<div class="card-body card-dashboard">
 								<div class="table-responsive" id="show-data-disease">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
-											<tr>
-												<th>No</th>
-												<th>ID Gejala</th>
-												<th>Nama Gejala</th>
-												<th>Bobot Gejala</th>
-												<th style="width:75px">Aksi</th>
-											</tr>
+										<tr>
+											<th>No</th>
+											<th>ID Gejala</th>
+											<th>Nama Gejala</th>
+											<th>Bobot Gejala</th>
+											<th style="width:75px">Aksi</th>
+										</tr>
 										</thead>
 										<tbody>
-											<?php
-                                foreach($listData as $key => $value){
-                                 ?>
+										<?php
+										foreach ($listData as $key => $value) {
+											?>
 											<tr>
 												<td><?= $key + 1; ?></td>
 												<td><?= $value->id_gejala; ?></td>
 												<td><?= $value->gejala; ?></td>
 												<td><?= $value->gejala_bobot; ?></td>
 												<td>
-													<a href="<?= base_url('admin/gejala/edit/'.$value->id_gejala) ?>"
-														class="badge badge-success badge-custom">Edit</a>
-													<a href="<?= base_url('admin/gejala/doDelete/'.$value->id_gejala) ?>"
-														class="badge badge-danger"
-														onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+													<a href="<?= base_url('admin/gejala/edit/' . $value->id_gejala) ?>"
+													   class="badge badge-success badge-custom">Edit</a>
+													<a href="<?= base_url('admin/gejala/doDelete/' . $value->id_gejala) ?>"
+													   class="badge badge-danger"
+													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
 												</td>
 											</tr>
 											<?php
-                    }
-                    ?>
+										}
+										?>
 										</tbody>
 									</table>
 								</div>

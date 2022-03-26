@@ -24,8 +24,8 @@
 					<div class="card">
 						<div class="card-header d-flex justify-content-between">
 							<h4 class="card-title">List Data Master Penyakit</h4>
-									<a href="<?php echo base_url('admin/penyakit/add/') ?>" class="btn btn-primary mr-1" ><i
-									class="bx bx-plus-circle"></i> Tambah Penyakit</a>
+							<a href="<?php echo base_url('admin/penyakit/add/') ?>" class="btn btn-primary mr-1"><i
+										class="bx bx-plus-circle"></i> Tambah Penyakit</a>
 
 						</div>
 						<div class="card-content">
@@ -33,20 +33,20 @@
 								<div class="table-responsive" id="show-data-disease">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
-											<tr>
-												<th>No</th>
-												<th>ID Gejala</th>
-												<th>Nama Gejala</th>
-												<th>Bobot Gejala</th>
-												<th style="width:75px">Aksi</th>
-											</tr>
+										<tr>
+											<th>No</th>
+											<th>ID Gejala</th>
+											<th>Nama Gejala</th>
+											<th>Bobot Gejala</th>
+											<th style="width:75px">Aksi</th>
+										</tr>
 										</thead>
 										<tbody>
-											<?php
-                                $no = 0 ;
-                                foreach($listData as $value){
-                                $no++;
-                                 ?>
+										<?php
+										$no = 0;
+										foreach ($listData as $value) {
+											$no++;
+											?>
 											<tr>
 												<td><?php echo $no; ?></td>
 												<td><?php echo $value->id_penyakit; ?></td>
@@ -54,25 +54,25 @@
 
 												<td>
 													<?php
-						$detailData = $this->m_penyakit->getListRuleByPenyakit($value->id_penyakit);
-						foreach($detailData as $value){
-						echo "[".$value->id_gejala."] ".$value->gejala."<br>";
-						} ?>
+													$detailData = $this->m_penyakit->getListRuleByPenyakit($value->id_penyakit);
+													foreach ($detailData as $value) {
+														echo "[" . $value->id_gejala . "] " . $value->gejala . "<br>";
+													} ?>
 												</td>
 
 												<td>
-													<a href="<?php echo base_url('admin/penyakit/edit/'.$value->id_penyakit) ?>"
-														class="badge badge-success badge-custom">Edit</a>
-													<a href="<?php echo base_url('admin/penyakit/doDelete/'.$value->id_penyakit) ?>"
-														class="badge badge-danger"
-														onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
-													<a href="<?php echo base_url('admin/penyakit/add_gejala/'.$value->id_penyakit) ?>"
-														class="badge badge-primary">Tambah Gejala</a>
+													<a href="<?php echo base_url('admin/penyakit/edit/' . $value->id_penyakit) ?>"
+													   class="badge badge-success badge-custom">Edit</a>
+													<a href="<?php echo base_url('admin/penyakit/doDelete/' . $value->id_penyakit) ?>"
+													   class="badge badge-danger"
+													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+													<a href="<?php echo base_url('admin/penyakit/add_gejala/' . $value->id_penyakit) ?>"
+													   class="badge badge-primary">Tambah Gejala</a>
 												</td>
 											</tr>
 											<?php
-                    }
-                    ?>
+										}
+										?>
 										</tbody>
 									</table>
 								</div>

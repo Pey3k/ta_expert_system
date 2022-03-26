@@ -30,35 +30,38 @@
 								<div class="table-responsive" id="show-data-disease">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
-											<tr>
-												<th>No</th>
-												<th>Nama Pasien</th>
-												<th>Jenis Kelamin</th>
-												<th>Umur</th>
-												<th>Username</th>
-												<th>Email</th>
-												<th>Aksi</th>
-											</tr>
+										<tr>
+											<th>No</th>
+											<th>Nama Pasien</th>
+											<th>Jenis Kelamin</th>
+											<th>Umur</th>
+											<th>Username</th>
+											<th>Email</th>
+											<th>Aksi</th>
+										</tr>
 										</thead>
 										<tbody>
-                    <?php
-                      foreach($listData as $key => $value){
-                    ?>
-                    <tr>
-                      <td><?= $key+1; ?></td>
-                      <td><?= $value->nama_pengguna; ?></td>
-                      <td><?= $value->jk; ?></td>
-                      <td><?= $value->umur; ?></td>
-                      <td><?= $value->username; ?></td>
-                      <td><?= $value->email; ?></td>
-                      <td>
-                        <a href="<?= base_url('admin/pasien/edit/'.$value->id_pengguna) ?>" class="badge badge-success badge-custom">Edit</a>
-                        <a href="<?= base_url('admin/pasien/doDelete/'.$value->id_pengguna) ?>" class="badge badge-danger" onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
-                     </td>
-                    </tr>
-                    <?php
-                    }
-                    ?>
+										<?php
+										foreach ($listData as $key => $value) {
+											?>
+											<tr>
+												<td><?= $key + 1; ?></td>
+												<td><?= $value->nama_pengguna; ?></td>
+												<td><?= $value->jk; ?></td>
+												<td><?= $value->umur; ?></td>
+												<td><?= $value->username; ?></td>
+												<td><?= $value->email; ?></td>
+												<td>
+													<a href="<?= base_url('admin/pasien/edit/' . $value->id_pengguna) ?>"
+													   class="badge badge-success badge-custom">Edit</a>
+													<a href="<?= base_url('admin/pasien/doDelete/' . $value->id_pengguna) ?>"
+													   class="badge badge-danger"
+													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+												</td>
+											</tr>
+											<?php
+										}
+										?>
 										</tbody>
 									</table>
 								</div>

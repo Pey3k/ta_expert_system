@@ -28,55 +28,60 @@
 						</div>
 						<div class="card-body">
 
-							<form method="post" action="<?= base_url().'admin/penyakit/doAddGejala/'.$this->uri->segment(4);?>"
-								role="form">
+							<form method="post"
+								  action="<?= base_url() . 'admin/penyakit/doAddGejala/' . $this->uri->segment(4); ?>"
+								  role="form">
 
-                <style>
-                  .form-group label{
-                    font-size: 14px!important;
-                  }
-                </style>
+								<style>
+									.form-group label {
+										font-size: 14px !important;
+									}
+								</style>
 
-								<?php 
-                $dataOld = $this->session->flashdata('oldPost'); 
-                echo $this->session->flashdata('msgbox');?>
+								<?php
+								$dataOld = $this->session->flashdata('oldPost');
+								echo $this->session->flashdata('msgbox'); ?>
 
 
-								<h6 class="m-0 font-weight-bold text-danger mb-1">Harap mengisi data gejala untuk penyakit : </h6>
-								<h5 class="m-0 font-weight-bold text-primary mb-1"> <?= $detailData->penyakit?> </h5>
+								<h6 class="m-0 font-weight-bold text-danger mb-1">Harap mengisi data gejala untuk
+									penyakit : </h6>
+								<h5 class="m-0 font-weight-bold text-primary mb-1"> <?= $detailData->penyakit ?> </h5>
 
 								<!-- RADIO BOX GEJALA -->
 
-								<?php 
-                foreach ($list_gejala as $value) { 
-                $check = "";
-                $data = $this->m_penyakit->getListRule($this->uri->segment(4),$value->id_gejala);
+								<?php
+								foreach ($list_gejala as $value) {
+									$check = "";
+									$data = $this->m_penyakit->getListRule($this->uri->segment(4), $value->id_gejala);
 
-                if(count($data) > 0){
-                $check = "checked";
-                }
-                ?>
-								<div class="form-group ml-2">
+									if (count($data) > 0) {
+										$check = "checked";
+									}
+									?>
+									<div class="form-group ml-2">
 
-									<input class="form-check-input position-static" type="checkbox" name="id_gejala[]" id="blankRadio1"
-										value="<?= $value->id_gejala;?>" <?= $check; ?>>
+										<input class="form-check-input position-static" type="checkbox"
+											   name="id_gejala[]" id="blankRadio1"
+											   value="<?= $value->id_gejala; ?>" <?= $check; ?>>
 
-									<label class="form-check-label ml-2" for="gridCheck">
-										<?= $value->id_gejala." - ".$value->gejala;?>
-									</label>
-
-									<div class="form-group row">
-
-										<label for="staticEmail" class="col-sm-2 col-form-label ml-2">Bobot Gejala :</label>
-										<label class="col-form-label" name="bobot_gejala[]"><?= $value->gejala_bobot;?>
+										<label class="form-check-label ml-2" for="gridCheck">
+											<?= $value->id_gejala . " - " . $value->gejala; ?>
 										</label>
 
+										<div class="form-group row">
+
+											<label for="staticEmail" class="col-sm-2 col-form-label ml-2">Bobot Gejala
+												:</label>
+											<label class="col-form-label"
+												   name="bobot_gejala[]"><?= $value->gejala_bobot; ?>
+											</label>
+
+										</div>
 									</div>
-								</div>
 								<?php } ?>
-                <button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan</button>
+								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan</button>
 								<a href="<?= base_url('admin/penyakit') ?>" class="btn btn-danger ml-2 mt-3"
-									style="width:100px">Batal</a>
+								   style="width:100px">Batal</a>
 							</form>
 						</div>
 					</div>

@@ -25,42 +25,45 @@
 						<div class="card-header d-flex justify-content-between">
 							<h4 class="card-title">List Data Master Solusi</h4>
 							<a href="<?php echo base_url('admin/solusi/add/') ?>" class="btn btn-primary mr-1"><i
-                        class="bx bx-plus-circle"></i> Tambah Solusi</a>
-              
-              <!-- <button type="button" class="btn btn-primary mr-1" onclick="openModal('disease','add')"><i
-                        class="bx bx-plus-circle"></i> Tambah Data</button> -->
+										class="bx bx-plus-circle"></i> Tambah Solusi</a>
+
+							<!-- <button type="button" class="btn btn-primary mr-1" onclick="openModal('disease','add')"><i
+									  class="bx bx-plus-circle"></i> Tambah Data</button> -->
 						</div>
 						<div class="card-content">
 							<div class="card-body card-dashboard">
 								<div class="table-responsive" id="show-data-disease">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Penyakit</th>
-                      <th>Solusi Penyakit</th>
-                      <th style="width:75px">Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <?php
-                                $no = 0 ;
-                                foreach($listData as $value){
-                                $no++;
-                                 ?>
-                    <tr>
-                      <td><?php echo $no; ?></td>
-                      <td><?php echo $value->penyakit; ?></td>
-									<td><?php echo $value->solusi; ?></td>
-                      <td>
-                        <a href="<?php echo base_url('admin/solusi/edit/'.$value->id_solusi) ?>" class="badge badge-success badge-custom" >Edit</a>
-                        <a href="<?php echo base_url('admin/solusi/doDelete/'.$value->id_solusi) ?>" class="badge badge-danger" onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
-                    </tr>
-                    <?php
-                    }
-                    ?>
-                  </tbody>
-                </table>
+									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+										<thead>
+										<tr>
+											<th>No</th>
+											<th>Penyakit</th>
+											<th>Solusi Penyakit</th>
+											<th style="width:75px">Aksi</th>
+										</tr>
+										</thead>
+										<tbody>
+										<?php
+										$no = 0;
+										foreach ($listData as $value) {
+											$no++;
+											?>
+											<tr>
+												<td><?php echo $no; ?></td>
+												<td><?php echo $value->penyakit; ?></td>
+												<td><?php echo $value->solusi; ?></td>
+												<td>
+													<a href="<?php echo base_url('admin/solusi/edit/' . $value->id_solusi) ?>"
+													   class="badge badge-success badge-custom">Edit</a>
+													<a href="<?php echo base_url('admin/solusi/doDelete/' . $value->id_solusi) ?>"
+													   class="badge badge-danger"
+													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
+											</tr>
+											<?php
+										}
+										?>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>

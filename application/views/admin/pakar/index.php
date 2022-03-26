@@ -30,17 +30,17 @@
 								<div class="table-responsive" id="show-data-disease">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
-											<tr>
-												<th>No</th>
-												<th>Nama Pakar</th>
-												<th>Username</th>
-												<th>Tanggal Pendaftaran</th>
-											</tr>
+										<tr>
+											<th>No</th>
+											<th>Nama Pakar</th>
+											<th>Username</th>
+											<th>Tanggal Pendaftaran</th>
+										</tr>
 										</thead>
 										<tbody>
-											<?php
-                      							foreach($listData as $key => $value){
-                       						?>
+										<?php
+										foreach ($listData as $key => $value) {
+											?>
 											<tr>
 												<td><?= $key + 1; ?></td>
 												<td><?= $value->nama_petugas; ?></td>
@@ -48,8 +48,8 @@
 												<td><?= $value->date_created; ?></td>
 											</tr>
 											<?php
-											}
-											?>
+										}
+										?>
 										</tbody>
 									</table>
 								</div>
