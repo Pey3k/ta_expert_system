@@ -16,15 +16,6 @@ class Informasi extends CI_Controller
 
 	public function index()
 	{
-		// $data['title'] = 'Gejala Management';
-		// $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-
-		// $data['id_gejala'] = $this->db->get('gejala')->result_array();
-
-		// $this->form_validation->set_rules('nama_gejala','Nama Gejala','required');
-		// $this->form_validation->set_rules('bobot_gejala','Bobot Gejala','required');
-
-		// if($this->form_validation->run() == false ){
 		$data['userLogin'] = $this->session->userdata('loginData');
 		$data['listData'] = $this->m_informasi->getListInformasi();
 
@@ -33,18 +24,6 @@ class Informasi extends CI_Controller
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('admin/informasi/index', $data);
 		$this->load->view('templates/footer');
-		// }
-		// else{
-		//     $data =[
-		//         'id_gejala' => $this->input->post('id_gejala'),
-		//         'nama_gejala'=> $this->input->post('nama_gejala'),
-		//         'bobot_gejala'=> $this->input->post('bobot_gejala')
-		//    ];
-		//      $this->db->insert('gejala',$data);
-		//     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-		// 	Gejala baru berhasil ditambahkan</div>');
-		// 	redirect('gejala');
-		// }
 	}
 
 	public function hapus($ig)
@@ -76,8 +55,10 @@ class Informasi extends CI_Controller
 	{
 		$post = $this->input->post();
 		$dataArray = array(
-			"namaPenyakit" => $post['namaPenyakit'],
-			"content" => $post['content']
+			"judul" => $post['judul'],
+			"content" => $post['content'],
+			"created_at" => date('Y-m-d H:i:s'),
+			"url" => strtolower(str_replace(' ', '-', $post['judul']))
 		);
 		$insert = $this->db->insert("informasi", $dataArray);
 		if ($insert) {
@@ -105,8 +86,10 @@ class Informasi extends CI_Controller
 	{
 		$post = $this->input->post();
 		$dataArray = array(
-			"namaPenyakit" => $post['namaPenyakit'],
-			"content" => $post['content']
+			"judul" => $post['judul'],
+			"content" => $post['content'],
+			"updated_at" => date('Y-m-d H:i:s'),
+			"url" => strtolower(str_replace(' ', '-', $post['judul']))
 		);
 		$update = $this->db->update("informasi", $dataArray, array("idInformasi" => $id));
 		if ($update) {

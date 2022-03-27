@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>WAOS - Solusi Penyakit Karies</title>
+	<title>WAOS - <?= $data_informasi->judul ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -66,7 +66,7 @@
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<h1 class="mb-2 bread">Penyakit <?= $dataPenyakit->penyakit ?></h1>
+				<h1 class="mb-2 bread"><?= $data_informasi->judul ?></h1>
 			</div>
 		</div>
 	</div>
@@ -76,17 +76,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 ftco-animate">
-				<?php
-				$dataOld = $this->session->flashdata('oldPost');
-				echo $this->session->flashdata('msgbox'); ?>
-				<h2 class="mb-3">Penyakit <?= $dataPenyakit->penyakit ?></h2>
-				<p><?= $dataPenyakit->solusi ?></p>
-
-				<div class="tag-widget post-tag-container mb-5 mt-5">
-					<div class="tagcloud">
-						<a href="<?= base_url('penyakit/karies') ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
-					</div>
-				</div>
+				<h2 class="mb-3"><?= $data_informasi->judul ?></h2>
+				<p><?= $data_informasi->content ?></p>
 			</div> <!-- .col-md-8 -->
 		</div>
 	</div>

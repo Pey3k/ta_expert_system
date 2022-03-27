@@ -42,7 +42,8 @@ class Pasien extends CI_Controller
 		$dataArray = array(
 			"id_pengguna" => $post['id_pengguna '],
 			"gejala" => $post['gejala'],
-			"gejala_bobot" => $post['bobot']
+			"gejala_bobot" => $post['bobot'],
+			"updated_at" => date('Y-m-d H:i:s')
 		);
 		$update = $this->db->update("gejala", $dataArray, array("id_gejala" => $id));
 		if ($update) {

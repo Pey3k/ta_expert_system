@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['informasi/(:any)'] = 'Informasi/index/$1';
+$route['solusi/(:any)'] = 'Informasi/solusi/$1';
+$route['penyakit/(:any)'] = 'Penyakit/penyakit/$1';

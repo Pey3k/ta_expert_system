@@ -48,7 +48,7 @@
 											?>
 											<tr>
 												<td><?php echo $no; ?></td>
-												<td><?php echo $value->namaPenyakit; ?></td>
+												<td><?php echo $value->judul; ?></td>
 												<td><?php echo $value->content; ?></td>
 												<td>
 													<a href="<?php echo base_url('admin/informasi/edit/' . $value->idInformasi) ?>"

@@ -10,9 +10,7 @@ class Pakar extends CI_Controller
 		$this->load->model('M_user');
 		$this->load->model('m_umum');
 		$this->load->model('m_pakar');
-
 	}
-
 
 	public function Index()
 	{

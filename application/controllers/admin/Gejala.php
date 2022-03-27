@@ -10,21 +10,10 @@ class Gejala extends CI_Controller
 		$this->load->model('m_umum');
 		$this->load->model('m_gejala');
 
-		//    is_logged_in();
-
 	}
 
 	public function index()
 	{
-		// $data['title'] = 'Gejala Management';
-		// $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-
-		// $data['id_gejala'] = $this->db->get('gejala')->result_array();
-
-		// $this->form_validation->set_rules('nama_gejala','Nama Gejala','required');
-		// $this->form_validation->set_rules('bobot_gejala','Bobot Gejala','required');
-
-		// if($this->form_validation->run() == false ){
 		$data['userLogin'] = $this->session->userdata('loginData');
 		$data['listData'] = $this->m_gejala->getlistGejala();
 
@@ -33,18 +22,6 @@ class Gejala extends CI_Controller
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('admin/gejala/index', $data);
 		$this->load->view('templates/footer');
-		// }
-		// else{
-		//     $data =[
-		//         'id_gejala' => $this->input->post('id_gejala'),
-		//         'nama_gejala'=> $this->input->post('nama_gejala'),
-		//         'bobot_gejala'=> $this->input->post('bobot_gejala')
-		//    ];
-		//      $this->db->insert('gejala',$data);
-		//     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-		// 	Gejala baru berhasil ditambahkan</div>');
-		// 	redirect('gejala');
-		// }
 	}
 
 
@@ -99,7 +76,8 @@ class Gejala extends CI_Controller
 		$dataArray = array(
 			"id_gejala" => $post['id_gejala'],
 			"gejala" => $post['gejala'],
-			"gejala_bobot" => $post['bobot']
+			"gejala_bobot" => $post['bobot'],
+			"updated_at" => date('Y-m-d H:i:s')
 		);
 		$update = $this->db->update("gejala", $dataArray, array("id_gejala" => $id));
 		if ($update) {

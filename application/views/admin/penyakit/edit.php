@@ -36,10 +36,9 @@
 								$dataOld = $this->session->flashdata('oldPost');
 								echo $this->session->flashdata('msgbox'); ?>
 
-
 								<h6 class="m-0 font-weight-bold text-danger mb-3">Harap mengisi data dibawah ini :</h6>
-								<div class="form-row">
 
+								<div class="form-row">
 									<div class="form-group col-md-5">
 										<label for="id_penyakit">ID Penyakit</label>
 										<input type="text" class="form-control" style="width:250px" name="id_penyakit"
@@ -53,11 +52,26 @@
 											   placeholder="" value="<?php echo $detailData->penyakit ?>">
 									</div>
 								</div>
+
 								<div class="form-group">
-									<label for="keterangan">Keterangan</label>
+									<label for="keterangan">URL Gambar</label>
+									<input type="text" class="form-control" style="width:530px" name="url_gambar"
+										   id="url_gambar"
+										   placeholder="" value="<?php echo $detailData->url_gambar ?>" required>
+								</div>
+
+								<div class="form-group">
+									<label for="keterangan">Deskripsi Singkat Penyakit</label>
 									<input type="text" class="form-control" style="width:730px " name="keterangan"
 										   id="keterangan"
 										   placeholder="" value="<?php echo $detailData->keterangan; ?>">
+								</div>
+
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi Detail Penyakit</label>
+									<input type="text" class="form-control" style="width:730px " name="deskripsi"
+										   id="deskripsi"
+										   placeholder="" value="<?php echo $detailData->deskripsi; ?>">
 								</div>
 
 								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Ubah</button>

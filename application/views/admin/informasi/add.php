@@ -40,8 +40,8 @@
 								<div class="form-row">
 									<div class="form-group col-md-8">
 										<label for="">Jenis Informasi</label>
-										<input type="text" class="form-control" style="width:400px" name="namaPenyakit"
-											   id="namaPenyakit"
+										<input type="text" class="form-control" style="width:400px" name="judul"
+											   id="judul"
 											   placeholder="">
 									</div>
 

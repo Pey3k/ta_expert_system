@@ -78,30 +78,22 @@
 			<div class="col-lg-8 ftco-animate">
 				<h2 class="mb-3">Penyakit Impaksi Gigi</h2>
 				<p>
-					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+					<img src="<?= base_url() . "assets/frontend/images/penyakit/impaksi.jpg" ?>" alt="" width="80%"
+						 class="img-fluid">
 				</p>
-				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
-					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
-					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
-					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
-					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
-					recusandae!</p>
-				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
-					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
-					inventore?</p>
+				<p>Gigi bungsu adalah gigi geraham ketiga yang paling terakhir tumbuh. Biasanya, gigi ini akan mulai
+					tumbuh saat Anda memasuki usia remaja, yaitu sekitar 17 sampai 20-an. Jumlah gigi orang dewasa
+					sendiri adalah 32.</p>
+				<p>Setiap orang umumnya punya empat buah gigi geraham bungsu. Dua pasang di atas dan bawah sisi kanan
+					belakang mulut, dan dua pasang lagi di atas-bawah sisi kiri belakang mulut.</p>
+				<p>Bila tumbuh dengan arah dan posisi yang tepat, tumbuhnya gigi terakhir ini tidak bermasalah. Namun
+					jika pertumbuhan gigi ini miring, maka akan terasa sakit.</p>
+				<p>Gigi geraham bungsu bisa tumbuh miring dengan arah yang berbeda-beda. Bisa tumbuh horizontal
+					(menyamping), mengarah atau menjauh dari gigi geraham kedua, atau tumbuh ke dalam atau keluar.
+					Kondisi ini dalam istilah medis disebut impaksi gigi bungsu.</p>
+				<p>Gigi geraham terakhir yang tumbuhnya miring dapat merusak gigi sebelahnya. Tak hanya itu, kerusakan
+					saraf dan tulang rahang yang parah juga bisa terjadi. Akibatnya, Anda akan lebih sering mengalami
+					gusi bengkak dan sakit gigi.</p>
 
 			</div> <!-- .col-md-8 -->
 

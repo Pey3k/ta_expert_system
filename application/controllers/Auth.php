@@ -9,9 +9,8 @@ class Auth extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
-		// $this->load->model('m_diagnosa');
-		// $this->load->model('m_gejala');
-		// $this->load->model('m_penyakit');
+		$this->load->model('m_informasi');
+		$this->load->model('m_penyakit');
 	}
 
 
@@ -19,8 +18,11 @@ class Auth extends CI_Controller
 	{
 		// Melakukan cek pada aksi login pasien
 		$data['userLogin'] = $this->session->userdata('loginUser');
+		$data['list_informasi'] = $this->m_informasi->getListInformasi();
+		$data['data_penyakit'] = $this->m_penyakit->listPenyakit();
 
 		$post = $this->input->post();
+
 		$this->load->view('client/homepage', $data);
 	}
 

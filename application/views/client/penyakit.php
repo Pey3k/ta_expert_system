@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>WAOS - Solusi Penyakit Abses Gusi</title>
+	<title>WAOS - Penyakit <?= $penyakit->penyakit ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -60,13 +60,14 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../../assets/frontend/images/bg_1.jpg');"
+<section class="hero-wrap hero-wrap-2"
+		 style="background-image: url(<?php base_url() . '/assets/frontend/images/bg_1.jpg' ?>);"
 		 data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<h1 class="mb-2 bread">Penyakit <?= $dataPenyakit->penyakit ?></h1>
+				<h1 class="mb-2 bread">Penyakit <?= $penyakit->penyakit ?></h1>
 			</div>
 		</div>
 	</div>
@@ -76,18 +77,29 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 ftco-animate">
-				<?php
-				$dataOld = $this->session->flashdata('oldPost');
-				echo $this->session->flashdata('msgbox'); ?>
-				<h2 class="mb-3">Penyakit <?= $dataPenyakit->penyakit ?></h2>
-				<p><?= $dataPenyakit->solusi ?></p>
+				<h2 class="mb-3">Penyakit <?= $penyakit->penyakit ?></h2>
+				<p>
+					<img src="<?= $penyakit->url_gambar ?>" alt="" width="80%"
+						 class="img-fluid">
+				</p>
+				<p><?= $penyakit->deskripsi ?></p>
 
-				<div class="tag-widget post-tag-container mb-5 mt-5">
-					<div class="tagcloud">
-						<a href="<?= base_url('penyakit/absesgusi') ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
-					</div>
-				</div>
 			</div> <!-- .col-md-8 -->
+
+			<div class="col-lg-4 sidebar ftco-animate">
+				<div class="sidebar-box ftco-animate">
+					<h3>Jenis Penyakit Gigi</h3>
+					<ul class="categories">
+						<?php foreach ($data_penyakit as $k => $v) { ?>
+							<?php if (!empty($v->url)) { ?>
+								<li><a href="<?= base_url('penyakit/' . $v->url) ?>"
+									   target="_blank"><?= $v->penyakit ?></a>
+								</li>
+							<?php } ?>
+						<?php } ?>
+					</ul>
+				</div>
+			</div><!-- END COL -->
 		</div>
 	</div>
 </section>

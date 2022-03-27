@@ -9,8 +9,6 @@ class Login extends CI_Controller
 		parent::__construct();
 		$this->load->model('m_login');
 		$this->load->library('form_validation');
-
-
 	}
 
 	public function index()
@@ -245,51 +243,6 @@ class Login extends CI_Controller
 			Registrasi admin berhasil. Silahkan melakukan login.</div>');
 			redirect('admin/login');
 		}
-
-
 	}
-	//
-	// public function login()
-	// {
-	// 	$username = $this->input->post('username');
-	// 	$password = $this->input->post('password');
-	//
-	// 	$user = $this->db->get_where('petugas', ['username'=> $username])->row_array();
-	// 	//user ada
-	// 	if($user){
-	// 		//jika user active
-	// 		if($user['is_active'] == 1)
-	// 		{
-	// 			//cek password
-	// 			if(password_verify($password,$user['password']))
-	// 			{
-	// 				$data = [
-	// 					'email' => $user['email'],
-	// 					'role_id'=> $user['role_id']
-	// 				];
-	// 				$this->session->set_userdata($data);
-	// 				if($user['role_id'] == 1)
-	// 				{
-	// 					redirect('admin');
-	// 				}else{
-	// 					redirect('user');
-	// 				}
-	//
-	// 			}else{
-	// 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-	// 		Password Anda salah</div>');
-	// 		redirect('admin/login');
-	// 			}
-	// 		}else
-	// 		$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-	// 		Email has not been activated</div>');
-	// 		redirect('auth');
-	// 	}else{
-	// 		$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-	// 		Email is not registered!</div>');
-	// 		redirect('auth');
-	// 	}
-	// }
-
 
 }

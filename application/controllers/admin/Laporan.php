@@ -30,8 +30,6 @@ class Laporan extends CI_Controller
 		$htmlnya = $this->load->view('admin/laporan/print_pendaftaran', $data, true);
 		$mpdf->WriteHTML($htmlnya);
 		$mpdf->Output();
-		// $this->load->library('fpdf_gen');
-		// $this->load->view('admin/laporan/print_pendaftaran',$data);
 	}
 
 	public function laporan_diagnosa()
@@ -65,15 +63,5 @@ class Laporan extends CI_Controller
 		$this->load->view('admin/laporan/laporan_pasien', $data);
 		$this->load->view('templates/footer');
 	}
-
-// $data['userLogin'] = $this->session->userdata('loginUser');
-// $data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['UserID']);
-// $mpdf = new \Mpdf\Mpdf();
-//
-// $htmlnya = $this->load->view('client/print_diagnosa_user', $data,true);
-//
-// $mpdf->WriteHTML($htmlnya);
-// $mpdf->Output();
-
 
 }

@@ -50,18 +50,32 @@
 									<label for="penyakit">Nama Penyakit</label>
 									<input type="text" class="form-control" style="width:530px" name="penyakit"
 										   id="penyakit"
-										   placeholder="">
+										   placeholder="" required>
 								</div>
 
 								<div class="form-group">
-									<label for="keterangan">Keterangan Penyakit</label>
-									<textarea style="width:730px" class="form-control" id="" name="keterangan"
-											  rows="3"></textarea>
+									<label for="keterangan">URL Gambar</label>
+									<input type="text" class="form-control" style="width:530px" name="url_gambar"
+										   id="url_gambar"
+										   placeholder="" required>
+								</div>
 
-									<button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan
-									</button>
-									<a href="<?php echo base_url('admin/penyakit') ?>" class="btn btn-danger ml-4 mt-3"
-									   style="width:100px">Batal</a>
+								<div class="form-group">
+									<label for="keterangan">Deskripsi Singkat Penyakit</label>
+									<textarea style="width:730px" class="form-control" id="" name="keterangan"
+											  rows="3" required></textarea>
+								</div>
+
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi Detail Penyakit</label>
+									<textarea style="width:730px" class="form-control" id="" name="deskripsi"
+											  rows="3" required></textarea>
+								</div>
+
+								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Simpan
+								</button>
+								<a href="<?php echo base_url('admin/penyakit') ?>" class="btn btn-danger ml-4 mt-3"
+								   style="width:100px">Batal</a>
 							</form>
 						</div>
 					</div>

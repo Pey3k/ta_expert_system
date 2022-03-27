@@ -78,30 +78,30 @@
 			<div class="col-lg-8 ftco-animate">
 				<h2 class="mb-3">Penyakit Pulpitis</h2>
 				<p>
-					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+					<img src="<?= base_url() . "assets/frontend/images/penyakit/pulpitis.jpg" ?>" alt="" width="80%"
+						 class="img-fluid">
 				</p>
-				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
-					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
-					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
-					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
-					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
-					recusandae!</p>
-				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
-					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
-					inventore?</p>
+				<p>Pulpitis adalah penyebab utama dari sakit gigi dan tanggalnya gigi pada orang-orang yang lebih muda.
+					Pulpitis merupakan peradangan pada pulpa gigi (bagian gigi terdalam yang berisi saraf dan pembuluh
+					darah) dan jaringan periradikular yang mengelilingi akar gigi.
+				</p>
+				<p>Kondisi ini dapat berupa akut atau kronis, dengan atau tanpa gejala. Dalam beberapa kasus, kondisi
+					ini bisa diobati. Namun, kalau sudah parah peradangan pulpa gigi tidak bisa disembuhkan seperti
+					semula lagi.</p>
+				<p>Kondisi ini cukup umum terjadi. Sering kali terjadi pada pasien yang kurang menjaga kebersihan gigi
+					dan mulut serta pasien dengan sayatan medis pada rongga mulut.
+				</p>
+				<p>Selain menyebabkan rasa sakit dan tidak nyaman, radang pulpa gigi ini dapat menyebar dan menyebabkan
+					komplikasi yang berpotensi mengancam nyawa, seperti infeksi pada ruang fascia dalam di kepala dan
+					leher.</p>
+				<p>Pulpitis dapat ditangani dengan mengurangi faktor-faktor risiko. Diskusikan dengan dokter untuk
+					informasi lebih lanjut.</p>
+				<p>Pulpitis terjadi ketika lapisan enamel dan dentin pelindung pulpa rusak. Ketika lapisan yang
+					melindungi
+					ini rusak, bakteri dapat masuk dengan mudah dan menyebabkan pembengkakan.</p>
+				<p>Pulpitis tidak hanya disebabkan oleh bakteri, tapi juga bisa terjadi akibat trauma atau cedera pada
+					gigi
+					atau rahang yang membuka rongga pulpa dan mengakibatkan bakteri masuk.</p>
 
 			</div> <!-- .col-md-8 -->
 

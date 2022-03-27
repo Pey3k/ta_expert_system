@@ -17,15 +17,6 @@ class Penyakit extends CI_Controller
 
 	public function index()
 	{
-		// $data['title'] = 'Gejala Management';
-		// $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-
-		// $data['id_gejala'] = $this->db->get('gejala')->result_array();
-
-		// $this->form_validation->set_rules('nama_gejala','Nama Gejala','required');
-		// $this->form_validation->set_rules('bobot_gejala','Bobot Gejala','required');
-
-		// if($this->form_validation->run() == false ){
 		$data['userLogin'] = $this->session->userdata('loginData');
 		$data['listData'] = $this->m_penyakit->listPenyakit();
 
@@ -34,18 +25,6 @@ class Penyakit extends CI_Controller
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('admin/penyakit/index', $data);
 		$this->load->view('templates/footer');
-		// }
-		// else{
-		//     $data =[
-		//         'id_gejala' => $this->input->post('id_gejala'),
-		//         'nama_gejala'=> $this->input->post('nama_gejala'),
-		//         'bobot_gejala'=> $this->input->post('bobot_gejala')
-		//    ];
-		//      $this->db->insert('gejala',$data);
-		//     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-		// 	Gejala baru berhasil ditambahkan</div>');
-		// 	redirect('gejala');
-		// }
 	}
 
 	public function add()
@@ -66,8 +45,10 @@ class Penyakit extends CI_Controller
 		$post = $this->input->post();
 		$dataArray = array(
 			"id_penyakit" => $post['id_penyakit'],
+			"url_gambar" => $post['url_gambar'],
 			"penyakit" => $post['penyakit'],
-			"keterangan" => $post['keterangan']
+			"keterangan" => $post['keterangan'],
+			"deskripsi" => $post['deskripsi']
 		);
 		$insert = $this->db->insert("penyakit", $dataArray);
 		if ($insert) {
@@ -97,7 +78,10 @@ class Penyakit extends CI_Controller
 		$post = $this->input->post();
 		$dataArray = array(
 			"penyakit" => $post['penyakit'],
-			"keterangan" => $post['keterangan']
+			"keterangan" => $post['keterangan'],
+			"url_gambar" => $post['url_gambar'],
+			"deskripsi" => $post['deskripsi'],
+			"updated_at" => date('Y-m-d H:i:s')
 		);
 		$update = $this->db->update("penyakit", $dataArray, array("id_penyakit" => $id));
 		if ($update) {

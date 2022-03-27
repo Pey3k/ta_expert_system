@@ -117,13 +117,13 @@
 					</div>
 				</div>
 				<div class="pl-md-5 ml-md-5 mb-5">
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-						is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
-						all-powerful Pointing has no control about the blind texts it is an almost unorthographic life
-						One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
-						far World of Grammar.</p>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-						is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+					<p>Untuk mendukung keluarga di Indonesia dalam penanganan masalah gigi dan mulut ketika berada di
+						rumah, serta untuk mengurangi risiko penularan Covid-19 di rumah sakit dan klinik pada masa ini,
+						kami memberikan pelayan konsultasi gigi gratis secara online.</p>
+					<p>
+						Anda dapat berkonsultasi secara langsung dengan dokter gigi professional dari WAOS melalui
+						website ini. </p>
+					<p>Karena pada saat seperti ini, setiap senyuman begitu berarti.</p>
 					<div class="founder d-flex align-items-center mt-5">
 						<div class="img" style="background-image: url(assets/frontend/images/doc-1.jpg);"></div>
 						<div class="text pl-3">
@@ -161,93 +161,26 @@
 			<div class="col-md-8 text-center heading-section ftco-animate">
 				<span class="subheading">Penyakit</span>
 				<h2 class="mb-4">Penyakit Gigi</h2>
-				<p>Beberapa penyakit gigi yang pernah menyerang pasien kami</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Karies Gigi</h3>
+			<?php foreach ($data_penyakit as $k => $v) { ?>
+				<?php if (!empty($v->url)) { ?>
+					<div class="col-md-4 services p-4 ftco-animate">
+						<div class="pricing-entry pb-5 text-center">
+							<div>
+								<h3 class="mb-4"><?= $v->penyakit ?></h3>
+							</div>
+							<div class="img w-100" style="background-image: url(<?= $v->url_gambar ?>);"></div>
+							<div>
+								<?= mb_strimwidth($v->deskripsi, 0, 97, '...') ?>
+							</div>
+							<p class="button text-center"><a href="<?= base_url('penyakit/' . $v->url) ?>"
+															 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
+						</div>
 					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-5.jpg');"></div>
-					<div>
-						Karies gigi adalah kondisi rusaknya struktur dan lapisan gigi yang terjadi secara bertahap ...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/karies') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Pulpitis</h3>
-					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-1.jpg');"></div>
-					<div>
-						Pulpitis adalah penyebab utama dari sakit gigi dan tanggalnya gigi pada orang-orang yang lebih
-						muda ...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/pulpitis') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry active pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Gingivitis</h3>
-					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-2.jpg');"></div>
-					<div>
-						Gingivitis merupakan suatu inflamasi atau peradangan yang mengenai jaringan lunak di sekitar
-						gigi atau jaringan gingiva...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/gingivitis') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Abses Gusi</h3>
-					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-8.jpg');"></div>
-					<div>
-						Abses gusi berawal dari infeksi pada mulut yang dibiarkan dan akhirnya membentuk kantung atau
-						benjolan berisi nanah pada gusi ...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/absesgusi') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Impaksi Gigi</h3>
-					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-3.jpg');"></div>
-					<div>
-						Impaksi gigi adalah suatu keadaan dimana benih gigi atau calon gigi yang akan tumbuh terhalang
-						jalan pertumbuhannya ...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/impaksi') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
-			<div class="col-md-4 services p-4 ftco-animate">
-				<div class="pricing-entry active pb-5 text-center">
-					<div>
-						<h3 class="mb-4">Periodontitis</h3>
-					</div>
-					<div class="img w-100" style="background-image: url('assets/frontend/images/dept-7.jpg');"></div>
-					<div>
-						Periodontitis adalah infeksi gusi yang merusak gigi, jaringan lunak, dan tulang penyangga
-						gigi. Kondisi ini harus segera diobati ...
-					</div>
-					<p class="button text-center"><a href="<?= base_url('penyakit/periodontitis') ?>"
-													 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
-				</div>
-			</div>
+				<?php } ?>
+			<?php } ?>
 		</div>
 	</div>
 </section>
@@ -256,63 +189,32 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-2">
 			<div class="col-md-8 text-center heading-section ftco-animate">
-				<span class="subheading">Tips dan Trick</span>
-				<h2 class="mb-4">Tips Kesehatan Gigi</h2>
-				<p>Beberapa tips untuk menjaga kesehatan gigi Anda</p>
+				<span class="subheading">Informasi Kesehatan Gigi</span>
+				<h2 class="mb-4"> Kesehatan Gigi</h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 ftco-animate">
-				<div class="blog-entry">
-					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('assets/frontend/images/image_1.jpg');">
-					</a>
-					<div class="text bg-white p-4">
-						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
-											class="ion-ios-arrow-round-forward"></span></a></p>
-							</p>
+			<?php foreach ($list_informasi as $k => $v) { ?>
+				<?php if (!empty($v->url)) { ?>
+					<div class="col-md-4 ftco-animate">
+						<div class="blog-entry">
+							<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
+							   style="background-image: url('assets/frontend/images/image_1.jpg');">
+							</a>
+							<div class="text bg-white p-4">
+								<h3 class="heading"><a href="<?= 'informasi/' . $v->url ?>"><?= $v->judul ?></a></h3>
+								<p><?= mb_strimwidth($v->content, 0, 97, '...') ?></p>
+								<div class="d-flex align-items-center mt-4">
+									<p class="mb-0"><a href="<?= 'informasi/' . $v->url ?>" class="btn btn-primary">Selengkapnya
+											<span
+													class="ion-ios-arrow-round-forward"></span></a></p>
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-4 ftco-animate">
-				<div class="blog-entry">
-					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('assets/frontend/images/image_2.jpg');">
-					</a>
-					<div class="text bg-white p-4">
-						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
-											class="ion-ios-arrow-round-forward"></span></a></p>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 ftco-animate">
-				<div class="blog-entry">
-					<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
-					   style="background-image: url('assets/frontend/images/image_3.jpg');">
-					</a>
-					<div class="text bg-white p-4">
-						<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-						<div class="d-flex align-items-center mt-4">
-							<p class="mb-0"><a href="#" class="btn btn-primary">Selengkapnya <span
-											class="ion-ios-arrow-round-forward"></span></a></p>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+				<?php } ?>
+			<?php } ?>
 		</div>
 	</div>
 </section>
@@ -386,8 +288,6 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/bootstrap-datepicker.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
-
-
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
 
 </body>

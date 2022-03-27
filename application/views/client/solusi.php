@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>WAOS - Solusi Penyakit Periodontitis</title>
+	<title>WAOS - Solusi Penyakit <?= $dataPenyakit->penyakit ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -79,12 +79,16 @@
 				<?php
 				$dataOld = $this->session->flashdata('oldPost');
 				echo $this->session->flashdata('msgbox'); ?>
-				<h2 class="mb-3">Penyakit <?= $dataPenyakit->penyakit ?></h2>
+				<h2 class="mb-3">Solusi Penyakit <?= $dataPenyakit->penyakit ?></h2>
+				<p>
+					<img src="<?= $dataPenyakit->url_gambar ?>" alt="" width="80%"
+						 class="img-fluid">
+				</p>
 				<p><?= $dataPenyakit->solusi ?></p>
 
 				<div class="tag-widget post-tag-container mb-5 mt-5">
 					<div class="tagcloud">
-						<a href="<?= base_url('penyakit/periodontitis') ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
+						<a href="<?= base_url($dataPenyakit->url) ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
 					</div>
 				</div>
 			</div> <!-- .col-md-8 -->

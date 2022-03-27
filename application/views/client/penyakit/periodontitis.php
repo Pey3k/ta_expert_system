@@ -78,30 +78,24 @@
 			<div class="col-lg-8 ftco-animate">
 				<h2 class="mb-3">Penyakit Periodontitis</h2>
 				<p>
-					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+					<img src="<?= base_url() . "assets/frontend/images/penyakit/periodontitis.jpg" ?>" alt=""
+						 width="80%"
+						 class="img-fluid">
 				</p>
-				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
-					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
-					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
-					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
-					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
-					recusandae!</p>
-				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
-					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
-					inventore?</p>
+				<p>Periodontitis adalah infeksi gusi yang merusak gigi, jaringan lunak, dan tulang penyangga gigi.
+					Kondisi ini harus segera diobati karena dapat menyebabkan komplikasi serius.</p>
+				<p>Periodontitis merupakan salah satu komplikasi dari radang gusi (gingivitis) yang tidak terobati.
+					Jika kondisi ini terjadi dalam jangka panjang, jaringan di sekitar gusi dan gigi akan rusak,
+					sehingga menyebabkan gigi tanggal. Bahkan, bisa muncul abses atau kumpulan nanah di gigi.</p>
+				<p>Periodontitis bermula dari penumpukan plak di gigi. Plak ini terbentuk dari sisa-sisa makanan yang
+					berinteraksi dengan bakteri yang normalnya hidup di mulut. Jika tidak dibersihkan, plak tersebut
+					akan mengeras dan membentuk karang gigi yang menjadi media bakteri berkembang biak.</p>
+				<p>Seiring waktu, bakteri di karang gigi tadi akan menyebabkan gusi di sekitar gigi (gingiva) meradang
+					dan iritasi. Jika tidak segera diobati, radang gusi tersebut akan menyebabkan terbentuknya celah di
+					gusi yang memisahkan jaringan gusi dengan gigi.</p>
+				<p>Celah tersebut menyebabkan bakteri menginfeksi lebih dalam lagi, hingga merusak jaringan dan tulang
+					di dalam gusi. Selain dapat menyebabkan gigi tanggal, radang gusi yang terus terjadi juga dapat
+					melemahkan sistem kekebalan tubuh.</p>
 
 			</div> <!-- .col-md-8 -->
 

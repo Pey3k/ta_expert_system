@@ -20,16 +20,6 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-	//
-	//   public function index()
-	// {
-	// 	// $data['listRemaining'] = $this->m_barang->remainingBarangHabis()->result();
-	// 	// die(var_dump($data['listRemaining']));
-	// 	$data['userLogin'] = $this->session->userdata('loginData');
-	// 	$data['v_content'] = 'member/dashboard/content';
-	// 	$this->load->view('member/layout',$data);
-	// }
-
 	function decryptIt($q)
 	{
 		$cryptKey = 'qJB0rGtIn5UB1xG03efyCp';

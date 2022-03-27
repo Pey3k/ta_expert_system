@@ -8,6 +8,7 @@ class Penyakit extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
+		$this->load->model('m_penyakit');
 	}
 
 	public function index()
@@ -16,41 +17,13 @@ class Penyakit extends CI_Controller
 		$this->load->view('client/homepage/', $data);
 	}
 
-	public function karies()
+	public function penyakit($url)
 	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/karies', $data);
-	}
+		$data['userLogin'] = $this->session->userdata('loginUser');
+		$data['penyakit'] = $this->db->query('select * from penyakit p join solusi s on s.id_penyakit = p.id_penyakit where p.url = "' . $url . '"')->row();
+		$data['data_penyakit'] = $this->m_penyakit->listPenyakit();
 
-	public function pulpitis()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/pulpitis', $data);
-	}
-
-	public function gingivitis()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/gingivitis', $data);
-	}
-
-	public function absesgusi()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/absesgusi', $data);
-	}
-
-	public function impaksi()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/impaksi', $data);
-	}
-
-
-	public function periodontitis()
-	{
-		$data['msg'] = $this->session->flashdata('msg');
-		$this->load->view('client/penyakit/periodontitis', $data);
+		$this->load->view('client/penyakit', $data);
 	}
 
 }
