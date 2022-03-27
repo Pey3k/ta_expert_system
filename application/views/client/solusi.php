@@ -60,8 +60,7 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../../assets/frontend/images/bg_1.jpg');"
-		 data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -88,7 +87,8 @@
 
 				<div class="tag-widget post-tag-container mb-5 mt-5">
 					<div class="tagcloud">
-						<a href="<?= base_url() . 'penyakit/' . $dataPenyakit->url ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
+						<a href="<?= base_url() . 'penyakit/' . $dataPenyakit->url ?>" target="_blank"
+						   class="tag-cloud-link">Selengkapnya...</a>
 					</div>
 				</div>
 			</div> <!-- .col-md-8 -->
