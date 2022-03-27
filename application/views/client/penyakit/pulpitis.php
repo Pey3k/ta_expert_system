@@ -43,7 +43,8 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item"><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-				<li class="nav-item active"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a>
+				<li class="nav-item active"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit
+						Gigi</a>
 				</li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
@@ -59,7 +60,8 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../assets/frontend/images/bg_1.jpg');"
+		 data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">

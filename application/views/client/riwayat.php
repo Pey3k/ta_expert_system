@@ -72,10 +72,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="card shadow col-md-12 ftco-animate">
-				<div class="card-header">
+				<div class="card-header py-3">
 					<div class="row">
 						<div class="col-md-6 ftco-animate">
-							<h6 class="col-12 text-left font-weight-bold text-primary">Riwayat Penyakit Gigi</h6>
+							<h6 class="m-0 font-weight-bold text-primary">Riwayat Penyakit Gigi</h6>
 						</div>
 						<div class="col-md-6 ftco-animate">
 							<?php if (!empty($userLogin)) { ?>
@@ -85,7 +85,7 @@
 										<button type="button" class="btn btn-sm btn-success pull-left"
 												data-dismiss="modal">
 											<i class="ace-icon fa fa-plus"></i>
-											Print PDF
+											Cetak PDF
 										</button>
 									</a>
 								</div>
@@ -106,7 +106,7 @@
 								<th align="center">Nama</th>
 								<th align="center">Penyakit</th>
 								<th align="center">Persentase</th>
-								<th align="center">Tanggal konsultasi</th>
+								<th align="center">Tanggal Konsultasi</th>
 							</tr>
 							</thead>
 							<tbody>
