@@ -18,7 +18,7 @@ class Laporan extends CI_Controller
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
-		$this->load->view('admin/laporan/pendaftaran', $data);
+		$this->load->view('admin/laporan/laporan_pendaftaran', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -45,23 +45,11 @@ class Laporan extends CI_Controller
 
 	public function downloadLaporanDiagnosa()
 	{
-
 		$data['userLogin'] = $this->session->userdata('loginData');
 		$data['listData'] = $this->db->query("SELECT * FROM penyakit")->result();
-		$this->load->library('fpdf_gen');
-		$this->load->view('admin/laporan/print_hasil_diagnosa', $data);
-
+		$mpdf = new \Mpdf\Mpdf();
+		$htmlnya = $this->load->view('admin/laporan/print_hasil_diagnosa', $data, true);
+		$mpdf->WriteHTML($htmlnya);
+		$mpdf->Output();
 	}
-
-	public function laporan_pasien()
-	{
-		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['listData'] = $this->db->query("SELECT * FROM pengguna")->result();
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
-		$this->load->view('admin/laporan/laporan_pasien', $data);
-		$this->load->view('templates/footer');
-	}
-
 }

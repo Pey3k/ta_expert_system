@@ -5,13 +5,12 @@
 			<div class="content-header-left col-12 mb-2 mt-1">
 				<div class="row breadcrumbs-top">
 					<div class="col-12">
-						<h5 class="content-header-title float-left pr-1 mb-0">Laporan Diagnosa Penyakit Sistem WAOS</h5>
+						<h5 class="content-header-title float-left pr-1 mb-0">Laporan Pasien WAOS</h5>
 						<div class="breadcrumb-wrapper col-12">
 							<ol class="breadcrumb p-0 mb-0">
 								<li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active">Rekapitulasi Data Diagnosa Penyakit pada Sistem Pakar
-									WAOS
+								<li class="breadcrumb-item active">Rekapitulasi Data Pasien pada Sistem Pakar WAOS
 								</li>
 							</ol>
 						</div>
@@ -25,9 +24,9 @@
 					<div class="card shadow">
 
 						<div class="card-header">
-							<h6 class="m-0 font-weight-bold text-primary pb-2">Data Penyakit Pasien</h6>
+							<h6 class="m-0 font-weight-bold text-primary pb-2">Data Pasien</h6>
 
-							<a href="<?php echo base_url('admin/laporan/downloadLaporanDiagnosa') ?>">
+							<a href="<?php echo base_url('admin/laporan/downloadPendaftaran') ?>">
 								<button type="button" class="btn btn-sm btn-primary pull-left" data-dismiss="modal"
 										style="font-size:14px">
 									<i class="ace-icon fa fa-print"></i>
@@ -40,8 +39,12 @@
 								<thead>
 								<tr>
 									<th>No</th>
-									<th>Nama Penyakit</th>
-									<th>Jumlah Pasien Terdiagnosa</th>
+									<th>Nama Pasien</th>
+									<th>Jenis Kelamin</th>
+									<th>Umur</th>
+									<th>Username</th>
+									<th>Email</th>
+									<th>Tanggal Pendaftaran</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -49,15 +52,15 @@
 								$no = 0;
 								foreach ($listData as $value) {
 									$no++;
-									$get = $this->db->query("SELECT COUNT(*) as total FROM detailhasilanalisa WHERE penyakit LIKE '%" . $value->penyakit . "%'")->row()->total;
-
-									// echo $this->db->last_query();die();
 									?>
 									<tr>
 										<td><?php echo $no; ?></td>
-										<td><?php echo $value->penyakit; ?></td>
-										<td><?php echo $get; ?> Pasien</td>
-
+										<td><?php echo $value->nama_pengguna; ?></td>
+										<td><?php echo $value->jk; ?></td>
+										<td><?php echo $value->umur; ?></td>
+										<td><?php echo $value->username; ?></td>
+										<td><?php echo $value->email; ?></td>
+										<td><?php echo $value->tanggal_pendaftaran; ?></td>
 									</tr>
 									<?php
 								}
@@ -72,4 +75,3 @@
 		</div>
 	</div>
 </div>
-

@@ -9,9 +9,6 @@ class Solusi extends CI_Controller
 		parent::__construct();
 		$this->load->model('m_umum');
 		$this->load->model('m_solusi');
-
-		//    is_logged_in();
-
 	}
 
 	public function index()

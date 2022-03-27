@@ -13,24 +13,24 @@
 	<div class="page">
 		<div class="subpage">
 			<div class="content">
-				<div style="width:128mm;float:right;">
-					<!-- <p style="text-align:right;"></button>&nbsp;&nbsp;&nbsp;<button style="text-align:right;" onclick="window.print()">Print</button></p> -->
-					<p style="text-align:right;">Tanggal Laporan: <?php echo date('Y-m-d'); ?> </p>
+				<div style="width:128mm;float:left;">
+					<h1>WAOS</h1>
 				</div>
+				<div style="width:128mm;float:right;">
+					<p style="text-align:right;">Laporan per tanggal: <?php echo date('d F Y'); ?> </p>
+				</div>
+
 				<div style="clear:both;"></div>
+
 				<hr/>
-				<center>
-					<h1 style="font-weight:none;font-size:28pt">WAOS.</h1>
-					<h2>Pengelolaan Pola Hidup Sehat Pada Remaja</h2>
-				</center>
+				<div style="text-align: center;">
+					<h1 style="font-weight:none;">Laporan Jumlah Pasien</title>
+					</h1>
+				</div>
 				<hr/>
 
 				<div style="clear:both;"></div>
 
-				<center>
-					&nbsp;&nbsp;
-					<p style="font-weight:none;font-size:16pt">LAPORAN DATA PENDAFTARAN </p>
-				</center>
 
 			</div>
 			<table class="tb1" style="width: 100%;height:70px;" border="1">

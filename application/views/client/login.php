@@ -122,10 +122,21 @@
 						</li>
 						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang
 								Kami</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a>
+						<li><a href="<?= base_url('profile') ?>">
+								<?php if (empty($this->session->userdata('loginUser'))) { ?>
+									<span class="ion-ios-arrow-round-forward mr-2"></span>Login
+								<?php } else { ?>
+									<span class="ion-ios-arrow-round-forward mr-2"></span>Profil
+								<?php } ?>
+							</a>
 						</li>
-						<li><a href="<?= base_url('admin/login') ?>"><span
-										class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
+						<?php if (empty($this->session->userdata('loginData'))) { ?>
+							<li><a href="<?= base_url('admin/login') ?>" target="_blank"><span
+											class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
+						<?php } else { ?>
+							<li><a href="<?= base_url('admin/dashboard') ?>" target="_blank"><span
+											class="ion-ios-arrow-round-forward mr-2"></span>Dashboard Admin</a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
