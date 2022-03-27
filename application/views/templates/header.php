@@ -5,10 +5,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<meta name="description" content="TA Expert System">
+	<meta name="description" content="Admin WAOS - Expert System">
 	<meta name="keywords" content="zoe, medical">
-	<meta name="author" content="TA Expert System">
-	<title>TA Expert System</title>
+	<meta name="author" content="Admin WAOS - Expert System">
+	<title>Admin WAOS - Expert System</title>
 	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700"
 		rel="stylesheet">
 	<link rel="stylesheet" type="text/css"
