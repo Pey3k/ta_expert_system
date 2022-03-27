@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Expert System</title>
+	<title>WAOS - Penyakit Gingivitis</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -78,30 +78,24 @@
 			<div class="col-lg-8 ftco-animate">
 				<h2 class="mb-3">Penyakit Gingivitis</h2>
 				<p>
-					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+					<img src="<?= base_url() . "assets/frontend/images/penyakit/gingivitis.jpg" ?>" alt="" width="80%"
+						 class="img-fluid">
 				</p>
-				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
-					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
-					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
-					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
-					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
-					recusandae!</p>
-				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
-					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
-					inventore?</p>
+				<p>Gingivitis (radang gusi) adalah penyakit akibat infeksi bakteri yang menyebabkan gusi bengkak karena
+					meradang.</p>
+				<p>Penyebab utama kondisi ini adalah kebersihan mulut yang buruk. Orang yang jarang sikat gigi, sering
+					makan makanan yang manis dan asam, tidak rutin cek gigi ke dokter adalah yang paling berisiko
+					mengalami gingivitis.</p>
+				<p>Banyak orang yang sering tidak tahu mereka memiliki penyakit ini karena gejalanya tidak begitu jelas.
+					Namun, radang gusi tidak boleh dibiarkan berlarut tanpa pengobatan.</p>
+				<p>AGingivitis adalah penyakit gusi dan mulut yang umum. Kondisi ini dapat dialami siapa saja tanpa
+					memandang jenis kelamin terutama mereka yang tidak menjaga kesehatan gigi dan mulut.</p>
+				<p>Radang gusi yang tidak diobati dapat berkembang semakin parah. Masalah gusi ini dapat menyebabkan
+					periodontitis, yaitu infeksi gusi serius yang bisa merusak jaringan tulang penyokong gigi.
+					Periodontitis dapat menyebabkan gigi tanggal dan berbagai masalah serius lainnya.
+				</p>
+				<p>Anda dapat terhindar dari risiko penyakit ini dengan mencegah faktor risiko yang ada. Silakan
+					konsultasi ke dokter gigi untuk informasi lebih lanjut.</p>
 
 			</div> <!-- .col-md-8 -->
 

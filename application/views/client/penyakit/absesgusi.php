@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Expert System</title>
+	<title>WAOS - Penyakit Abses Gusi</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -78,30 +78,27 @@
 			<div class="col-lg-8 ftco-animate">
 				<h2 class="mb-3">Penyakit Abses Gusi</h2>
 				<p>
-					<img src="<?= base_url() . "assets/frontend/images/image_2.jpg" ?>" alt="" class="img-fluid">
+					<img src="<?= base_url() . "assets/frontend/images/penyakit/abses.jpg" ?>" alt="" width="80%"
+						 class="img-fluid">
 				</p>
-				<p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-					Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-					dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
-					repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-				<p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-					est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-					consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit,
-					porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-				<p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-					pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-					soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni.
-					Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-				<p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-					asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-					beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum
-					provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur
-					recusandae!</p>
-				<p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-					a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-					alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta
-					doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis,
-					inventore?</p>
+				<p>Abses gigi adalah terbentuknya kantung atau benjolan berisi nanah pada gigi. Abses gigi disebabkan
+					oleh infeksi bakteri. Kondisi ini bisa muncul di sekitar akar gigi maupun di gusi.
+				</p>
+				<p>Infeksi bakteri penyebab abses gigi umumnya terjadi pada orang dengan kebersihan dan kesehatan gigi
+					yang buruk. Nanah yang berkumpul pada benjolan, lambat laun akan terasa bertambah nyeri.</p>
+				<p>Penyakit ini dapat dicegah dengan cara menyikat gigi secara rutin atau membersihkan gigi menggunakan
+					benang gigi. Untuk menghindari kerusakan dan abses gigi, dianjurkan untuk rutin memeriksakan gigi ke
+					dokter gigi.</p>
+				<p>Abses gigi dibedakan menjadi beberapa jenis. Berikut ini adalah tiga jenis abses gigi yang paling
+					umum ditemukan:
+				<ul>
+					<li>Abses periapikal, yaitu abses yang muncul pada ujung akar gigi.</li>
+					<li>Abses periodontal, yaitu abses yang muncul pada gusi di sebelah akar gigi dan bisa menyebar ke
+						jaringan dan tulang sekitarnya.
+					</li>
+					<li>Abses gingiva, yaitu abses yang muncul pada gusi.</li>
+				</ul>
+				</p>
 
 			</div> <!-- .col-md-8 -->
 
