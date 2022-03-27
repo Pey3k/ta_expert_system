@@ -48,12 +48,14 @@
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
-				<li class="nav-item active"><a href="<?= base_url('') ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
+				<li class="nav-item"><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
+				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a>
+				</li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
-				<li class="nav-item active"><a href="<?= base_url('tentang') ?>" class="nav-link pl-0">Tentang Kami</a></li>
-				<?php if(empty($this->session->userdata('loginUser'))) { ?>
+				<li class="nav-item active"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a>
+				</li>
+				<?php if (empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
 				<?php } else { ?>
 					<li class="nav-item"><a href="<?= base_url('login/logout') ?>" class="nav-link">Logout</a></li>
@@ -64,7 +66,8 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('assets/frontend/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('assets/frontend/images/bg_1.jpg');"
+		 data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -84,9 +87,11 @@
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Informasi Kesehatan Gigi</h3>
 						<p>Apakah Anda sedang mencari informasi mengenai cara merawat gigi?
-							Apakah Anda tertarik dengan informasi mengenai gaya hidup, informasi tentang plak gigi, dan kerusakan gigi?
+							Apakah Anda tertarik dengan informasi mengenai gaya hidup, informasi tentang plak gigi, dan
+							kerusakan gigi?
 							Kami memiliki yang Anda butuhkan.
-							Dalam halaman ini Anda dapat membaca informasi seputar cara merawat gigi agar tetap sehat dan prima.</p>
+							Dalam halaman ini Anda dapat membaca informasi seputar cara merawat gigi agar tetap sehat
+							dan prima.</p>
 					</div>
 				</div>
 			</div>
@@ -98,7 +103,8 @@
 						<p>Apakah gigi Anda sedang mengalami rasa sakit atau nyeri di bagian tertentu?
 							Mulailah konsultasi dengan kami.
 							Kami dapat membantu Anda dalam mengatasi permasalahan gigi Anda.
-							Dibantu dengan seorang pakar gigi Anda dapat mengetahui jenis penyakit gigi yang sedang dialami.</p>
+							Dibantu dengan seorang pakar gigi Anda dapat mengetahui jenis penyakit gigi yang sedang
+							dialami.</p>
 					</div>
 				</div>
 			</div>
@@ -107,7 +113,8 @@
 					<div class="img w-100" style="background-image: url(assets/frontend/images/dept-3.jpg);"></div>
 					<div class="media-body p-2 mt-3">
 						<h3 class="heading">Monitoring Kesehatan</h3>
-						<p>WAOS akan menyediakan riwayat konsultasi dari Anda setelah melakukan konsultasi mengenai penyakit gigi yang sedang Anda alami.
+						<p>WAOS akan menyediakan riwayat konsultasi dari Anda setelah melakukan konsultasi mengenai
+							penyakit gigi yang sedang Anda alami.
 							Solusi mengenai penyakit gigi yang Anda alami diperoleh melalui seorang pakar.</p>
 					</div>
 				</div>
@@ -130,13 +137,20 @@
 				<div class="ftco-footer-widget mb-5 ml-md-4">
 					<h2 class="ftco-heading-2">Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="<?= base_url('') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a></li>
-						<li><a href="<?= base_url('/#penyakit-gigi') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
-						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a></li>
-						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a></li>
-						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang Kami</a></li>
-						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a></li>
-						<li><a href="<?= base_url('admin/login') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
+						<li><a href="<?= base_url('') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a>
+						</li>
+						<li><a href="<?= base_url('/#penyakit-gigi') ?>"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
+						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>
+						</li>
+						<li><a href="<?= base_url('petunjuk') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Petunjuk</a>
+						</li>
+						<li><a href="<?= base_url('tentang') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Tentang
+								Kami</a></li>
+						<li><a href="<?= base_url('profile') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Login</a>
+						</li>
+						<li><a href="<?= base_url('admin/login') ?>"><span
+										class="ion-ios-arrow-round-forward mr-2"></span>Admin Login</a></li>
 					</ul>
 				</div>
 			</div>
@@ -178,7 +192,7 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/bootstrap-datepicker.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
 <script src="<?= base_url('assets/frontend/'); ?>js/google-map.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
 

@@ -48,10 +48,10 @@
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
-				<li class="nav-item"><a href="<?= base_url('') ?>" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
 				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a></li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
-				<li class="nav-item active"><a href="<?= base_url('petunjuk') ?>" class="nav-link pl-0">Petunjuk</a></li>
+				<li class="nav-item active"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
 				<li class="nav-item"><a href="<?= base_url('tentang') ?>" class="nav-link">Tentang Kami</a></li>
 				<?php if (empty($this->session->userdata('loginUser'))) { ?>
 					<li class="nav-item"><a href="<?= base_url('login') ?>" class="nav-link">Login</a></li>
@@ -220,7 +220,7 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/bootstrap-datepicker.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
 <script src="<?= base_url('assets/frontend/'); ?>js/google-map.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
 
