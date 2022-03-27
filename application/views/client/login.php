@@ -167,7 +167,6 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/bootstrap-datepicker.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
-<script src="<?= base_url('assets/frontend/'); ?>js/google-map.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
 
 </body>

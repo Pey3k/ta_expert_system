@@ -60,7 +60,7 @@
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../assets/frontend/images/bg_1.jpg');"
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../../assets/frontend/images/bg_1.jpg');"
 		 data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -161,7 +161,7 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
 
-<script src="<?= base_url('assets/frontend/'); ?>js/google-map.js"></script>
+
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
 
 </body>
