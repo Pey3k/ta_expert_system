@@ -62,16 +62,14 @@
 
 								<div class="form-group">
 									<label for="keterangan">Deskripsi Singkat Penyakit</label>
-									<input type="text" class="form-control" style="width:730px " name="keterangan"
-										   id="keterangan"
-										   placeholder="" value="<?php echo $detailData->keterangan; ?>">
+									<textarea class="form-control" id="" name="keterangan"
+											  rows="5"><?php echo $detailData->keterangan; ?></textarea>
 								</div>
 
 								<div class="form-group">
 									<label for="deskripsi">Deskripsi Detail Penyakit</label>
-									<input type="text" class="form-control" style="width:730px " name="deskripsi"
-										   id="deskripsi"
-										   placeholder="" value="<?php echo $detailData->deskripsi; ?>">
+									<textarea class="form-control" id="" name="deskripsi"
+											  rows="5"><?php echo $detailData->deskripsi; ?></textarea>
 								</div>
 
 								<button type="submit" class="btn btn-primary mt-3" style="width:100px">Ubah</button>

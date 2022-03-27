@@ -40,21 +40,24 @@ class Pasien extends CI_Controller
 	{
 		$post = $this->input->post();
 		$dataArray = array(
-			"id_pengguna" => $post['id_pengguna '],
-			"gejala" => $post['gejala'],
-			"gejala_bobot" => $post['bobot'],
+			"id_pengguna" => $post['id_pengguna'],
+			"nama_pengguna" => $post['nama_pengguna'],
+			"username" => $post['username'],
+			"umur" => $post['umur'],
+			"email" => $post['email'],
+			"tgl_lahir" => $post['tgl_lahir'],
+			"tempat_lahir" => $post['tempat_lahir'],
 			"updated_at" => date('Y-m-d H:i:s')
 		);
-		$update = $this->db->update("gejala", $dataArray, array("id_gejala" => $id));
+		$update = $this->db->update("pengguna", $dataArray, array("id_pengguna" => $id));
 		if ($update) {
 			$this->m_umum->generatePesan("Berhasil Mengupdate Data", "berhasil");
-			redirect("admin/gejala/index");
+			redirect("admin/pasien/index");
 		} else {
 			$this->m_umum->generatePesan("Gagal Mengupdate Data", "gagal");
-			redirect("admin/gejala/edit");
+			redirect("admin/pasien/edit");
 		}
 	}
-
 
 	public function doDelete($id)
 	{

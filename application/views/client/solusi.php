@@ -88,7 +88,7 @@
 
 				<div class="tag-widget post-tag-container mb-5 mt-5">
 					<div class="tagcloud">
-						<a href="<?= base_url($dataPenyakit->url) ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
+						<a href="<?= base_url() . 'penyakit/' . $dataPenyakit->url ?>" target="_blank" class="tag-cloud-link">Selengkapnya...</a>
 					</div>
 				</div>
 			</div> <!-- .col-md-8 -->

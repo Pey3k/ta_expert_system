@@ -40,43 +40,55 @@
 								<div class="form-row">
 
 									<div class="form-group col-md-6">
-										<label for="id_gejala">ID Pasien</label>
-										<input type="text" class="form-control" style="width:400px" name="id_gejala"
-											   id="id_gejala"
+										<label for="id_pengguna">ID Pasien</label>
+										<input type="text" class="form-control" style="width:400px" name="id_pengguna"
+											   id="id_pengguna"
 											   placeholder="" value="<?php echo $detailData->id_pengguna ?>" readonly>
 									</div>
 									<div class="form-group col-md-6">
-										<label for="bobot">Usia</label>
-										<input type="text" class="form-control" style="width:200px" name="bobot"
-											   value="<?php echo $detailData->umur ?>" id="bobot" placeholder="">
+										<label for="umur">Usia</label>
+										<input type="text" class="form-control" style="width:200px" name="umur"
+											   value="<?php echo $detailData->umur ?>" id="umur" placeholder="">
 									</div>
 								</div>
 
 								<div class="form-row">
-
 									<div class="form-group col-md-6">
-										<label for="bobot">Nama Pasien</label>
-										<input type="text" class="form-control" name="bobot" id="bobot"
+										<label for="nama_pengguna">Nama Pasien</label>
+										<input type="text" class="form-control" name="nama_pengguna" id="nama_pengguna"
 											   value="<?php echo $detailData->nama_pengguna ?>" placeholder="">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="bobot">Jenis Kelamin</label>
-										<input type="text" class="form-control" style="width:300px" name="bobot"
-											   value="<?php echo $detailData->jk ?>" id="bobot" placeholder="" readonly>
+										<label for="jk">Jenis Kelamin</label>
+										<input type="text" class="form-control" style="width:300px" name="jk"
+											   value="<?php echo $detailData->jk ?>" id="jk" placeholder="" readonly>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="tempat_lahir">Tempat Lahir</label>
+										<input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir"
+											   value="<?php echo $detailData->tempat_lahir ?>" placeholder="">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="tgl_lahir">Tanggal Lahir</label>
+										<input type="date" class="form-control" style="width:300px" name="tgl_lahir"
+											   value="<?php echo $detailData->tgl_lahir ?>" id="tgl_lahir" placeholder="">
 									</div>
 								</div>
 
 								<div class="form-row">
 
 									<div class="form-group col-md-6">
-										<label for="bobot">Email</label>
-										<input type="text" class="form-control" name="bobot"
+										<label for="email">Email</label>
+										<input type="text" class="form-control" name="email"
 											   value="<?php echo $detailData->email ?>"
-											   id="bobot" placeholder="">
+											   id="email" placeholder="">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="bobot">Username</label>
-										<input type="text" class="form-control" name="bobot" id="bobot"
+										<label for="username">Username</label>
+										<input type="text" class="form-control" name="username" id="username"
 											   value="<?php echo $detailData->username ?>" placeholder="">
 									</div>
 								</div>

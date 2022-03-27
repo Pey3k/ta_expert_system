@@ -84,6 +84,12 @@
 				</p>
 				<p><?= $penyakit->deskripsi ?></p>
 
+				<div class="tag-widget post-tag-container mb-5 mt-5">
+					<div class="tagcloud">
+						<a href="<?= base_url() . 'solusi/' . $penyakit->url ?>" target="_blank" class="tag-cloud-link">Solusi Penyakit</a>
+					</div>
+				</div>
+
 			</div> <!-- .col-md-8 -->
 
 			<div class="col-lg-4 sidebar ftco-animate">
