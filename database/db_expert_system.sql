@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2022 at 11:54 AM
+-- Generation Time: Mar 27, 2022 at 04:50 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.28
 
@@ -62,7 +62,9 @@ CREATE TABLE `detailhasilanalisa` (
 --
 
 INSERT INTO `detailhasilanalisa` (`idDetailHasilAnalisa`, `idHasilAnalisa`, `penyakit`, `idPengguna`, `persentase`, `keterangan_penyakit`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'Karies Gigi', 1, '60.60959357', '', '2022-03-27 09:09:56', '2022-03-27 09:09:56', NULL);
+(1, 1, 'Karies Gigi', 1, '60.60959357', '', '2022-03-27 09:09:56', '2022-03-27 09:09:56', NULL),
+(2, 2, 'Gingivitis', 1, '30.7456', '', '2022-03-27 12:11:39', '2022-03-27 12:11:39', NULL),
+(3, 3, 'Karies Gigi', 2, '60.60959357', '', '2022-03-27 14:44:45', '2022-03-27 14:44:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -73,7 +75,7 @@ INSERT INTO `detailhasilanalisa` (`idDetailHasilAnalisa`, `idHasilAnalisa`, `pen
 CREATE TABLE `gejala` (
   `id_gejala` varchar(3) NOT NULL,
   `gejala` varchar(255) DEFAULT NULL,
-  `gejala_bobot` decimal(10,4) DEFAULT NULL,
+  `gejala_bobot` decimal(10,2) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -84,31 +86,32 @@ CREATE TABLE `gejala` (
 --
 
 INSERT INTO `gejala` (`id_gejala`, `gejala`, `gejala_bobot`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('G01', 'Apakah terjadi perubahan warna pada gigi Anda?', '0.1667', '2022-03-27 08:43:29', '2022-03-27 08:46:06', NULL),
-('G02', 'Apakah permukaan gigi Anda terasa kasar?', '0.1667', '2022-03-27 08:46:28', '2022-03-27 08:46:28', NULL),
-('G03', 'Apakah permukaan gigi Anda terasa tajam?', '0.1667', '2022-03-27 08:46:49', '2022-03-27 08:46:49', NULL),
-('G04', 'Apakah Anda merasakan ada makanan yang mudah tersangkut?', '0.1667', '2022-03-27 08:47:10', '2022-03-27 08:47:10', NULL),
-('G05', 'Apakah Anda merasakan linu pada bagian gigi jika sudah akut?', '0.1667', '2022-03-27 08:47:33', '2022-03-27 08:47:33', NULL),
-('G06', 'Apakah Anda tidak merasakan linu pada bagian gigi kronis?', '0.1667', '2022-03-27 08:48:35', '2022-03-27 08:48:35', NULL),
-('G07', 'Apakah Anda merasakan nyeri yang tajam pada bagian gigi berlangsung cepat dan menetap?', '0.2000', '2022-03-27 08:48:52', '2022-03-27 08:48:52', NULL),
-('G08', 'Apakah Anda merasakan nyeri pada bagian gigi yang dapat hilang dan timbul kembali secara spontan tanpa adanya rangsangan?', '0.2000', '2022-03-27 08:49:24', '2022-03-27 08:49:24', NULL),
-('G09', 'Apakah Anda merasakan nyeri pada bagian gigi dapat menjalar hingga kebelakang telinga?', '0.2000', '2022-03-27 08:49:42', '2022-03-27 08:49:42', NULL),
-('G10', 'Apakah Anda merasakan nyeri pada bagian gigi yang dapat timbul akibat perubahan temperatur seperti dingin, manis, dan asam?', '0.2000', '2022-03-27 08:50:01', '2022-03-27 08:50:01', NULL),
-('G11', 'Apakah Anda merasakan nyeri pada bagian gigi tidak dapat ditunjukkan dengan tepat?', '0.2000', '2022-03-27 08:50:17', '2022-03-27 08:50:17', NULL),
-('G12', 'Apakah bagian gusi Anda berwarna kemerahan?', '0.2000', '2022-03-27 08:50:38', '2022-03-27 08:50:38', NULL),
-('G13', 'Apakah pada bagian gusi Anda mengalami pembengkakan?', '0.1867', '2022-03-27 08:50:56', '2022-03-27 04:02:42', NULL),
-('G14', 'Apakah pada bagian gusi Anda berdarah apabila disentuh?', '0.2000', '2022-03-27 08:51:12', '2022-03-27 08:51:12', NULL),
-('G15', 'Apakah Anda mengalami rasa gatal pada bagian gusi di sela-sela gigi?', '0.1867', '2022-03-27 08:51:28', '2022-03-27 04:02:53', NULL),
-('G16', 'Apakah terdapat karang gigi atau plak pada gigi Anda?', '0.2000', '2022-03-27 08:51:44', '2022-03-27 08:51:44', NULL),
-('G17', 'Apakah pada bagian gusi Anda terlihat licin dan mengkilap?', '0.1667', '2022-03-27 08:52:28', '2022-03-27 09:01:17', NULL),
-('G18', 'Apakah pada bagian gusi Anda terasa nyeri apabila dipegang?', '0.1667', '2022-03-27 08:52:39', '2022-03-27 09:01:20', NULL),
-('G19', 'Apakah pada bagian gusi Anda terdapat cairan nanah?', '0.1667', '2022-03-27 08:52:53', '2022-03-27 09:01:23', NULL),
-('G20', 'Apakah pada bagian gusi Anda terasa sensitif apabila diketuk?', '0.1667', '2022-03-27 08:53:03', '2022-03-27 09:01:27', NULL),
-('G21', 'Apakah Anda mengalami goyang pada bagian gigi?', '0.1667', '2022-03-27 08:53:18', '2022-03-27 09:01:29', NULL),
-('G22', 'Apakah posisi tumbuh pada bagian gigi Anda mengalami malposisi atau tumbuh miring?', '0.2000', '2022-03-27 08:53:41', '2022-03-27 09:01:32', NULL),
-('G23', 'Apakah pada bagian pipi Anda mengalami pembengkakan dan kesulitan membuka mulut?', '0.2000', '2022-03-27 08:55:10', '2022-03-27 09:01:35', NULL),
-('G24', 'Apakah Anda mengalami nyeri pada bagian gigi apabila sedang mengunyah?', '0.1667', '2022-03-27 08:57:22', '2022-03-27 09:01:38', NULL),
-('G25', 'Apakah Anda mengalami rasa nyeri pada bagian gigi apabila sedang menggigit?', '0.1667', '2022-03-27 08:57:39', '2022-03-27 09:01:40', NULL);
+('G01', 'Apakah terjadi perubahan warna pada gigi Anda?', '0.17', '2022-03-27 08:43:29', '2022-03-27 08:46:06', NULL),
+('G02', 'Apakah permukaan gigi Anda terasa kasar?', '0.17', '2022-03-27 08:46:28', '2022-03-27 08:46:28', NULL),
+('G03', 'Apakah permukaan gigi Anda terasa tajam?', '0.17', '2022-03-27 08:46:49', '2022-03-27 08:46:49', NULL),
+('G04', 'Apakah Anda merasakan ada makanan yang mudah tersangkut?', '0.17', '2022-03-27 08:47:10', '2022-03-27 08:47:10', NULL),
+('G05', 'Apakah Anda merasakan linu pada bagian gigi jika sudah akut?', '0.17', '2022-03-27 08:47:33', '2022-03-27 08:47:33', NULL),
+('G06', 'Apakah Anda tidak merasakan linu pada bagian gigi kronis?', '0.17', '2022-03-27 08:48:35', '2022-03-27 08:48:35', NULL),
+('G07', 'Apakah Anda merasakan nyeri yang tajam pada bagian gigi berlangsung cepat dan menetap?', '0.20', '2022-03-27 08:48:52', '2022-03-27 08:48:52', NULL),
+('G08', 'Apakah Anda merasakan nyeri pada bagian gigi yang dapat hilang dan timbul kembali secara spontan tanpa adanya rangsangan?', '0.20', '2022-03-27 08:49:24', '2022-03-27 08:49:24', NULL),
+('G09', 'Apakah Anda merasakan nyeri pada bagian gigi dapat menjalar hingga kebelakang telinga?', '0.20', '2022-03-27 08:49:42', '2022-03-27 08:49:42', NULL),
+('G10', 'Apakah Anda merasakan nyeri pada bagian gigi yang dapat timbul akibat perubahan temperatur seperti dingin, manis, dan asam?', '0.20', '2022-03-27 08:50:01', '2022-03-27 08:50:01', NULL),
+('G11', 'Apakah Anda merasakan nyeri pada bagian gigi tidak dapat ditunjukkan dengan tepat?', '0.20', '2022-03-27 08:50:17', '2022-03-27 08:50:17', NULL),
+('G12', 'Apakah bagian gusi Anda berwarna kemerahan?', '0.20', '2022-03-27 08:50:38', '2022-03-27 08:50:38', NULL),
+('G13', 'Apakah pada bagian gusi Anda mengalami pembengkakan?', '0.19', '2022-03-27 08:50:56', '2022-03-27 04:02:42', NULL),
+('G14', 'Apakah pada bagian gusi Anda berdarah apabila disentuh?', '0.20', '2022-03-27 08:51:12', '2022-03-27 08:51:12', NULL),
+('G15', 'Apakah Anda mengalami rasa gatal pada bagian gusi di sela-sela gigi?', '0.19', '2022-03-27 08:51:28', '2022-03-27 04:02:53', NULL),
+('G16', 'Apakah terdapat karang gigi atau plak pada gigi Anda?', '0.20', '2022-03-27 08:51:44', '2022-03-27 08:51:44', NULL),
+('G17', 'Apakah pada bagian gusi Anda terlihat licin dan mengkilap?', '0.16', '2022-03-27 08:52:28', '2022-03-27 09:36:40', NULL),
+('G18', 'Apakah pada bagian gusi Anda terasa nyeri apabila dipegang?', '0.16', '2022-03-27 08:52:39', '2022-03-27 09:36:48', NULL),
+('G19', 'Apakah pada bagian gusi Anda terdapat cairan nanah?', '0.16', '2022-03-27 08:52:53', '2022-03-27 09:36:56', NULL),
+('G20', 'Apakah pada bagian gusi Anda terasa sensitif apabila diketuk?', '0.16', '2022-03-27 08:53:03', '2022-03-27 09:37:05', NULL),
+('G21', 'Apakah Anda mengalami goyang pada bagian gigi?', '0.16', '2022-03-27 08:53:18', '2022-03-27 09:37:13', NULL),
+('G22', 'Apakah posisi tumbuh pada bagian gigi Anda mengalami malposisi atau tumbuh miring?', '0.20', '2022-03-27 08:53:41', '2022-03-27 09:01:32', NULL),
+('G26', 'Apakah gusi Anda mengalami pembengkakan?', '0.16', '2022-03-27 14:34:25', '2022-03-27 14:34:25', NULL),
+('G23', 'Apakah pada bagian pipi Anda mengalami pembengkakan dan kesulitan membuka mulut?', '0.20', '2022-03-27 08:55:10', '2022-03-27 09:01:35', NULL),
+('G24', 'Apakah Anda mengalami nyeri pada bagian gigi apabila sedang mengunyah?', '0.16', '2022-03-27 08:57:22', '2022-03-27 09:35:55', NULL),
+('G25', 'Apakah Anda mengalami rasa nyeri pada bagian gigi apabila sedang menggigit?', '0.16', '2022-03-27 08:57:39', '2022-03-27 09:36:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -130,7 +133,9 @@ CREATE TABLE `hasilanalisa` (
 --
 
 INSERT INTO `hasilanalisa` (`idHasilAnalisa`, `idPengguna`, `tglAnalisa`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, '2022-03-27', '2022-03-27 09:09:56', '2022-03-27 09:09:56', NULL);
+(1, 1, '2022-03-27', '2022-03-27 09:09:56', '2022-03-27 09:09:56', NULL),
+(2, 1, '2022-03-27', '2022-03-27 12:11:39', '2022-03-27 12:11:39', NULL),
+(3, 2, '2022-03-27', '2022-03-27 14:44:45', '2022-03-27 14:44:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -153,6 +158,7 @@ CREATE TABLE `informasi` (
 --
 
 INSERT INTO `informasi` (`idInformasi`, `judul`, `content`, `created_at`, `updated_at`, `deleted_at`, `url`) VALUES
+(4, 'Gigi', 'Informasi Gigi', '2022-03-27 09:27:54', '2022-03-27 14:27:54', NULL, 'gigi'),
 (3, 'Tips Kesehatan', 'Tips kesehatan', '2022-03-27 02:12:15', '2022-03-27 02:12:22', NULL, 'tips-kesehatan');
 
 -- --------------------------------------------------------
@@ -182,7 +188,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `umur`, `jk`, `email`, `tanggal_pendaftaran`, `tgl_lahir`, `tempat_lahir`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Testing', 'testing', 'ae2b1fca515949e5d54fb22b8ed95575', 23, 'Laki-Laki', 'testing@test.coms', '2022-03-26', '1992-11-29', 'Tangerang', '2022-03-27 06:00:13', '2022-03-27 09:54:02', NULL);
+(1, 'Testing', 'testing', 'ae2b1fca515949e5d54fb22b8ed95575', 23, 'Laki-Laki', 'testing@test.coms', '2022-03-26', '1992-11-29', 'Tangerangs', '2022-03-27 06:00:13', '2022-03-27 14:48:16', NULL),
+(2, 'Testing 2', 'testing2', 'a119e534072584a0ea88cdea4664aecd', 23, 'Laki-Laki', 'testing2@test.com', '2022-03-27', '1990-10-26', 'Bantul', '2022-03-27 14:42:06', '2022-03-27 14:42:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -294,12 +301,12 @@ INSERT INTO `rule_analisa` (`id_rule_analisa`, `id_penyakit`, `id_gejala`, `crea
 (14, 'P03', 'G14', '2022-03-27 09:03:52', '2022-03-27 09:03:52', NULL),
 (15, 'P03', 'G15', '2022-03-27 09:03:52', '2022-03-27 09:03:52', NULL),
 (16, 'P03', 'G16', '2022-03-27 09:03:52', '2022-03-27 09:03:52', NULL),
-(17, 'P04', 'G13', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
-(18, 'P04', 'G17', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
-(19, 'P04', 'G18', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
-(20, 'P04', 'G19', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
-(21, 'P04', 'G20', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
-(22, 'P04', 'G21', '2022-03-27 09:04:14', '2022-03-27 09:04:14', NULL),
+(39, 'P04', 'G26', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
+(38, 'P04', 'G21', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
+(37, 'P04', 'G20', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
+(36, 'P04', 'G19', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
+(35, 'P04', 'G18', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
+(34, 'P04', 'G17', '2022-03-27 14:44:04', '2022-03-27 14:44:04', NULL),
 (23, 'P05', 'G12', '2022-03-27 09:04:46', '2022-03-27 09:04:46', NULL),
 (24, 'P05', 'G13', '2022-03-27 09:04:46', '2022-03-27 09:04:46', NULL),
 (25, 'P05', 'G18', '2022-03-27 09:04:46', '2022-03-27 09:04:46', NULL),
@@ -425,25 +432,25 @@ ALTER TABLE `analisa`
 -- AUTO_INCREMENT for table `detailhasilanalisa`
 --
 ALTER TABLE `detailhasilanalisa`
-  MODIFY `idDetailHasilAnalisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idDetailHasilAnalisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `hasilanalisa`
 --
 ALTER TABLE `hasilanalisa`
-  MODIFY `idHasilAnalisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idHasilAnalisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
-  MODIFY `idInformasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idInformasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `petugas`
@@ -461,7 +468,7 @@ ALTER TABLE `riwayat`
 -- AUTO_INCREMENT for table `rule_analisa`
 --
 ALTER TABLE `rule_analisa`
-  MODIFY `id_rule_analisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_rule_analisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `solusi`
