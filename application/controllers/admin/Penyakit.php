@@ -48,6 +48,7 @@ class Penyakit extends CI_Controller
 			"url_gambar" => $post['url_gambar'],
 			"penyakit" => $post['penyakit'],
 			"keterangan" => $post['keterangan'],
+			"url" => strtolower(str_replace(' ', '-', $post['penyakit'])),
 			"deskripsi" => $post['deskripsi']
 		);
 		$insert = $this->db->insert("penyakit", $dataArray);
@@ -81,6 +82,7 @@ class Penyakit extends CI_Controller
 			"keterangan" => $post['keterangan'],
 			"url_gambar" => $post['url_gambar'],
 			"deskripsi" => $post['deskripsi'],
+			"url" => strtolower(str_replace(' ', '-', $post['penyakit'])),
 			"updated_at" => date('Y-m-d H:i:s')
 		);
 		$update = $this->db->update("penyakit", $dataArray, array("id_penyakit" => $id));
@@ -114,7 +116,6 @@ class Penyakit extends CI_Controller
 			$dataArray = array(
 				"id_penyakit" => $id,
 				"id_gejala" => $post['id_gejala'][$key],
-				//"bobot_gejala"		=> $post['bobot_gejala'][$key]
 			);
 			$insert = $this->db->insert("rule_analisa", $dataArray);
 		}
