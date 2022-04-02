@@ -82,7 +82,13 @@
 					<div class="row form-group">
 						<div class="col-md-12">
 							<label class="text-black" for="password">Password</label>
-							<input type="password" id="email" name="password" class="form-control rounded-0">
+							<input type="password" id="password" name="password" class="form-control rounded-0">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<input type="checkbox" onclick="showHidePassword()"> Tampil Password
 						</div>
 					</div>
 
@@ -179,6 +185,17 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
+
+<script>
+	function showHidePassword() {
+		var x = document.getElementById("password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </body>
 </html>

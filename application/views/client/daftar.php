@@ -138,12 +138,23 @@
 							<input type="password" id="password1" name="password1" class="form-control rounded-0"
 								   required>
 							<?= form_error('password1', '<small class="text-danger pl-1">', '</small>'); ?>
+							<div class="row form-group">
+								<div class="col-md-12">
+									<input type="checkbox" onclick="showHidePassword()"> Tampil Password
+								</div>
+							</div>
 						</div>
 
 						<div class="col-md-6">
 							<label class="text-black" for="password2">Konfirmasi Password</label>
 							<input type="password" id="password2" name="password2" class="form-control rounded-0">
 							<?= form_error('password2', '<small class="text-danger pl-1">', '</small>'); ?>
+							<div class="row form-group">
+								<div class="col-md-12">
+									<input type="checkbox" onclick="showHideConfirmationPassword()"> Tampil Konfirmasi
+									Password
+								</div>
+							</div>
 						</div>
 
 						<div class="row form-group">
@@ -239,6 +250,25 @@
 <script src="<?= base_url('assets/frontend/'); ?>js/jquery.timepicker.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/scrollax.min.js"></script>
 <script src="<?= base_url('assets/frontend/'); ?>js/main.js"></script>
+<script>
+	function showHidePassword() {
+		var x = document.getElementById("password1");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
+	function showHideConfirmationPassword() {
+		var x = document.getElementById("password2");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </body>
 </html>

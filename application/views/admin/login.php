@@ -67,17 +67,16 @@
 													<label class="text-bold-600"
 														   for="exampleInputPassword1">Password</label>
 													<input type="password" class="form-control"
-														   placeholder="Password" name="password" id="password" required>
+														   placeholder="Password" name="password" id="password"
+														   required>
 												</div>
-												<div
-														class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+												<div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
 													<div class="text-left">
 														<div class="checkbox checkbox-sm">
 															<input type="checkbox" class="form-check-input"
-																   id="exampleCheck1">
+																   id="exampleCheck1" onclick="showHidePassword()">
 															<label class="checkboxsmall"
-																   for="exampleCheck1"><small>Keep me logged
-																	in</small></label>
+																   for="exampleCheck1"><small>Tampil Password</small></label>
 														</div>
 													</div>
 													<div class="text-right"><a
@@ -115,7 +114,16 @@
 <script src="<?= base_url('assets/admin/frest/app-assets/js/core/app.js') ?>"></script>
 <script src="<?= base_url('assets/admin/frest/app-assets/js/scripts/components.js') ?>"></script>
 <script src="<?= base_url('assets/admin/frest/app-assets/js/scripts/footer.js') ?>"></script>
-
+<script>
+	function showHidePassword() {
+		var x = document.getElementById("password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </body>
 <!-- END: Body-->

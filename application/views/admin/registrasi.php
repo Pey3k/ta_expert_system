@@ -77,16 +77,37 @@
 													<label class="text-bold-600"
 														   for="password1">Password</label>
 													<input type="password" class="form-control"
-														   placeholder="Password" name="password1" id="password1" required>
+														   placeholder="Password" name="password1" id="password1"
+														   required>
 													<?= form_error('password1', '<small class="text-danger pl-1">', '</small>'); ?>
+													<div class="form-group">
+														<div class="checkbox checkbox-sm">
+															<input type="checkbox" class="form-check-input"
+																   id="exampleCheck1" onclick="showHidePassword()">
+															<label class="checkboxsmall"
+																   for="exampleCheck1"><small>Tampil
+																	Password</small></label>
+														</div>
+													</div>
 												</div>
 
 												<div class="form-group">
 													<label class="text-bold-600"
 														   for="password2">Konfirmasi Password</label>
 													<input type="password" class="form-control"
-														   placeholder="Password" name="password2" id="password2" required>
+														   placeholder="Password" name="password2" id="password2"
+														   required>
 													<?= form_error('password2', '<small class="text-danger pl-1">', '</small>'); ?>
+													<div class="form-group">
+														<div class="checkbox checkbox-sm">
+															<input type="checkbox" class="form-check-input"
+																   id="exampleCheck2"
+																   onclick="showHideConfirmationPassword()">
+															<label class="checkboxsmall"
+																   for="exampleCheck2"><small>Tampil Konfirmasi
+																	Password</small></label>
+														</div>
+													</div>
 												</div>
 
 												<div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
@@ -131,7 +152,25 @@
 <script src="<?= base_url('assets/admin/frest/app-assets/js/core/app.js') ?>"></script>
 <script src="<?= base_url('assets/admin/frest/app-assets/js/scripts/components.js') ?>"></script>
 <script src="<?= base_url('assets/admin/frest/app-assets/js/scripts/footer.js') ?>"></script>
+<script>
+	function showHidePassword() {
+		var x = document.getElementById("password1");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
 
+	function showHideConfirmationPassword() {
+		var x = document.getElementById("password2");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </body>
 <!-- END: Body-->
