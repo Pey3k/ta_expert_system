@@ -73,7 +73,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<form action="<?php echo base_url() . 'diagnosa/kalkulasi/' . $id_pengguna; ?>" method="post">
+				<form action="<?php echo base_url('diagnosa/kalkulasi/' . $id_pengguna); ?>" method="post">
 					<?= $this->session->flashdata('message'); ?>
 					<div class="card shadow mb-4">
 						<div class="card-header py-3">
