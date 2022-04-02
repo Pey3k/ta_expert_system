@@ -7,7 +7,6 @@ class Riwayatpasien extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		// $this->load->model('m_umum');
 		$this->load->model('M_pengguna');
 		$this->load->model('m_diagnosa');
 	}
@@ -18,7 +17,6 @@ class Riwayatpasien extends CI_Controller
 		$data['userLogin'] = $this->session->userdata('loginUser');
 		$data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['UserID']);
 		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['UserID']);
-		//	$data['v_content']  = 'profile';
 		$this->load->view('client/riwayat', $data);
 	}
 

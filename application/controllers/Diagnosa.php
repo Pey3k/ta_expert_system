@@ -28,19 +28,14 @@ class Diagnosa extends CI_Controller
 
 	public function kalkulasi()
 	{
-		// Autentifikasi login userName
 		$data['userLogin'] = $this->session->userdata('loginUser');
-		// Mengambil data user
 		$dataUserLogin = $this->session->userdata('loginUser');
-		// Mengambil data gejala dari modal gejala mengambil semua data gejala
-		$query = $this->m_gejala->getlistGejala();
 
-		// Mengambil data jawaban dari post pada view di radio box
 		$jawaban = $this->input->post();
 
 		if (count($jawaban) <= 1) {
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.</div>');
 			redirect('diagnosa');
 		}
 
@@ -69,6 +64,12 @@ class Diagnosa extends CI_Controller
 			}
 			// Ambil semua data pilihan gejala, namun menampilkan 1 data penyakit sampai ke nilainya
 			$minning['pilih'][] = array('id_penyakit' => $list_penyakit, 'nilai' => number_format($nilai_gejala['gejala_bobot'], 2, '.', '') * 1);
+		}
+
+		if (count($minning['pilih']) == 0) {
+			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.</div>');
+			redirect('diagnosa');
 		}
 
 		// Membuat deklarasi pembuatan tabel semua gejala dan penyakit di gejala pertama
@@ -216,42 +217,33 @@ class Diagnosa extends CI_Controller
 					$minning['berapaCombine'][$i][$keyt] = $kiri . "/1";
 				}
 			}
-
 		}
 
-		if (count($jawaban) <= 1) {
-			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
-			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
-			redirect('diagnosa');
+		$b_max = array_keys($minning['nilaiCombine'][count($minning['nilaiCombine'])], max($minning['nilaiCombine'][count($minning['nilaiCombine'])]));
+		$minning['max'] = $b_max[0];
 
-		} else {
+		if (!empty($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]])) {
 
-			$b_max = array_keys($minning['nilaiCombine'][count($minning['nilaiCombine'])], max($minning['nilaiCombine'][count($minning['nilaiCombine'])]));
-			$minning['max'] = $b_max[0];
-
-			if (!empty($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]])) {
-
-				$dataSimpan = array(
-					'idPengguna' => $dataUserLogin['UserID'],
-					'tglAnalisa' => date('Y-m-d'),
-				);
-				$this->db->insert("hasilanalisa", $dataSimpan);
-				$idhasil = $this->db->insert_id();
-				foreach ($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]] as $key => $value) {
-					$data_gangguan = $this->m_penyakit->getListPenyakitById($value);
-					if (empty($data_gangguan)) {
-						continue;
-					}
-
-					$dataDetail = array(
-						'idHasilAnalisa' => $idhasil,
-						'penyakit' => $data_gangguan->penyakit,
-						'idPengguna' => $dataUserLogin['UserID'],
-						'persentase' => ($minning['nilaiCombine'][count($minning['tableCombine'])][$b_max[0]] * 100),
-					);
-
-					$this->db->insert("detailhasilanalisa", $dataDetail);
+			$dataSimpan = array(
+				'idPengguna' => $dataUserLogin['UserID'],
+				'tglAnalisa' => date('Y-m-d'),
+			);
+			$this->db->insert("hasilanalisa", $dataSimpan);
+			$idhasil = $this->db->insert_id();
+			foreach ($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]] as $key => $value) {
+				$data_gangguan = $this->m_penyakit->getListPenyakitById($value);
+				if (empty($data_gangguan)) {
+					continue;
 				}
+
+				$dataDetail = array(
+					'idHasilAnalisa' => $idhasil,
+					'penyakit' => $data_gangguan->penyakit,
+					'idPengguna' => $dataUserLogin['UserID'],
+					'persentase' => ($minning['nilaiCombine'][count($minning['tableCombine'])][$b_max[0]] * 100),
+				);
+
+				$this->db->insert("detailhasilanalisa", $dataDetail);
 			}
 		}
 
@@ -269,18 +261,13 @@ class Diagnosa extends CI_Controller
 
 	public function tampil_hitung()
 	{
-		$dataPost = $this->input->post();
-		$datar = ['hasil' => json_decode($dataPost['data'], true)];
+		$postData = $this->input->post();
+
 		$data['userLogin'] = $this->session->userdata('loginUser');
-		$data['data'] = $datar;
-		// $data['msg'] = $this->session->flashdata('msg');
+		$data['data'] = array(
+			'hasil' => json_decode($postData['data'], true)
+		);
+
 		$this->load->view('client/tampil_hitung', $data);
-	}
-
-	public function solusi($id)
-	{
-		$data['dataPenyakit'] = $this->db->query('select * from solusi inner join penyakit on penyakit.id_penyakit = solusi.id_penyakit where penyakit.id_penyakit = "' . $id . '"')->row();
-
-		$this->load->view('client/solusipenyakit/' . $id, $data);
 	}
 }
