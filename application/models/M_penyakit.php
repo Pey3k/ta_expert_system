@@ -107,5 +107,42 @@ class M_penyakit extends CI_Model
 		return $result;
 	}
 
+	public function getNamePenyakitByIds($ids)
+	{
+		$ids = explode(",", $ids);
+
+		$newIds = array();
+		foreach ($ids as $val) {
+			$newIds[] = sprintf("'%s'", $val);
+		}
+
+		$sql = "SELECT
+					*
+				FROM
+					penyakit
+				WHERE
+					id_penyakit IN (" . implode(',', $newIds) . ")
+					AND deleted_at IS NULL
+				ORDER BY
+					id_penyakit ASC";
+
+		$query = $this->db->query($sql);
+
+		$result = $query->result();
+
+		$newNamePenyakit = array();
+		foreach ($result as $val) {
+			$newNamePenyakit[] = $val->penyakit;
+		}
+
+		$name = join(", ", $newNamePenyakit);
+
+		if (count($newNamePenyakit) == 2) {
+			$name = join(" dan ", $newNamePenyakit);
+		}
+
+		return $name;
+	}
+
 
 }

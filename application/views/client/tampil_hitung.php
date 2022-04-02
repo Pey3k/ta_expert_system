@@ -84,7 +84,7 @@
 				<table class="table table-striped table-bordered">
 					<tr>
 						<th align="center">No</th>
-						<th align="center">Terpilih</th>
+						<th align="center">Gejala</th>
 						<th align="center">Pertanyaan</th>
 					</tr>
 					<?php
@@ -107,12 +107,12 @@
 
 
 				<div class="table-header">
-					Data Penyakit sesuai Gejala :
+					Bobot Gejala:
 				</div>
 				<table class="table table-striped table-bordered">
 					<tr>
 						<th align="center">No</th>
-						<th align="center">Terpilih</th>
+						<th align="center">Gejala</th>
 						<th align="center">Nilai</th>
 					</tr>
 					<?php
@@ -120,7 +120,7 @@
 					foreach ($data['hasil']['pilih'] as $key => $value) { ?>
 						<tr>
 							<th align="center"><?= $no++ ?></th>
-							<th align="center"><?= implode(',', $value['id_penyakit']) ?></th>
+							<th align="center"><?= implode(',', $value['id_gejala']) ?></th>
 							<th align="center"><?= $value['nilai'] ?></th>
 						</tr>
 					<?php } ?>
@@ -138,18 +138,27 @@
 					<table class="table table-striped table-bordered">
 						<?php foreach ($value as $keys => $values) { ?>
 							<tr>
-								<?php foreach ($values as $keyss => $valuess) { ?>
-									<?php if (count($valuess) == 0) { ?>
+								<?php
+								foreach ($values as $k => $v) { ?>
+									<?php if (count($v) == 0) { ?>
 										<td></td>
 										<td></td>
 									<?php } else { ?>
-										<?php if (count($valuess['id_penyakit']) == 0) { ?>
+										<?php if (count($v['id_penyakit']) == 0) { ?>
 											<td>ø</td>
 										<?php } else { ?>
-											<td><?= implode(',', $valuess['id_penyakit']) ?></td>
+											<td>
+												<?php
+												if (isset($v['matriks']) && !is_array($v['matriks'])) {
+													echo $v['matriks'];
+												} else {
+													echo sprintf("m{G(%s)}", implode(',', $v['id_penyakit']));
+												}
+												?>
+											</td>
 										<?php } ?>
 
-										<td><?= $valuess['nilai'] ?></td>
+										<td><?= $v['nilai'] ?></td>
 									<?php } ?>
 								<?php } ?>
 							</tr>
@@ -177,23 +186,19 @@
 				<div class="hr hr-24"></div>
 				<div> Penyakit yang teridentifikasi berdasarkan perhitungan Metode Dempster Shafer:
 					<ul>
+						<?php foreach ($data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])] as $key => $value) {
+							$valID = implode(',', $data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$key]); ?>
+							<?php if (!empty($valID)) {
+								$namePenyakit = $this->m_penyakit->getNamePenyakitByIds($valID); ?>
+								<li>
+									<?php if (!empty($namePenyakit)) {
+										echo $namePenyakit;
+									} ?> dengan persentase sebesar
+									<?php echo floatval($value * 100) . '%'; ?>
+								</li>
+							<?php } ?>
+						<?php } ?>
 					</ul>
-					<?php
-					if (count($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']]) == 0) { ?>
-						<li>Tidak Ada</li>
-					<?php } else {
-						$nilaiKombinasi = $data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])][$data['hasil']['max']];
-
-						foreach ($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']] as $key => $value) {
-							$data_gangguan = $this->m_penyakit->getListPenyakitById($value); ?>
-							<li><?= $data_gangguan->penyakit ?> dengan persentase sebesar
-								<?php
-								echo floatval($nilaiKombinasi * 100) . ' % , diperoleh dari nilai himpunan penyakit yang paling tinggi.';
-								?>
-							</li>
-						<?php }
-					}
-					?>
 				</div>
 
 			</form>

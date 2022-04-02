@@ -110,20 +110,16 @@
 					<p>Berdasarkan data gejala yang Anda rasakan pada gigi Anda, kemungkinan Anda mengalami
 						beberapa penyakit gigi yaitu: </p>
 					<ul>
-						<?php if (count($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']]) == 0) { ?>
-							<li>Tidak Ada</li>
-						<?php } else {
-							$nilaiKombinasi = $data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])][$data['hasil']['max']];
-
-							foreach ($data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$data['hasil']['max']] as $key => $value) {
-								$data_gangguan = $this->m_penyakit->getListPenyakitById($value); ?>
-								<li><?= $data_gangguan->penyakit ?>
-									<?php
-									echo floatval($nilaiKombinasi * 100) . ' %';
-									?> |
-									<a href="<?= base_url() ?>penyakit/<?= $data_gangguan->url ?>" target="_blank">Baca
-										Solusi
-										Tindakan</a><br></li>
+						<?php foreach ($data['hasil']['nilaiCombine'][count($data['hasil']['nilaiCombine'])] as $key => $value) {
+							$valID = implode(',', $data['hasil']['tableCombine'][count($data['hasil']['tableCombine'])][$key]); ?>
+							<?php if (!empty($valID)) {
+								$namePenyakit = $this->m_penyakit->getNamePenyakitByIds($valID); ?>
+								<li>
+									<?php if (!empty($namePenyakit)) {
+										echo $namePenyakit;
+									} ?> dengan persentase sebesar
+									<?php echo floatval($value * 100) . '%'; ?>
+								</li>
 							<?php } ?>
 						<?php } ?>
 					</ul>
