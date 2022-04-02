@@ -49,7 +49,7 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item"><a href="<?= base_url('') ?>" class="nav-link">Beranda</a></li>
-				<li class="nav-item"><a href="<?= base_url('/#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a>
+				<li class="nav-item"><a href="<?= base_url('#penyakit-gigi') ?>" class="nav-link">Penyakit Gigi</a>
 				</li>
 				<li class="nav-item"><a href="<?= base_url('diagnosa') ?>" class="nav-link">Konsultasi</a></li>
 				<li class="nav-item"><a href="<?= base_url('petunjuk') ?>" class="nav-link">Petunjuk</a></li>
@@ -139,7 +139,7 @@
 					<ul class="list-unstyled">
 						<li><a href="<?= base_url('') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a>
 						</li>
-						<li><a href="<?= base_url('/#penyakit-gigi') ?>"><span
+						<li><a href="<?= base_url('#penyakit-gigi') ?>"><span
 										class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>
 						</li>

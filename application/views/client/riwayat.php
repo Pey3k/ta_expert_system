@@ -159,7 +159,7 @@
 					<ul class="list-unstyled">
 						<li><a href="<?= base_url('') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a>
 						</li>
-						<li><a href="<?= base_url('/#penyakit-gigi') ?>"><span
+						<li><a href="<?= base_url('#penyakit-gigi') ?>"><span
 										class="ion-ios-arrow-round-forward mr-2"></span>Penyakit Gigi</a></li>
 						<li><a href="<?= base_url('diagnosa') ?>"><span class="ion-ios-arrow-round-forward mr-2"></span>Konsultasi</a>
 						</li>
