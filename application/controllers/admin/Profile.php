@@ -8,7 +8,7 @@ class Profile extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('m_umum');
-		$this->load->model('m_pakar');
+		$this->load->model('M_petugas');
 	}
 
 	public function index()

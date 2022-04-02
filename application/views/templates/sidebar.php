@@ -27,9 +27,9 @@
 			</li>
 			<li class=" navigation-header"><span>Management Data Master</span>
 			</li>
-			<li class=" nav-item <?= ($cur1 == "pakar") ? "active" : ""; ?>"><a
-						href="<?= base_url('admin/pakar'); ?>"><i
-							class="bx bx-folder"></i><span class="menu-title">Data Pakar</span></a>
+			<li class=" nav-item <?= ($cur1 == "petugas") ? "active" : ""; ?>"><a
+						href="<?= base_url('admin/petugas'); ?>"><i
+							class="bx bx-folder"></i><span class="menu-title">Data Petugas</span></a>
 			</li>
 			<li class=" nav-item <?= ($cur1 == "pasien") ? "active" : ""; ?>"><a
 						href="<?= base_url('admin/pasien'); ?>"><i

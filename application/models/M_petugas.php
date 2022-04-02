@@ -1,6 +1,6 @@
 <?php
 
-class M_pakar extends CI_Model
+class M_petugas extends CI_Model
 {
 
 	public function __construct()

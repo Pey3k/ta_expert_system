@@ -32,7 +32,7 @@
 										<thead>
 										<tr>
 											<th>No</th>
-											<th>Nama Pakar</th>
+											<th>Nama Petugas</th>
 											<th>Username</th>
 											<th>Tanggal Pendaftaran</th>
 										</tr>

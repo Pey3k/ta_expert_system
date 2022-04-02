@@ -17,7 +17,6 @@ class Diagnosa extends CI_Controller
 	public function index()
 	{
 		$data = $this->session->userdata('loginUser');
-
 		if (empty($data)) {
 			redirect('login');
 		}
@@ -257,7 +256,7 @@ class Diagnosa extends CI_Controller
 		}
 
 		$dataqu['data'] = array(
-			'title' => 'Sistem Pakar',
+			'title' => 'Sistem Petugas',
 			'hasil' => $minning
 		);
 
