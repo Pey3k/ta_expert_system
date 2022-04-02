@@ -16,6 +16,10 @@ class Pasien extends CI_Controller
 	public function Index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->M_user->getListPengguna();
 
 		$this->load->view('templates/header', $data);
@@ -28,6 +32,10 @@ class Pasien extends CI_Controller
 	public function edit($id)
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['detailData'] = $this->m_pengguna->getListPenggunaId($id);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);

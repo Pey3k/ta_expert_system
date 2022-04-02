@@ -14,6 +14,10 @@ class Laporan extends CI_Controller
 	public function laporan_pendaftaran()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->M_user->getListPendaftaran();
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
@@ -25,6 +29,10 @@ class Laporan extends CI_Controller
 	public function downloadPendaftaran()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->M_user->getListPendaftaran();
 		$mpdf = new \Mpdf\Mpdf();
 		$htmlnya = $this->load->view('admin/laporan/print_pendaftaran', $data, true);
@@ -35,6 +43,10 @@ class Laporan extends CI_Controller
 	public function laporan_diagnosa()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->db->query("SELECT * FROM penyakit")->result();
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
@@ -46,6 +58,10 @@ class Laporan extends CI_Controller
 	public function downloadLaporanDiagnosa()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->db->query("SELECT * FROM penyakit")->result();
 		$mpdf = new \Mpdf\Mpdf();
 		$htmlnya = $this->load->view('admin/laporan/print_hasil_diagnosa', $data, true);

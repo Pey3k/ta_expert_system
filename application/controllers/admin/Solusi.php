@@ -14,6 +14,10 @@ class Solusi extends CI_Controller
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->m_penyakit->listPenyakit();
 		$data['countSolusi'] = $this->m_penyakit->countPenyakitWithoutSolusi();
 
@@ -27,6 +31,10 @@ class Solusi extends CI_Controller
 	public function add()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['jenisPenyakit'] = $this->m_penyakit->listPenyakit();
 
 		$this->load->view('templates/header', $data);
@@ -57,6 +65,10 @@ class Solusi extends CI_Controller
 	public function edit($id)
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['jenisPenyakit'] = $this->m_penyakit->listPenyakit();
 		$data['dataDetail'] = $this->m_penyakit->getListPenyakitById($id);
 

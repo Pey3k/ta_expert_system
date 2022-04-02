@@ -15,6 +15,10 @@ class Pakar extends CI_Controller
 	public function Index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->M_user->getListPakar();
 
 		$this->load->view('templates/header', $data);

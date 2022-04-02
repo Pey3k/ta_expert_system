@@ -10,31 +10,31 @@
 	<meta name="author" content="Admin WAOS - Expert System">
 	<title>Admin WAOS - Expert System</title>
 	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700"
-		rel="stylesheet">
+		  rel="stylesheet">
 	<link rel="stylesheet" type="text/css"
-		href="<?= base_url('assets/admin/frest/app-assets/vendors/css/vendors.min.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/bootstrap.css')?>">
+		  href="<?= base_url('assets/admin/frest/app-assets/vendors/css/vendors.min.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/bootstrap.css') ?>">
 	<link rel="stylesheet" type="text/css"
-		href="<?= base_url('assets/admin/frest/app-assets/css/bootstrap-extended.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/colors.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/components.css')?>">
+		  href="<?= base_url('assets/admin/frest/app-assets/css/bootstrap-extended.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/colors.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/app-assets/css/components.css') ?>">
 	<link rel="stylesheet" type="text/css"
-		href="<?= base_url('assets/admin/frest/app-assets/css/core/menu/menu-types/vertical-menu.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/assets/css/style.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/assets/css/custom.css')?>">
+		  href="<?= base_url('assets/admin/frest/app-assets/css/core/menu/menu-types/vertical-menu.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/assets/css/style.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/admin/frest/assets/css/custom.css') ?>">
 
 	<link rel="stylesheet" type="text/css"
-		href="<?= base_url('assets/admin/frest/app-assets/vendors/css/forms/select/select2.min.css')?>">
+		  href="<?= base_url('assets/admin/frest/app-assets/vendors/css/forms/select/select2.min.css') ?>">
 
 	<link rel="stylesheet" type="text/css"
-		href="<?= base_url('assets/admin/frest/app-assets/vendors/css/tables/datatable/datatables.min.css')?>">
+		  href="<?= base_url('assets/admin/frest/app-assets/vendors/css/tables/datatable/datatables.min.css') ?>">
 </head>
 
 <body class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns navbar-sticky footer-static"
-	data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+	  data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
-    <style>
-        .badge-custom{
-            width: 79px!important;
-        }
-    </style>
+<style>
+	.badge-custom {
+		width: 79px !important;
+	}
+</style>

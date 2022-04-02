@@ -12,6 +12,10 @@ class Dashboard extends CI_Controller
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);

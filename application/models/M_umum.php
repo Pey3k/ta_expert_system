@@ -48,25 +48,6 @@ class M_umum extends CI_Model
 		return $str;
 	}
 
-
-	// function sendWhatsAppMessage($toNumber,$message){
-	//     $key = '9bd664161dc8bcad0c28c30300b86853';
-	//     $secret = 'c65e4abf04cc85a523923a48712f54b6';
-	//     $message = urlencode($message);
-	//     $urlPair = "http://128.199.178.179/whatapi/api/send_message?nomor=".$toNumber."&pesan=".$message."&secret=".$secret."&key=".$key."";
-	//     $exe  = json_decode(file_get_contents($urlPair));
-	//     $status       = $exe->success;
-
-	//     if($status==1){
-	//         return true;
-	//     }else{
-	//         return false;
-	//     }
-	//     //return $status;
-
-	// }
-
-
 	function formatTanggal($datetime, $format = 'd/m/Y')
 	{
 

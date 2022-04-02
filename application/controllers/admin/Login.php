@@ -27,7 +27,11 @@ class Login extends CI_Controller
 		$username = $this->input->post('username');
 
 		$user = $this->db->get_where('petugas', ['username' => $username])->row_array();
-		if ($this->m_login->checkLogin($dataPost['username'], $dataPost['password']) && $user['is_active'] == 1) {
+		/* debugCode($dataPost); */
+		if ($this->m_login->checkLogin($dataPost['username'], $dataPost['password'])) {
+			//echo "success";
+			$this->session->set_flashdata('message', '<div style="font-size:15px" class="alert alert-info" role="alert">
+			Berhasil melakukan login</div>');
 			redirect('admin/dashboard');
 		} else {
 			$this->session->set_flashdata('message', '<div style="font-size:15px" class="alert alert-danger" role="alert">

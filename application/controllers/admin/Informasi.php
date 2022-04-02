@@ -10,13 +10,15 @@ class Informasi extends CI_Controller
 		$this->load->model('m_umum');
 		$this->load->model('m_informasi');
 		$this->load->library("ckeditor");
-		//    is_logged_in();
-
 	}
 
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->m_informasi->getListInformasi();
 
 		$this->load->view('templates/header', $data);
@@ -37,6 +39,10 @@ class Informasi extends CI_Controller
 	public function add()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$this->ckeditor->basePath = base_url() . 'assets/ckeditor/';
 		$this->ckeditor->config['toolbar'] = array(
 			array('Source', '-', 'Bold', 'Italic', 'Underline', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo', '-', 'NumberedList', 'BulletedList')
@@ -73,6 +79,10 @@ class Informasi extends CI_Controller
 	public function edit($id)
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['detailData'] = $this->m_informasi->getListInformasiById($id);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);

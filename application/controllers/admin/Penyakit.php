@@ -15,6 +15,10 @@ class Penyakit extends CI_Controller
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['listData'] = $this->m_penyakit->listPenyakit();
 
 		$this->load->view('templates/header', $data);
@@ -27,6 +31,10 @@ class Penyakit extends CI_Controller
 	public function add()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$id = $this->m_penyakit->getIDPenyakit();
 		$data['id_penyakit'] = "P" . sprintf("%02s", $id->id_penyakit + 1);
 
@@ -62,6 +70,10 @@ class Penyakit extends CI_Controller
 	public function edit($id)
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
+		if (empty($data['userLogin'])) {
+			redirect('admin/login');
+		}
+
 		$data['detailData'] = $this->m_penyakit->getListPenyakitById($id);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);

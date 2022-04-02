@@ -6,6 +6,7 @@ class Registrasi extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('m_umum');
 		$this->load->library('form_validation');
 	}
 
@@ -51,6 +52,7 @@ class Registrasi extends CI_Controller
 				'nama_petugas' => htmlspecialchars($this->input->post('nama_petugas', true)),
 				'username' => htmlspecialchars($this->input->post('username', true)),
 				'password' => md5($this->input->post('password1')),
+				'date_created' => date('Y-m-d')
 			];
 
 			$this->db->insert('petugas', $data);
