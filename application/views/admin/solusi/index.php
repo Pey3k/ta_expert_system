@@ -24,11 +24,10 @@
 					<div class="card">
 						<div class="card-header d-flex justify-content-between">
 							<h4 class="card-title">List Data Master Solusi</h4>
-							<a href="<?php echo base_url('admin/solusi/add/') ?>" class="btn btn-primary mr-1"><i
-										class="bx bx-plus-circle"></i> Tambah Solusi</a>
-
-							<!-- <button type="button" class="btn btn-primary mr-1" onclick="openModal('disease','add')"><i
-									  class="bx bx-plus-circle"></i> Tambah Data</button> -->
+							<?php if ($countSolusi[0]->jumlah > 0) { ?>
+								<a href="<?php echo base_url('admin/solusi/add/') ?>" class="btn btn-primary mr-1"><i
+											class="bx bx-plus-circle"></i> Tambah Solusi</a>
+							<?php } ?>
 						</div>
 						<div class="card-content">
 							<div class="card-body card-dashboard">
@@ -53,9 +52,9 @@
 												<td><?php echo $value->penyakit; ?></td>
 												<td><?php echo $value->solusi; ?></td>
 												<td>
-													<a href="<?php echo base_url('admin/solusi/edit/' . $value->id_solusi) ?>"
+													<a href="<?php echo base_url('admin/solusi/edit/' . $value->id_penyakit) ?>"
 													   class="badge badge-success badge-custom">Edit</a>
-													<a href="<?php echo base_url('admin/solusi/doDelete/' . $value->id_solusi) ?>"
+													<a href="<?php echo base_url('admin/solusi/doDelete/' . $value->id_penyakit) ?>"
 													   class="badge badge-danger"
 													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
 											</tr>

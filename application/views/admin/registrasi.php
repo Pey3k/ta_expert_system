@@ -9,7 +9,7 @@
 	<meta name="description" content="Expert System">
 	<meta name="keywords" content="expert system">
 	<meta name="author" content="PIXINVENT">
-	<title>Login Page - Expert System</title>
+	<title>Registration Page - Expert System</title>
 	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700"
 		  rel="stylesheet">
 	<link rel="stylesheet" type="text/css"
@@ -47,46 +47,62 @@
 										class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
 									<div class="card-header pb-1">
 										<div class="card-title">
-											<h4 class="text-center mb-2">Login Expert System</h4>
+											<h4 class="text-center mb-2">Registrasi Expert System</h4>
 										</div>
 									</div>
 									<div class="card-content">
 										<div class="card-body">
 											<form method="post"
-												  action="<?php echo base_url('admin/login/doLogin') ?>">
+												  action="<?php echo base_url('admin/registrasi/doRegister') ?>">
 												<?= $this->session->flashdata('berhasil'); ?>
 												<?= $this->session->flashdata('message'); ?>
 												<div class="form-group mb-50">
 													<label class="text-bold-600"
-														   for="exampleInputEmail1">Username</label>
-													<input type="text" class="form-control" placeholder="Username"
-														   name="username" id="username" required>
+														   for="nama_petugas">Nama Petugas</label>
+													<input type="text" class="form-control" placeholder="Nama Petugas"
+														   name="nama_petugas" id="nama_petugas" required>
 
 												</div>
+
+												<div class="form-group mb-50">
+													<label class="text-bold-600"
+														   for="username">Username</label>
+													<input type="text" class="form-control" placeholder="Username"
+														   name="username" id="username" required>
+													<?= form_error('username', '<small class="text-danger pl-1">', '</small>'); ?>
+												</div>
+
+
 												<div class="form-group">
 													<label class="text-bold-600"
-														   for="exampleInputPassword1">Password</label>
+														   for="password1">Password</label>
 													<input type="password" class="form-control"
-														   placeholder="Password" name="password" id="password" required>
+														   placeholder="Password" name="password1" id="password1" required>
+													<?= form_error('password1', '<small class="text-danger pl-1">', '</small>'); ?>
 												</div>
-												<div
-														class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+
+												<div class="form-group">
+													<label class="text-bold-600"
+														   for="password2">Konfirmasi Password</label>
+													<input type="password" class="form-control"
+														   placeholder="Password" name="password2" id="password2" required>
+													<?= form_error('password2', '<small class="text-danger pl-1">', '</small>'); ?>
+												</div>
+
+												<div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
 													<div class="text-left">
-														<div class="checkbox checkbox-sm">
-															<input type="checkbox" class="form-check-input"
-																   id="exampleCheck1">
-															<label class="checkboxsmall"
-																   for="exampleCheck1"><small>Keep me logged
-																	in</small></label>
-														</div>
+
 													</div>
+
 													<div class="text-right"><a
-																href="<?php echo base_url('admin/registrasi') ?>"
-																class="card-link"><small>Registrasi Petugas</small></a>
+																href="<?php echo base_url('admin/login') ?>"
+																class="card-link"><small>Login Petugas</small></a>
 													</div>
 												</div>
+
 												<button type="submit"
-														class="btn btn-success glow w-100 position-relative">Login<i
+														class="btn btn-success glow w-100 position-relative">
+													Registrasi<i
 															id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
 											</form>
 											<hr>
@@ -121,3 +137,4 @@
 <!-- END: Body-->
 
 </html>
+

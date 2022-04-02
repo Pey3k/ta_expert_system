@@ -40,8 +40,9 @@ class Diagnosa extends CI_Controller
 		// Mengambil data jawaban dari post pada view di radio box
 		$jawaban = $this->input->post();
 
-		if (count($jawaban) == 0) {
-			// Kondisi jika jawaban bernilai null yaitu tidak dipilih satu pun
+		if (count($jawaban) <= 1) {
+			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
 		}
 
@@ -694,8 +695,9 @@ class Diagnosa extends CI_Controller
 		$jawaban = $this->input->post();
 
 
-		if (count($jawaban) == 0) {
-			// Kondisi jika jawaban bernilai null yaitu tidak dipilih satu pun
+		if (count($jawaban) <= 1) {
+			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-danger" role="alert">
+			Harap memasukan data gejala sebanyak minimal 2 gejala yang Anda rasakan.   Terdapat sebanyak 30 pertanyaan untuk melakukan diagnosa gejala penyakit.</div>');
 			redirect('diagnosa');
 		}
 

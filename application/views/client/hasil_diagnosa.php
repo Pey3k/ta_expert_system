@@ -121,7 +121,7 @@
 									<?php
 									echo floatval($nilaiKombinasi * 100) . ' %';
 									?> |
-									<a href="<?= base_url() ?>solusi/<?= $data_gangguan->url ?>" target="_blank">Baca
+									<a href="<?= base_url() ?>penyakit/<?= $data_gangguan->url ?>" target="_blank">Baca
 										Solusi
 										Tindakan</a><br></li>
 							<?php } ?>

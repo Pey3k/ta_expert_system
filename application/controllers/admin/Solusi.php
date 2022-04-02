@@ -8,13 +8,14 @@ class Solusi extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('m_umum');
-		$this->load->model('m_solusi');
+		$this->load->model('m_penyakit');
 	}
 
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['listData'] = $this->m_solusi->getListsolusi();
+		$data['listData'] = $this->m_penyakit->listPenyakit();
+		$data['countSolusi'] = $this->m_penyakit->countPenyakitWithoutSolusi();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
@@ -26,7 +27,8 @@ class Solusi extends CI_Controller
 	public function add()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['jenisPenyakit'] = $this->m_solusi->getPenyakit();
+		$data['jenisPenyakit'] = $this->m_penyakit->listPenyakit();
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
@@ -41,7 +43,7 @@ class Solusi extends CI_Controller
 			"id_penyakit" => $post['jenis'],
 			"solusi" => $post['solusi']
 		);
-		$insert = $this->db->insert("solusi", $dataArray);
+		$insert = $this->db->update("penyakit", $dataArray, array("id_penyakit" => $post['jenis']));
 		if ($insert) {
 			$this->m_umum->generatePesan("Berhasil Menambahkan Data", "berhasil");
 			redirect("admin/solusi/index");
@@ -55,8 +57,9 @@ class Solusi extends CI_Controller
 	public function edit($id)
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['jenisPenyakit'] = $this->m_solusi->getPenyakit();
-		$data['dataDetail'] = $this->m_solusi->getListByID($id);
+		$data['jenisPenyakit'] = $this->m_penyakit->listPenyakit();
+		$data['dataDetail'] = $this->m_penyakit->getListPenyakitById($id);
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
@@ -73,7 +76,7 @@ class Solusi extends CI_Controller
 			"solusi" => $post['solusi'],
 			"updated_at" => date('Y-m-d H:i:s')
 		);
-		$update = $this->db->update("solusi", $dataArray, array("id_solusi" => $id));
+		$update = $this->db->update("penyakit", $dataArray, array("id_penyakit" => $id));
 		if ($update) {
 			$this->m_umum->generatePesan("Berhasil mengupdate Data", "berhasil");
 			redirect("admin/solusi/index");
@@ -86,7 +89,11 @@ class Solusi extends CI_Controller
 
 	public function doDelete($id)
 	{
-		$delete = $this->db->delete("solusi", array("id_solusi" => $id));
+		$dataArray = array(
+			"solusi" => NULL,
+			"updated_at" => date('Y-m-d H:i:s'),
+		);
+		$delete = $this->db->update("penyakit", $dataArray, array("id_penyakit" => $id));
 		if ($delete) {
 			$this->m_umum->generatePesan("Berhasil delete Data", "berhasil");
 			redirect("admin/solusi/index");

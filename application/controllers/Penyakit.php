@@ -20,7 +20,7 @@ class Penyakit extends CI_Controller
 	public function penyakit($url)
 	{
 		$data['userLogin'] = $this->session->userdata('loginUser');
-		$data['penyakit'] = $this->db->query('select * from penyakit p join solusi s on s.id_penyakit = p.id_penyakit where p.url = "' . $url . '"')->row();
+		$data['penyakit'] = $this->db->query('select * from penyakit where url = "' . $url . '"')->row();
 		$data['data_penyakit'] = $this->m_penyakit->listPenyakit();
 
 		$this->load->view('client/penyakit', $data);

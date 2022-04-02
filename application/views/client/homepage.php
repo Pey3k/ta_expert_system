@@ -166,17 +166,21 @@
 		<div class="row">
 			<?php foreach ($data_penyakit as $k => $v) { ?>
 				<?php if (!empty($v->url)) { ?>
-					<div class="col-md-4 services p-4 ftco-animate">
-						<div class="pricing-entry pb-5 text-center">
-							<div>
-								<h3 class="mb-4"><?= $v->penyakit ?></h3>
+					<div class="col-md-4 ftco-animate">
+						<div class="blog-entry">
+							<a href="blog-single.html" class="block-20 d-flex align-items-end justify-content-end"
+							   style="background-image: url(<?= $v->url_gambar ?>);">
+							</a>
+							<div class="text bg-white p-4">
+								<h3 class="heading"><a href="<?= 'penyakit/' . $v->url ?>"><?= $v->penyakit ?></a></h3>
+								<p><?= mb_strimwidth($v->deskripsi, 0, 97, '...') ?></p>
+								<div class="d-flex align-items-center mt-4">
+									<p class="mb-0"><a href="<?= 'penyakit/' . $v->url ?>" class="btn btn-primary">Selengkapnya
+											<span
+													class="ion-ios-arrow-round-forward"></span></a></p>
+									</p>
+								</div>
 							</div>
-							<div class="img w-100" style="background-image: url(<?= $v->url_gambar ?>);"></div>
-							<div>
-								<?= mb_strimwidth($v->deskripsi, 0, 97, '...') ?>
-							</div>
-							<p class="button text-center"><a href="<?= base_url('penyakit/' . $v->url) ?>"
-															 class="btn btn-primary px-4 py-3">Selengkapnya</a></p>
 						</div>
 					</div>
 				<?php } ?>

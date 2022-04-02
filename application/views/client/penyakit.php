@@ -82,12 +82,13 @@
 				</p>
 				<p><?= $penyakit->deskripsi ?></p>
 
-				<div class="tag-widget post-tag-container mb-5 mt-5">
-					<div class="tagcloud">
-						<a href="<?= base_url() . 'solusi/' . $penyakit->url ?>" target="_blank" class="tag-cloud-link">Solusi
-							Penyakit</a>
-					</div>
-				</div>
+				<h3 class="mb-3">Solusi Penyakit <?= $penyakit->penyakit ?></h3>
+				<?php if (!empty($penyakit->solusi)) { ?>
+					<p><?= $penyakit->solusi ?></p>
+				<?php } else { ?>
+					<p>Tidak Ada</p>
+				<?php } ?>
+
 
 			</div> <!-- .col-md-8 -->
 

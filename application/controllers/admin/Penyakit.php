@@ -10,9 +10,6 @@ class Penyakit extends CI_Controller
 		$this->load->model('m_umum');
 		$this->load->model('m_penyakit');
 		$this->load->model('m_gejala');
-
-		//    is_logged_in();
-
 	}
 
 	public function index()

@@ -118,6 +118,7 @@
 							<label class="text-black" for="email">Email</label>
 							<input type="email" id="email" name="email" class="form-control rounded-0"
 								   value="<?= set_value('email'); ?>">
+							<?= form_error('email', '<small class="text-danger pl-1">', '</small>'); ?>
 						</div>
 					</div>
 
@@ -142,6 +143,7 @@
 						<div class="col-md-6">
 							<label class="text-black" for="password2">Konfirmasi Password</label>
 							<input type="password" id="password2" name="password2" class="form-control rounded-0">
+							<?= form_error('password2', '<small class="text-danger pl-1">', '</small>'); ?>
 						</div>
 
 						<div class="row form-group">

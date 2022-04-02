@@ -92,5 +92,20 @@ class M_penyakit extends CI_Model
 		return $data;
 	}
 
+	public function countPenyakitWithoutSolusi()
+	{
+		$sql = "SELECT
+					count(id_penyakit) AS jumlah
+				FROM
+					penyakit
+				WHERE
+					solusi IS NULL
+					OR solusi = ''";
+
+		$query = $this->db->query($sql);
+		$result = $query->result();
+		return $result;
+	}
+
 
 }
