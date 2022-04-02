@@ -228,6 +228,7 @@ class Diagnosa extends CI_Controller
 				'idPengguna' => $dataUserLogin['UserID'],
 				'tglAnalisa' => date('Y-m-d'),
 			);
+
 			$this->db->insert("hasilanalisa", $dataSimpan);
 			$idhasil = $this->db->insert_id();
 			foreach ($minning['tableCombine'][count($minning['tableCombine'])][$b_max[0]] as $key => $value) {

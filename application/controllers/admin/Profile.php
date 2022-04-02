@@ -8,13 +8,13 @@ class Profile extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('m_umum');
-		$this->load->model('M_petugas');
+		$this->load->model('m_petugas');
 	}
 
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['dataPakar'] = $this->m_pakar->getListPakarId($data['userLogin']['UserID']);
+		$data['dataPakar'] = $this->m_petugas->getListPakarId($data['userLogin']['UserID']);
 		if (empty($data['userLogin'])) {
 			redirect('admin/login');
 		}
