@@ -82,13 +82,13 @@ class Diagnosa extends CI_Controller
 					'id_penyakit' => $result['pilih'][$i]['id_penyakit'],
 					'id_gejala' => $result['pilih'][$i]['id_gejala'],
 					'matriks' => $result['pilih'][$i]['matriks'],
-					'nilai' => $result['pilih'][$i]['nilai']
+					'nilai' => number_format($result['pilih'][$i]['nilai'], 2, '.', '')
 				),
 				array(
 					'id_penyakit' => array(),
 					'id_gejala' => array(),
 					'matriks' => array(),
-					'nilai' => 1 - $result['pilih'][$i]['nilai']
+					'nilai' => number_format((1 - $result['pilih'][$i]['nilai']), 2, '.', '')
 				)
 			);
 
@@ -98,7 +98,7 @@ class Diagnosa extends CI_Controller
 						'id_penyakit' => $result['pilih'][$i - 1]['id_penyakit'],
 						'id_gejala' => $result['pilih'][$i - 1]['id_gejala'],
 						'matriks' => $result['pilih'][$i - 1]['matriks'],
-						'nilai' => $result['pilih'][$i - 1]['nilai']
+						'nilai' => number_format($result['pilih'][$i - 1]['nilai'], 2, '.', '')
 					),
 					array(),
 					array(),
@@ -110,7 +110,7 @@ class Diagnosa extends CI_Controller
 						'id_penyakit' => array(),
 						'id_gejala' => array(),
 						'matriks' => array(),
-						'nilai' => 1 - $result['pilih'][$i - 1]['nilai']
+						'nilai' => number_format((1 - $result['pilih'][$i - 1]['nilai']), 2, '.', '')
 					),
 					array(),
 					array(),
@@ -123,7 +123,7 @@ class Diagnosa extends CI_Controller
 							'id_penyakit' => $value,
 							'id_gejala' => array(),
 							'matriks' => array(),
-							'nilai' => $result['nilaiCombine'][$i - 1][$key]
+							'nilai' => number_format($result['nilaiCombine'][$i - 1][$key], 2, '.', '')
 						),
 						array(),
 						array()
@@ -199,7 +199,8 @@ class Diagnosa extends CI_Controller
 			}
 
 			foreach ($result['tableCombine'][$i] as $keyt => $valuet) {
-				$kiri = $kanan = 0;
+				$kiri = 0;
+				$kanan = 0;
 				foreach ($result['table'][$i] as $key => $value) {
 					foreach ($value as $keys => $values) {
 						if ($key != 0 && $keys != 0) {
