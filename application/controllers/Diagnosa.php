@@ -86,10 +86,11 @@ class Diagnosa extends CI_Controller
 				),
 				array(
 					'id_penyakit' => array(),
+					'id_gejala' => array(),
+					'matriks' => array(),
 					'nilai' => 1 - $result['pilih'][$i]['nilai']
 				)
 			);
-
 
 			if ($i == 1) {
 				$result['table'][$i][] = array(
@@ -120,8 +121,8 @@ class Diagnosa extends CI_Controller
 					$result['table'][$i][] = array(
 						array(
 							'id_penyakit' => $value,
-							'id_gejala' => $value,
-							'matriks' => $value,
+							'id_gejala' => array(),
+							'matriks' => array(),
 							'nilai' => $result['nilaiCombine'][$i - 1][$key]
 						),
 						array(),
@@ -153,29 +154,52 @@ class Diagnosa extends CI_Controller
 							$combine = array();
 						}
 
+						$combineGejala = array_intersect($result['table'][$i][0][$keys]['id_gejala'], $result['table'][$i][$key][0]['id_gejala']);
+						$cGejala = array();
+						foreach ($combineGejala as $kG => $vG) {
+							$cGejala[] = $vG;
+						}
+						$combineGejala = $cGejala;
+
+						if (count($result['table'][$i][0][$keys]['id_gejala']) == 0) {
+							$combineGejala = $result['table'][$i][$key][0]['id_gejala'];
+						}
+
+						if (count($result['table'][$i][$key][0]['id_gejala']) == 0) {
+							$combineGejala = $result['table'][$i][0][$keys]['id_gejala'];
+						}
+
+						if (count($result['table'][$i][0][$keys]['id_gejala']) == 0 && count($result['table'][$i][$key][0]['id_gejala']) == 0) {
+							$combineGejala = array();
+						}
+
+						$matriks = "";
+						if (count($combine) > 0 && count($combineGejala) > 0) {
+							$matriks = sprintf("m{%s(%s)}", $combineGejala[0], implode(',', $combine));
+						}
+
 						$result['table'][$i][$key][$keys] = array(
 							'id_penyakit' => $combine,
+							'id_gejala' => $combineGejala,
+							'matriks' => $matriks,
 							'nilai' => $result['table'][$i][0][$keys]['nilai'] * $result['table'][$i][$key][0]['nilai']
 						);
 
 						if (empty($result['tableCombine'][$i])) {
-							$combine = (array)$combine;
-							$result['tableCombine'][$i][] = $combine;
+							$result['tableCombine'][$i][] = (array)$combine;
 							$result['nilaiCombine'][$i][] = 0;
-						} else {
-							if (!in_array($combine, $result['tableCombine'][$i])) {
-								$combine = (array)$combine;
-								$result['tableCombine'][$i][] = $combine;
-								$result['nilaiCombine'][$i][] = 0;
-							}
+						}
+
+						if (!in_array($combine, $result['tableCombine'][$i])) {
+							$result['tableCombine'][$i][] = (array)$combine;
+							$result['nilaiCombine'][$i][] = 0;
 						}
 					}
 				}
 			}
 
 			foreach ($result['tableCombine'][$i] as $keyt => $valuet) {
-				$kiri = 0;
-				$kanan = 0;
+				$kiri = $kanan = 0;
 				foreach ($result['table'][$i] as $key => $value) {
 					foreach ($value as $keys => $values) {
 						if ($key != 0 && $keys != 0) {
@@ -210,6 +234,7 @@ class Diagnosa extends CI_Controller
 
 		$dataSimpan = array(
 			'idPengguna' => $dataUserLogin['UserID'],
+			'payload' => json_encode($result),
 			'tglAnalisa' => date('Y-m-d'),
 		);
 
@@ -222,7 +247,7 @@ class Diagnosa extends CI_Controller
 
 			$code = $valID;
 			if (empty($valID)) {
-				$code = "Theta";
+				$code = sprintf("%s", 'Ø');
 			}
 
 			$dataAnalisa = array(
@@ -250,7 +275,6 @@ class Diagnosa extends CI_Controller
 				);
 
 				$this->db->insert("detailhasilanalisa", $dataDetail);
-
 			}
 		}
 

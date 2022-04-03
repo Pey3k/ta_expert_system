@@ -114,6 +114,7 @@
 						<th align="center">No</th>
 						<th align="center">Gejala</th>
 						<th align="center">Nilai</th>
+						<th align="center">Perkiraan Penyakit</th>
 					</tr>
 					<?php
 					$no = 1;
@@ -122,6 +123,7 @@
 							<th align="center"><?= $no++ ?></th>
 							<th align="center"><?= implode(',', $value['id_gejala']) ?></th>
 							<th align="center"><?= $value['nilai'] ?></th>
+							<th align="center"><?= implode(',', $value['id_penyakit']) ?></th>
 						</tr>
 					<?php } ?>
 				</table>
@@ -145,14 +147,16 @@
 										<td></td>
 									<?php } else { ?>
 										<?php if (count($v['id_penyakit']) == 0) { ?>
-											<td>ø</td>
+											<td><?= sprintf('%s', 'Ø'); ?></td>
 										<?php } else { ?>
 											<td>
 												<?php
-												if (isset($v['matriks']) && !is_array($v['matriks'])) {
+												if (!empty($v['matriks']) && !is_array($v['matriks'])) {
 													echo $v['matriks'];
+												} else if (implode(',', $v['id_gejala']) == "") {
+													echo sprintf('m{%s}', 'Ø');
 												} else {
-													echo sprintf("m{G(%s)}", implode(',', $v['id_penyakit']));
+													echo sprintf("m{%s(%s)}", implode(',', $v['id_gejala']), implode(',', $v['id_penyakit']));
 												}
 												?>
 											</td>
