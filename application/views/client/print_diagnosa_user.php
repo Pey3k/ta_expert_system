@@ -53,7 +53,7 @@
 						<td style="font-size:10pt;text-align:center;"><?php echo $no; ?></td>
 
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->nama_pengguna ?></td>
-						<td style="font-size:10pt;text-align:center;"><?php echo $value->penyakit ?></td>
+						<td style="font-size:10pt;text-align:center;"><?php echo $value->nama_penyakit ?></td>
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->persentase ?> %</td>
 						<td style="font-size:10pt;text-align:center;"><?php echo $value->tgl_analisa ?></td>
 

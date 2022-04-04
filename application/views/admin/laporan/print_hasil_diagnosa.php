@@ -47,7 +47,7 @@
 				foreach ($listData as $value) {
 
 					$no++;
-					$get = $this->db->query("SELECT COUNT(*) as total FROM detail_hasil_analisa WHERE penyakit LIKE '%" . $value->penyakit . "%'")->row()->total;
+					$get = $this->db->query("SELECT COUNT(*) as total FROM detail_hasil_analisa WHERE nama_penyakit LIKE '%" . $value->penyakit . "%'")->row()->total;
 
 					?>
 					<tr class="isi-colom">
