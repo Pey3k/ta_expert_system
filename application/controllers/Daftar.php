@@ -46,7 +46,7 @@ class Daftar extends CI_Controller
 		} else {
 			$dataArray = array(
 				"nama_pengguna" => $post['nama'],
-				"jk" => $post['jk'],
+				"jenis_kelamin" => $post['jenis_kelamin'],
 				"tempat_lahir" => $post['tempat_lahir'],
 				"tgl_lahir" => $post['tgl_lahir'],
 				"umur" => $post['umur'],

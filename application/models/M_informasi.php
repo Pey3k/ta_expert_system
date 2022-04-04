@@ -23,7 +23,7 @@ class M_informasi extends CI_Model
 	{
 		$this->db->select("*");
 		$this->db->from("informasi");
-		$this->db->where("idInformasi", $id);
+		$this->db->where("id_informasi", $id);
 		$query = $this->db->get();
 		$result = $query->row();
 		return $result;

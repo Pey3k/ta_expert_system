@@ -56,7 +56,7 @@
 									<tr>
 										<td><?php echo $no; ?></td>
 										<td><?php echo $value->nama_pengguna; ?></td>
-										<td><?php echo $value->jk; ?></td>
+										<td><?php echo $value->jenis_kelamin; ?></td>
 										<td><?php echo $value->umur; ?></td>
 										<td><?php echo $value->username; ?></td>
 										<td><?php echo $value->email; ?></td>

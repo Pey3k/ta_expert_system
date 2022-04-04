@@ -91,7 +91,7 @@
 					<th>:</th>
 					<td>
 						<?php
-						if ($listProfile->jk == "Laki-Laki") {
+						if ($listProfile->jenis_kelamin == "Laki-Laki") {
 							echo "Laki laki";
 						} else {
 							echo "Perempuan";

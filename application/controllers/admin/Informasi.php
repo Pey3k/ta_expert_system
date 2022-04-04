@@ -101,7 +101,7 @@ class Informasi extends CI_Controller
 			"updated_at" => date('Y-m-d H:i:s'),
 			"url" => strtolower(str_replace(' ', '-', $post['judul']))
 		);
-		$update = $this->db->update("informasi", $dataArray, array("idInformasi" => $id));
+		$update = $this->db->update("informasi", $dataArray, array("id_informasi" => $id));
 		if ($update) {
 			$this->m_umum->generatePesan("Berhasil mengupdate Data", "berhasil");
 			redirect("admin/informasi/index");
@@ -113,7 +113,7 @@ class Informasi extends CI_Controller
 
 	public function doDelete($id)
 	{
-		$delete = $this->db->delete("informasi", array("idInformasi" => $id));
+		$delete = $this->db->delete("informasi", array("id_informasi" => $id));
 		if ($delete) {
 			$this->m_umum->generatePesan("Berhasil delete Data", "berhasil");
 			redirect("admin/informasi/index");

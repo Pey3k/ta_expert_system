@@ -51,9 +51,9 @@
 												<td><?php echo $value->judul; ?></td>
 												<td><?php echo $value->content; ?></td>
 												<td>
-													<a href="<?php echo base_url('admin/informasi/edit/' . $value->idInformasi) ?>"
+													<a href="<?php echo base_url('admin/informasi/edit/' . $value->id_informasi) ?>"
 													   class="badge badge-success badge-custom">Edit</a>
-													<a href="<?php echo base_url('admin/informasi/doDelete/' . $value->idInformasi) ?>"
+													<a href="<?php echo base_url('admin/informasi/doDelete/' . $value->id_informasi) ?>"
 													   class="badge badge-danger"
 													   onclick="return confirm('Anda yakin ingin menghapus data ini ? ')">Delete</a>
 											</tr>

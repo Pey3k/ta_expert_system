@@ -56,7 +56,7 @@
 					<tr class="isi-colom">
 						<td style="font-size:14pt; text-align:center;"><?php echo $no; ?></td>
 						<td style="font-size:14pt; text-align:center;"><?php echo $value->nama_pengguna; ?></td>
-						<td style="font-size:14pt; text-align:center;"><?php echo $value->jk; ?></td>
+						<td style="font-size:14pt; text-align:center;"><?php echo $value->jenis_kelamin; ?></td>
 						<td style="font-size:14pt; text-align:center;"><?php echo $value->umur; ?></td>
 						<td style="font-size:14pt; text-align:center;"><?php echo $value->username; ?></td>
 						<td style="font-size:14pt; text-align:center;"><?php echo $value->email; ?></td>

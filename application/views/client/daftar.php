@@ -103,9 +103,9 @@
 						</div>
 
 						<div class="col-md-6">
-							<label class="text-black" for="jk">Jenis Kelamin</label>
-							<select name="jk" id="jk" class="form-control rounded-0" required autofocus
-									value="<?= set_value('jk'); ?>">
+							<label class="text-black" for="jenis_kelamin">Jenis Kelamin</label>
+							<select name="jenis_kelamin" id="jenis_kelamin" class="form-control rounded-0" required autofocus
+									value="<?= set_value('jenis_kelamin'); ?>">
 								<option value="Laki-Laki" selected>Laki-Laki</option>
 								<option value="Perempuan">Perempuan</option>
 							</select>

@@ -15,8 +15,8 @@ class M_login extends CI_Model
 			$querycheck = $query->result();
 
 			$dataArr = array(
-				'UserID' => $querycheck[0]->id_petugas,
-				'userName' => $querycheck[0]->nama_petugas,
+				'user_id' => $querycheck[0]->id_petugas,
+				'user_name' => $querycheck[0]->nama_petugas,
 				"level" => 1
 			);
 			$this->session->set_userdata('loginData', $dataArr);
@@ -38,8 +38,8 @@ class M_login extends CI_Model
 		if ($query->num_rows() > 0) {
 			$querycheck = $query->result();
 			$dataArr = array(
-				'UserID' => $querycheck[0]->id_pengguna,
-				'userName' => $querycheck[0]->nama_pengguna,
+				'user_id' => $querycheck[0]->id_pengguna,
+				'user_name' => $querycheck[0]->nama_pengguna,
 				"level" => 99
 			);
 			$this->session->set_userdata('loginUser', $dataArr);

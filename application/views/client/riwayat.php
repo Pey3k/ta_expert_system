@@ -122,7 +122,7 @@
 									<td style="padding:10px;"> <?php echo $value->nama_pengguna; ?> </td>
 									<td style="padding:10px;"> <?php echo $value->penyakit; ?> </td>
 									<td style="padding:10px;"> <?php echo $value->persentase; ?> %</td>
-									<td style="padding:10px;"> <?= date_format(date_create($value->tglAnalisa), 'd F Y'); ?></td>
+									<td style="padding:10px;"> <?= date_format(date_create($value->tgl_analisa), 'd F Y'); ?></td>
 								</tr>
 							<?php } ?>
 

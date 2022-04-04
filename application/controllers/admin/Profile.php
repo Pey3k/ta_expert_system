@@ -14,7 +14,7 @@ class Profile extends CI_Controller
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginData');
-		$data['dataPakar'] = $this->m_petugas->getListPakarId($data['userLogin']['UserID']);
+		$data['dataPakar'] = $this->m_petugas->getListPakarId($data['userLogin']['user_id']);
 		if (empty($data['userLogin'])) {
 			redirect('admin/login');
 		}
@@ -39,8 +39,8 @@ class Profile extends CI_Controller
 		$update = $this->db->update("petugas", $dataArray, array("id_petugas" => $id));
 		if ($update) {
 			$dataArr = array(
-				'UserID' => $id,
-				'userName' => $post['nama_petugas'],
+				'user_id' => $id,
+				'user_name' => $post['nama_petugas'],
 				"level" => 1
 			);
 			$this->session->set_userdata('loginData', $dataArr);

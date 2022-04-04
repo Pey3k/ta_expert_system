@@ -105,14 +105,14 @@
 						</div>
 
 						<div class="col-md-6">
-							<label class="text-black" for="jk">Jenis Kelamin</label>
-							<select name="jk" id="jk" class="form-control rounded-0" required
-									value="<?= $detailData->jk ?>">
-								<option value="Laki-Laki" <?php if ($detailData->jk == "Laki-Laki") {
+							<label class="text-black" for="jenis_kelamin">Jenis Kelamin</label>
+							<select name="jenis_kelamin" id="jenis_kelamin" class="form-control rounded-0" required
+									value="<?= $detailData->jenis_kelamin ?>">
+								<option value="Laki-Laki" <?php if ($detailData->jenis_kelamin == "Laki-Laki") {
 									echo "selected";
 								} ?>>Laki-laki
 								</option>
-								<option value="Perempuan" <?php if ($detailData->jk == "Perempuan") {
+								<option value="Perempuan" <?php if ($detailData->jenis_kelamin == "Perempuan") {
 									echo "selected";
 								} ?>>Perempuan
 								</option>

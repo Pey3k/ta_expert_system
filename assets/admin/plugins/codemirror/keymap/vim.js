@@ -676,7 +676,7 @@
           // Vim's action command before the last edit, used to repeat actions
           // with '.' and insert mode repeat.
           lastEditActionCommand: undefined,
-          // When using jk for navigation, if you move from a longer line to a
+          // When using jenis_kelamin for navigation, if you move from a longer line to a
           // shorter line, the cursor may clip to the end of the shorter line.
           // If j is pressed again and cursor goes to the next line, the
           // cursor should go back to its horizontal position on the longer

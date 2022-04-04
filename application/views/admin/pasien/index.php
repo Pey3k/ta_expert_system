@@ -47,7 +47,7 @@
 											<tr>
 												<td><?= $key + 1; ?></td>
 												<td><?= $value->nama_pengguna; ?></td>
-												<td><?= $value->jk; ?></td>
+												<td><?= $value->jenis_kelamin; ?></td>
 												<td><?= $value->umur; ?></td>
 												<td><?= $value->username; ?></td>
 												<td><?= $value->email; ?></td>

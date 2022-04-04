@@ -21,7 +21,7 @@ class Diagnosa extends CI_Controller
 			redirect('login');
 		}
 
-		$data['id_pengguna'] = $data['UserID'];
+		$data['id_pengguna'] = $data['user_id'];
 		$data['list_gejala'] = $this->m_gejala->getlistGejala();
 		$this->load->view('client/diagnosa', $data);
 	}
@@ -234,12 +234,12 @@ class Diagnosa extends CI_Controller
 		$result['max'] = $b_max[0];
 
 		$dataSimpan = array(
-			'idPengguna' => $dataUserLogin['UserID'],
+			'id_pengguna' => $dataUserLogin['user_id'],
 			'payload' => json_encode($result),
-			'tglAnalisa' => date('Y-m-d'),
+			'tgl_analisa' => date('Y-m-d'),
 		);
 
-		$this->db->insert("hasilanalisa", $dataSimpan);
+		$this->db->insert("hasil_analisa", $dataSimpan);
 		$idhasil = $this->db->insert_id();
 
 		$no = 1;
@@ -252,12 +252,11 @@ class Diagnosa extends CI_Controller
 			}
 
 			$dataAnalisa = array(
-				'M' => sprintf("m%d", $no++),
-				'kode' => $code,
-				'nilai' => $value,
-				'id_pengguna' => $dataUserLogin['UserID'],
-				'tanggal_diagnosa' => date('Y-m-d'),
-				'idHasilAnalisa' => $idhasil,
+				'densitas' => sprintf("m%d", $no++),
+				'kode_densitas' => $code,
+				'nilai_densitas' => $value,
+				'tgl_diagnosa' => date('Y-m-d'),
+				'id_hasil_analisa' => $idhasil,
 			);
 
 			$this->db->insert("analisa", $dataAnalisa);
@@ -269,13 +268,13 @@ class Diagnosa extends CI_Controller
 				}
 
 				$dataDetail = array(
-					'idHasilAnalisa' => $idhasil,
-					'penyakit' => $namePenyakit,
-					'idPengguna' => $dataUserLogin['UserID'],
+					'id_hasil_analisa' => $idhasil,
+					'id_penyakit' => $valID,
+					'nama_penyakit' => $namePenyakit,
 					'persentase' => ($value * 100),
 				);
 
-				$this->db->insert("detailhasilanalisa", $dataDetail);
+				$this->db->insert("detail_hasil_analisa", $dataDetail);
 			}
 		}
 

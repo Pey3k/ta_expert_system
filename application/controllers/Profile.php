@@ -18,7 +18,7 @@ class Profile extends CI_Controller
 		}
 
 		$data['userLogin'] = $data;
-		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['UserID']);
+		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['user_id']);
 		$this->load->view('client/profile', $data);
 	}
 
@@ -39,7 +39,7 @@ class Profile extends CI_Controller
 				"nama_pengguna" => $post['nama'],
 				"tempat_lahir" => $post['tempat_lahir'],
 				"tgl_lahir" => $post['tgl_lahir'],
-				"jk" => $post['jk'],
+				"jenis_kelamin" => $post['jenis_kelamin'],
 				"email" => $post['email'],
 				"umur" => $post['umur'],
 				"username" => $post['username'],
@@ -50,7 +50,7 @@ class Profile extends CI_Controller
 				"nama_pengguna" => $post['nama'],
 				"tempat_lahir" => $post['tempat_lahir'],
 				"tgl_lahir" => $post['tgl_lahir'],
-				"jk" => $post['jk'],
+				"jenis_kelamin" => $post['jenis_kelamin'],
 				"email" => $post['email'],
 				"umur" => $post['umur'],
 				"username" => $post['username'],
@@ -64,16 +64,14 @@ class Profile extends CI_Controller
 			$query = $this->db->get();
 			$querycheck = $query->result();
 			$dataArr = array(
-				'UserID' => $querycheck[0]->id_pengguna,
-				'userName' => $querycheck[0]->nama_pengguna,
+				'user_id' => $querycheck[0]->id_pengguna,
+				'user_name' => $querycheck[0]->nama_pengguna,
 				"level" => 99
 			);
 			$this->session->set_userdata('loginUser', $dataArr);
 
-			// $this->m_umum->generatePesan("Berhasil update data","berhasil");
 			redirect('profile');
 		} else {
-			// $this->m_umum->generatePesan("Gagal update data","gagal");
 			redirect('profile/editProfile/' . $id);
 		}
 	}

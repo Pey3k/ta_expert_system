@@ -18,7 +18,7 @@
 																   href="#" data-toggle="dropdown">
 							<div class="user-nav d-sm-flex d-none">
 								<?php if (!empty($userLogin)) { ?>
-									<span class="user-name"><?php echo $userLogin['userName'] ?></span>
+									<span class="user-name"><?php echo $userLogin['user_name'] ?></span>
 								<?php } ?>
 								<span
 										class="user-status text-muted">Available</span></div>

@@ -59,9 +59,9 @@
 											   value="<?php echo $detailData->nama_pengguna ?>" placeholder="">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="jk">Jenis Kelamin</label>
-										<input type="text" class="form-control" style="width:300px" name="jk"
-											   value="<?php echo $detailData->jk ?>" id="jk" placeholder="" readonly>
+										<label for="jenis_kelamin">Jenis Kelamin</label>
+										<input type="text" class="form-control" style="width:300px" name="jenis_kelamin"
+											   value="<?php echo $detailData->jenis_kelamin ?>" id="jenis_kelamin" placeholder="" readonly>
 									</div>
 								</div>
 

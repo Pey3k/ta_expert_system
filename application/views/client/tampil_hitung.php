@@ -121,7 +121,7 @@
 					foreach ($data['hasil']['pilih'] as $key => $value) { ?>
 						<tr>
 							<th align="center"><?= $no++ ?></th>
-							<th align="center"><?= implode(',', $value['id_gejala']) ?></th>
+							<th align="center"><?= $value['id_gejala'][0] ?></th>
 							<th align="center"><?= $value['nilai'] ?></th>
 							<th align="center"><?= implode(',', $value['id_penyakit']) ?></th>
 						</tr>

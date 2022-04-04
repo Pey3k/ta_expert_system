@@ -15,15 +15,15 @@ class Riwayatpasien extends CI_Controller
 	public function index()
 	{
 		$data['userLogin'] = $this->session->userdata('loginUser');
-		$data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['UserID']);
-		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['UserID']);
+		$data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['user_id']);
+		$data['listProfile'] = $this->M_pengguna->getListPenggunaId($data['userLogin']['user_id']);
 		$this->load->view('client/riwayat', $data);
 	}
 
 	public function print_pasien()
 	{
 		$data['userLogin'] = $this->session->userdata('loginUser');
-		$data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['UserID']);
+		$data['hasil_analisa'] = $this->m_diagnosa->getListHasilUser($data['userLogin']['user_id']);
 		$mpdf = new \Mpdf\Mpdf();
 		$htmlnya = $this->load->view('client/print_diagnosa_user', $data, true);
 		$mpdf->WriteHTML($htmlnya);
