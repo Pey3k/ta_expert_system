@@ -53,6 +53,7 @@ class Pasien extends CI_Controller
 			"username" => $post['username'],
 			"umur" => $post['umur'],
 			"email" => $post['email'],
+			"jenis_kelamin" => $post['jenis_kelamin'],
 			"tgl_lahir" => $post['tgl_lahir'],
 			"tempat_lahir" => $post['tempat_lahir'],
 			"updated_at" => date('Y-m-d H:i:s')

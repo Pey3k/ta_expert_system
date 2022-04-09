@@ -21,24 +21,29 @@ class Daftar extends CI_Controller
 
 		$post = $this->input->post();
 
-		$this->form_validation->set_rules('email', 'Email', 'required|trim|is_unique[pengguna.email]', [
-			'is_unique' => 'Email sudah terdaftar.'
-		]);
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|min_length[4]|max_length[30]|is_unique[pengguna.email]', array(
+			'is_unique' => 'Email sudah terdaftar.',
+			'min_length' => 'Password minimal mengandung 4 karakter',
+			'max_length' => 'Password maximal mengandung 30 karakter',
+		));
 
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[pengguna.username]', [
-			'is_unique' => 'Username sudah terdaftar.'
-		]);
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[30]|is_unique[pengguna.username]', array(
+			'is_unique' => 'Username sudah terdaftar.',
+			'min_length' => 'Password minimal mengandung 4 karakter',
+			'max_length' => 'Password maximal mengandung 30 karakter',
+		));
 
-		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password2]', [
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password2]', array(
 			'matches' => 'Konfirmasi password tidak sesuai',
-			'min_length' => 'Password minimal mengandung 3 karakter',
+			'min_length' => 'Password minimal mengandung 6 karakter',
 			'max_length' => 'Password maximal mengandung 15 karakter',
-		]);
-		$this->form_validation->set_rules('password2', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password1]', [
+		));
+
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password1]', array(
 			'matches' => 'Konfirmasi password tidak sesuai',
-			'min_length' => 'Password minimal mengandung 3 karakter',
+			'min_length' => 'Password minimal mengandung 6 karakter',
 			'max_length' => 'Password maximal mengandung 15 karakter',
-		]);
+		));
 
 
 		if ($this->form_validation->run() == false) {

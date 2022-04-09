@@ -35,9 +35,9 @@
 										<thead>
 										<tr>
 											<th>No</th>
-											<th>ID Gejala</th>
-											<th>Nama Gejala</th>
-											<th>Bobot Gejala</th>
+											<th>ID Penyakit</th>
+											<th>Nama Penyakit</th>
+											<th>Gejala</th>
 											<th style="width:75px">Aksi</th>
 										</tr>
 										</thead>

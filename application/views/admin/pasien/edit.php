@@ -5,12 +5,12 @@
 			<div class="content-header-left col-12 mb-2 mt-1">
 				<div class="row breadcrumbs-top">
 					<div class="col-12">
-						<h5 class="content-header-title float-left pr-1 mb-0">Informasi</h5>
+						<h5 class="content-header-title float-left pr-1 mb-0">Pasien</h5>
 						<div class="breadcrumb-wrapper col-12">
 							<ol class="breadcrumb p-0 mb-0">
 								<li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active">Informasi
+								<li class="breadcrumb-item active">Pasien
 								</li>
 							</ol>
 						</div>
@@ -24,7 +24,7 @@
 					<div class="card shadow">
 
 						<div class="card-header">
-							<h4 class="m-0 font-weight-bold text-primary">Form Ubah Data Informasi</h4>
+							<h4 class="m-0 font-weight-bold text-primary">Form Ubah Data Pasien</h4>
 						</div>
 						<div class="card-body">
 							<form method="post"
@@ -60,8 +60,11 @@
 									</div>
 									<div class="form-group col-md-6">
 										<label for="jenis_kelamin">Jenis Kelamin</label>
-										<input type="text" class="form-control" style="width:300px" name="jenis_kelamin"
-											   value="<?php echo $detailData->jenis_kelamin ?>" id="jenis_kelamin" placeholder="" readonly>
+										<select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required autofocus
+												value="<?= $detailData->jenis_kelamin ?>">
+											<option value="Laki-Laki" <?php if($detailData->jenis_kelamin=="Laki-Laki") echo 'selected="selected"'; ?> >Laki-Laki</option>
+											<option value="Perempuan" <?php if($detailData->jenis_kelamin=="Perempuan") echo 'selected="selected"'; ?> >Perempuan</option>
+										</select>
 									</div>
 								</div>
 

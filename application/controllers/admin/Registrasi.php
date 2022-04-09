@@ -27,32 +27,34 @@ class Registrasi extends CI_Controller
 
 		$this->form_validation->set_rules('nama_petugas', 'Name', 'required|trim');
 
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[petugas.username]', [
-			'is_unique' => 'Username sudah terdaftar.'
-		]);
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[30]|is_unique[petugas.username]', array(
+			'is_unique' => 'Username sudah terdaftar.',
+			'min_length' => 'Password minimal mengandung 4 karakter',
+			'max_length' => 'Password maximal mengandung 30 karakter',
+		));
 
 
-		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password2]', [
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[6]|max_length[15]|matches[password2]', array(
 			'matches' => 'Pasword tidak sesuai',
 			'min_length' => 'Password minimal mengandung 6 karakter',
 			'max_length' => 'Password maximal mengandung 15 karakter',
-		]);
+		));
 
-		$this->form_validation->set_rules('password2', 'Password', 'required|trim|min_length[3]|max_length[15]|matches[password1]', [
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|min_length[3]|max_length[15]|matches[password1]', array(
 			'matches' => 'Pasword tidak sesuai',
 			'min_length' => 'Password minimal mengandung 6 karakter',
 			'max_length' => 'Password maximal mengandung 15 karakter',
-		]);
+		));
 
 		if ($this->form_validation->run() == false) {
 			$this->load->view('admin/registrasi');
 		} else {
-			$data = [
+			$data = array(
 				'nama_petugas' => htmlspecialchars($this->input->post('nama_petugas', true)),
 				'username' => htmlspecialchars($this->input->post('username', true)),
 				'password' => md5($this->input->post('password1')),
 				'date_created' => date('Y-m-d')
-			];
+			);
 
 			$this->db->insert('petugas', $data);
 			$this->session->set_flashdata('message', '<div style="font-size:14px" class="alert alert-success" role="alert">
