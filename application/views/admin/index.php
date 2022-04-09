@@ -21,12 +21,12 @@
 				<div class="col-12">
 					<div class="card">
 						<div class="card-header d-flex justify-content-between">
-							<!-- <h4 class="card-title">Dashboard</h4> -->
+							<h4 class="card-title">Dashboard</h4>
 						</div>
 						<div class="card-content">
-							<!-- <div class="card-body card-dashboard">
-                                Dashboard
-							</div> -->
+							<div class="card-body card-dashboard">
+								Selamat Datang <?= $userLogin['user_name'] ?>, Anda telah berhasil masuk!
+							</div>
 						</div>
 					</div>
 				</div>
